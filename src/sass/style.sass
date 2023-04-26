@@ -16,7 +16,6 @@
 .container
     max-width: 1470px
     margin: 0 auto
-    overflow: hidden
 
 .header
     background-color: #fff
@@ -89,6 +88,42 @@
                 cursor: pointer
                 width: 30px
                 height: 30px
+    .search-panel.active
+        opacity: 1
+        transition: .5s all
+        z-index: 3
+    .search-panel
+        display: flex
+        position: absolute
+        z-index: -3
+        bottom: -70px
+        right: 14.5%
+        opacity: 0
+        transition: .5s all
+        &__input
+            width: 533px
+            height: 45px
+            border: 1px solid #1A1A1A
+            padding: 12px 0 12px 15px
+            font-style: normal
+            font-weight: 300
+            font-size: 18px
+            line-height: 21px
+            &:active,
+            &:focus
+                outline: none
+                
+        &__btn
+            width: 167px
+            height: 45px
+            background-color: #1A1A1A
+            font-weight: 400
+            font-size: 16px
+            line-height: 18px
+            color: #FFFFFF
+            border: none
+            padding: 13px 0
+            cursor: pointer
 .preview
     padding: 215px 216px 217px 216px
     background: url('../img/preview.jpg')center center/cover no-repeat
@@ -129,6 +164,8 @@
         padding: 0 15px
     &__img
         display: block
+        &-medium
+            display: none
         &-tablet
             display: none
         &-mobile
@@ -145,7 +182,7 @@
         margin-top: 14px
         
 .catalog
-    padding: 38px 0 80px 0
+    padding: 42px 0 80px 0
     &__title
         @include titles
         margin-bottom: 10px
@@ -166,20 +203,24 @@
             width: 100%
             height: 100%
             border: 1px solid #EFEFEF
-            padding: 20px
+            padding: 25px 15px 15px 17px
         &-descr
             font-style: normal
             font-weight: 500
             font-size: 18px
             line-height: 21px
             color: #1A1A1A
-            margin-top: 20px
+            margin-top: 14px
         &-img
             margin: 0 auto
             height: 169px
             &-desc
                 display: block
                 margin: 0 auto
+            &-desc.trubs
+                padding-top: 15px
+            &-desc.vozd
+                padding-top: 10px
             &-tablet
                 display: none
         &-img.ind
@@ -245,7 +286,7 @@
         -webkit-flex-wrap: wrap
         -ms-flex-wrap: wrap
         flex-wrap: wrap
-        margin: 40px -46px 0 -46px
+        margin: 38px -46px 0 -46px
         align-items: center
     &__item
         padding: 0 46px
@@ -420,5 +461,225 @@
     display: block
 .slick-dots
     width: auto
+
+
+                        //Catalog
+
+.main
+    &__title
+        font-weight: 500
+        font-size: 38px
+        line-height: 44px
+        padding: 23px 0 0 0
+.directory
+    display: flex
+    padding: 17px 0
+    &__way
+        &-link
+            font-weight: 400
+            font-size: 14px
+            line-height: 16px
+            color: #818181
+            text-decoration: none
+        &-link.active
+            color: #1A1A1A
+        span
+            margin: 0 3px
+            font-weight: 400
+            font-size: 14px
+            line-height: 16px
+            color: #818181
+.vent
+    padding: 40px 0
+    &__title
+        font-weight: 500
+        font-size: 24px
+        line-height: 28px
+        color: #1A1A1A
+    &__cards-block
+        margin: -10px -15px 0 -15px
+        display: -webkit-flex
+        display: -ms-flexbox
+        display: flex
+        -webkit-flex-wrap: wrap
+        -ms-flex-wrap: wrap
+        flex-wrap: wrap
+    &__card
+        width: 25%
+        padding: 0 15px
+        height: 250px
+        margin-top: 30px
+        &-wrapper
+            width: 100%
+            height: 100%
+            border: 1px solid #EFEFEF
+            padding: 25px 15px 15px 17px
+        &-descr
+            font-style: normal
+            font-weight: 500
+            font-size: 18px
+            line-height: 21px
+            color: #1A1A1A
+            margin-top: 14px
+        &-img
+            margin: 0 auto
+            height: 169px
+            &-desc
+                display: block
+                margin: 0 auto
+            &-desc.trubs
+                padding-top: 15px
+            &-desc.vozd
+                padding-top: 10px
+            &-tablet
+                display: none
+        &-img.ind
+            margin: 0 auto
+            height: 148px
+    .catalog__card
+        height: 429px
+        &-descr.over
+            margin-top: -7px
+    .catalog__card-wrapper
+        height: auto
+
+.plumbing
+    padding: 0 0 40px 0
+    &__title
+        font-weight: 500
+        font-size: 24px
+        line-height: 28px
+        color: #1A1A1A
+    &__cards-block
+        margin: -10px -15px 0 -15px
+        display: -webkit-flex
+        display: -ms-flexbox
+        display: flex
+        -webkit-flex-wrap: wrap
+        -ms-flex-wrap: wrap
+        flex-wrap: wrap
+    .catalog__card
+        height: 429px
+        &-descr.over
+            margin-top: -7px
+    .catalog__card-wrapper
+        height: auto
+
+.accordion
+    &__wrapper
+        display: block
+        width: 92%
+        border: 1px solid #efefef
+        border-top: none
+        padding: 15px 17px
+        position: absolute
+        z-index: 3
+        background-color: #fff
+        min-height: 180px
+    &__link
+        display: block
+        margin-top: 15px
+        a
+            text-decoration: none
+            font-weight: 400
+            font-size: 16px
+            line-height: 18px
+            color: #1A1A1A
+            &::after
+                content: ''
+                display: block
+                width: 0%
+                height: 1px
+                position: absolute
+                bottom: 0
+                left: 0
+                background-color: #1A1A1A
+                transition: .3s all
+            &:hover
+                &::after
+                    width: 100%
+        &:first-child
+            margin-top: 0
+    &__hidden
+        height: 0
+        overflow: hidden
+        transition: .3s all
+        z-index: 3
+        background-color: #fff
+        &__link
+            display: block
+            margin-top: 15px
+            a
+                display: inline-block
+                font-weight: 400
+                font-size: 16px
+                line-height: 18px
+                color: #1A1A1A
+                text-decoration: none
+                &::after
+                    content: ''
+                    display: block
+                    width: 0%
+                    height: 1px
+                    position: absolute
+                    bottom: 0
+                    left: 0
+                    background-color: #1A1A1A
+                    transition: .3s all
+                &:hover
+                    &::after
+                        width: 100%
+    &__more-btn
+        margin-top: 15px
+        display: inline-block
+        font-style: normal
+        font-weight: 500
+        font-size: 16px
+        line-height: 18px
+        color: #1A1A1A
+        cursor: pointer
+        width: 128px
+        z-index: 3
+        background-color: #fff
+        &::after,
+        &::before
+            content: ''
+            display: block
+            position: absolute
+            bottom: 35%
+            right: 4px
+            width: 6px
+            height: 1px
+            background-color: #1A1A1A
+            transition: .3s all
+        &::after
+            transform: rotate(45deg)
+        &::before
+            transform: rotate(-45deg)
+            right: 0
+    &__more-btn.active
+        &::after
+            transform: rotate(-45deg)
+            right: 54px
+            transition: .3s all
+        &::before
+            transform: rotate(45deg)
+            right: 50px
+            transition: .3s all
+
+.info
+    padding: 0 0 100px 0
+    &__text
+        margin-bottom: 15px
+        &:last-child
+            margin-bottom: 0
+        p
+            font-weight: 400
+            font-size: 18px
+            line-height: 140%
+            color: #818181
+            
+                        //Imorts
+@import medium
 @import tablet
 @import mobile

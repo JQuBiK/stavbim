@@ -4,17 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>stavbim.</title>
+    <title>Каталог</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
     <header class="header">
         <div class="container">
             <div class="header__wrapper">
-                <div class="header__logo">
+                <a href="index.html" class="header__logo">
                     <img src="img/logo.svg" alt="logo" class="StavBim">
-                </div>
+                </a>
                 <ul class="header__list">
                     <li class="header__list-item"><a href="" class="header__link">О компании</a></li>
                     <li class="header__list-item"><a href="catalog.html" class="header__link">Каталог</a></li>
@@ -37,7 +39,231 @@
                 </div>
             </div>
         </div>
+        <div class="search-panel">
+            <input placeholder="Поиск" type="search" id="search" name="" class="search-panel__input">
+            <button class="search-panel__btn">Найти</button>
+        </div>
     </header>
+    <div class="container">
+        <div class="directory">
+            <div class="directory__way"><a href="" class="directory__way-link">Главная</a><span>/</span></div>
+            <div class="directory__way"><a href="" class="directory__way-link active">Каталог</a></div>
+        </div>
+    </div>
+    <main class="main">
+        <div class="container">
+            <h1 class="main__title">Каталог</h1>
+            <section class="vent">
+                <h2 class="vent__title">Вентиляция и кондиционирование воздуха</h2>
+                <div class="vent__cards-block">
+                    <div class="catalog__card">
+                        <div class="catalog__card-wrapper">
+                            <div class="catalog__card-img">
+                                <img src="img/catalog/catalog_card1.png" alt="" class="catalog__card-img-desc">
+                                <img src="img/catalog/catalog_card_tablet1.png" alt="" class="catalog__card-img-tablet">
+                            </div>
+                            <div class="catalog__card-descr"><p>Арматура воздуховодов</p></div>
+                        </div>
+                        <div class="accordion__wrapper">
+                            <div class="accordion__link"><a href="">Кран шаровый</a></div>
+                            <div class="accordion__link"><a href="">Обратный клапан</a></div>
+                            <div class="accordion__link"><a href="">Вентиль</a></div>
+                            <div class="accordion__link"><a href="">Клапан предохранительный</a></div>
+                            <div class="accordion__hidden">
+                                <div class="accordion__hidden__link"><a href="">Lorem, ipsum.</a></div>
+                                <div class="accordion__hidden__link"><a href="">Lorem, ipsum.</a></div>
+                                <div class="accordion__hidden__link"><a href="">Lorem, ipsum.</a></div>
+                                <div class="accordion__hidden__link"><a href="">Lorem, ipsum.</a></div>
+                            </div>
+                            <div class="accordion__more-btn">Показать еще</div>
+                        </div>
+                    </div>
+                    <div class="catalog__card">
+                        <div class="catalog__card-wrapper">
+                            <div class="catalog__card-img">
+                                <img src="img/catalog/catalog_card3.png" alt="" class="catalog__card-img-desc">
+                                <img src="img/catalog/catalog_card_tablet3.png" alt="" class="catalog__card-img-tablet">
+                            </div>
+                            <div class="catalog__card-descr"><p>Воздуховоды</p></div>
+                        </div>
+                        <div class="accordion__wrapper">
+                            <div class="accordion__link"><a href="">Круглые</a></div>
+                            <div class="accordion__link"><a href="">Прямоугольные</a></div>
+                            <div class="accordion__link"><a href="">Овальные</a></div>
+                        </div>
+                    </div>
+                    <div class="catalog__card">
+                        <div class="catalog__card-wrapper">
+                            <div class="catalog__card-img">
+                                <img src="img/catalog/catalog_card6.png" alt="" class="catalog__card-img-desc">
+                                <img src="img/catalog/catalog_card_tablet6.png" alt="" class="catalog__card-img-tablet">
+                            </div>
+                            <div class="catalog__card-descr over"><p>Соединительные <br> детали воздуховодов</p></div>
+                        </div>
+                        <div class="accordion__wrapper">
+                            <div class="accordion__link"><a href="">Отвод</a></div>
+                            <div class="accordion__link"><a href="">Переход</a></div>
+                            <div class="accordion__link"><a href="">Утка</a></div>
+                            <div class="accordion__link"><a href="">Врезка</a></div>
+                            <div class="accordion__hidden">
+                                <div class="accordion__hidden__link"><a href="">Lorem, ipsum.</a></div>
+                                <div class="accordion__hidden__link"><a href="">Lorem, ipsum.</a></div>
+                                <div class="accordion__hidden__link"><a href="">Lorem, ipsum.</a></div>
+                                <div class="accordion__hidden__link"><a href="">Lorem, ipsum.</a></div>
+                            </div>
+                            <div class="accordion__more-btn">Показать еще</div>
+                        </div>
+                    </div>
+                    <div class="catalog__card">
+                        <div class="catalog__card-wrapper">
+                            <div class="catalog__card-img">
+                                <img src="img/catalog/catalog_card4.png" alt="" class="catalog__card-img-desc">
+                                <img src="img/catalog/catalog_card_tablet4.png" alt="" class="catalog__card-img-tablet">
+                            </div>
+                            <div class="catalog__card-descr"><p>Воздухораспределители</p></div>
+                        </div>
+                        <div class="accordion__wrapper">
+                            <div class="accordion__link"><a href="">Кран шаровый</a></div>
+                            <div class="accordion__link"><a href="">Обратный клапан</a></div>
+                            <div class="accordion__link"><a href="">Вентиль</a></div>
+                            <div class="accordion__link"><a href="">Клапан предохранительный</a></div>
+                            <div class="accordion__hidden">
+                                <div class="accordion__hidden__link"><a href="">Lorem, ipsum.</a></div>
+                                <div class="accordion__hidden__link"><a href="">Lorem, ipsum.</a></div>
+                                <div class="accordion__hidden__link"><a href="">Lorem, ipsum.</a></div>
+                                <div class="accordion__hidden__link"><a href="">Lorem, ipsum.</a></div>
+                            </div>
+                            <div class="accordion__more-btn">Показать еще</div>
+                        </div>
+                    </div>
+                    <div class="catalog__card">
+                        <div class="catalog__card-wrapper">
+                            <div class="catalog__card-img">
+                                <img src="img/catalog/catalog_card5.png" alt="" class="catalog__card-img-desc">
+                                <img src="img/catalog/catalog_card_tablet5.png" alt="" class="catalog__card-img-tablet">
+                            </div>
+                            <div class="catalog__card-descr"><p>Оборудование</p></div>
+                        </div>
+                        <div class="accordion__wrapper">
+                            <div class="accordion__link"><a href="">Наружный блок</a></div>
+                            <div class="accordion__link"><a href="">Внутренний блок</a></div>
+                            <div class="accordion__link"><a href="">Вентилятор</a></div>
+                            <div class="accordion__link"><a href="">Приточная установка</a></div>
+                            <div class="accordion__hidden">
+                                <div class="accordion__hidden__link"><a href="">Lorem, ipsum.</a></div>
+                                <div class="accordion__hidden__link"><a href="">Lorem, ipsum.</a></div>
+                                <div class="accordion__hidden__link"><a href="">Lorem, ipsum.</a></div>
+                                <div class="accordion__hidden__link"><a href="">Lorem, ipsum.</a></div>
+                            </div>
+                            <div class="accordion__more-btn">Показать еще</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--  -->
+
+            <section class="plumbing">
+                <h2 class="plumbing__title">Сантехника и Трубопроводы</h2>
+                <div class="plumbing__cards-block">
+                    <div class="catalog__card">
+                        <div class="catalog__card-wrapper">
+                            <div class="catalog__card-img">
+                                <img src="img/catalog/catalog_card8.png" alt="" class="catalog__card-img-desc">
+                                <img src="img/catalog/catalog_card_tablet8.png" alt="" class="catalog__card-img-tablet">
+                            </div>
+                            <div class="catalog__card-descr"><p>Трубы</p></div>
+                        </div>
+                        <div class="accordion__wrapper">
+                            <div class="accordion__link"><a href="">Кран шаровый</a></div>
+                            <div class="accordion__link"><a href="">Обратный клапан</a></div>
+                            <div class="accordion__link"><a href="">Вентиль</a></div>
+                            <div class="accordion__link"><a href="">Клапан предохранительный</a></div>
+                            <div class="accordion__hidden">
+                                <div class="accordion__hidden__link"><a href="">Lorem, ipsum.</a></div>
+                                <div class="accordion__hidden__link"><a href="">Lorem, ipsum.</a></div>
+                                <div class="accordion__hidden__link"><a href="">Lorem, ipsum.</a></div>
+                                <div class="accordion__hidden__link"><a href="">Lorem, ipsum.</a></div>
+                            </div>
+                            <div class="accordion__more-btn">Показать еще</div>
+                        </div>
+                    </div>
+                    <div class="catalog__card">
+                        <div class="catalog__card-wrapper">
+                            <div class="catalog__card-img">
+                                <img src="img/catalog/catalog_card7.png" alt="" class="catalog__card-img-desc">
+                                <img src="img/catalog/catalog_card_tablet7.png" alt="" class="catalog__card-img-tablet">
+                            </div>
+                            <div class="catalog__card-descr over"><p>Соединительные <br> детали трубопроводов</p></div>
+                        </div>
+                        <div class="accordion__wrapper">
+                            <div class="accordion__link"><a href="">Кран шаровый</a></div>
+                            <div class="accordion__link"><a href="">Обратный клапан</a></div>
+                            <div class="accordion__link"><a href="">Вентиль</a></div>
+                            <div class="accordion__link"><a href="">Клапан предохранительный</a></div>
+                            <div class="accordion__hidden">
+                                <div class="accordion__hidden__link"><a href="">Lorem, ipsum.</a></div>
+                                <div class="accordion__hidden__link"><a href="">Lorem, ipsum.</a></div>
+                                <div class="accordion__hidden__link"><a href="">Lorem, ipsum.</a></div>
+                                <div class="accordion__hidden__link"><a href="">Lorem, ipsum.</a></div>
+                            </div>
+                            <div class="accordion__more-btn">Показать еще</div>
+                        </div>
+                    </div>
+                    <div class="catalog__card">
+                        <div class="catalog__card-wrapper">
+                            <div class="catalog__card-img">
+                                <img src="img/catalog/catalog_card2.png" alt="" class="catalog__card-img-desc">
+                                <img src="img/catalog/catalog_card_tablet2.png" alt="" class="catalog__card-img-tablet">
+                            </div>
+                            <div class="catalog__card-descr"><p>Арматура трубопроводов</p></div>
+                        </div>
+                        <div class="accordion__wrapper">
+                            <div class="accordion__link"><a href="">Краны шаровые</a></div>
+                            <div class="accordion__link"><a href="">Вентили</a></div>
+                            <div class="accordion__link"><a href="">Задвижки</a></div>
+                            <div class="accordion__link"><a href="">Обратные клапаны </a></div>
+                            <div class="accordion__hidden">
+                                <div class="accordion__hidden__link"><a href="">Lorem, ipsum.</a></div>
+                                <div class="accordion__hidden__link"><a href="">Lorem, ipsum.</a></div>
+                                <div class="accordion__hidden__link"><a href="">Lorem, ipsum.</a></div>
+                                <div class="accordion__hidden__link"><a href="">Lorem, ipsum.</a></div>
+                            </div>
+                            <div class="accordion__more-btn">Показать еще</div>
+                        </div>
+                    </div>
+                    <div class="catalog__card">
+                        <div class="catalog__card-wrapper">
+                            <div class="catalog__card-img">
+                                <img src="img/catalog/catalog_card5.png" alt="" class="catalog__card-img-desc">
+                                <img src="img/catalog/catalog_card_tablet5.png" alt="" class="catalog__card-img-tablet">
+                            </div>
+                            <div class="catalog__card-descr"><p>Оборудование</p></div>
+                        </div>
+                        <div class="accordion__wrapper">
+                            <div class="accordion__link"><a href="">Насосы</a></div>
+                            <div class="accordion__link"><a href="">Фильтры</a></div>
+                            <div class="accordion__link"><a href="">Сепараторы</a></div>
+                            <div class="accordion__link"><a href="">Котлы</a></div>
+                            <div class="accordion__hidden">
+                                <div class="accordion__hidden__link"><a href="">Lorem, ipsum.</a></div>
+                                <div class="accordion__hidden__link"><a href="">Lorem, ipsum.</a></div>
+                                <div class="accordion__hidden__link"><a href="">Lorem, ipsum.</a></div>
+                                <div class="accordion__hidden__link"><a href="">Lorem, ipsum.</a></div>
+                            </div>
+                            <div class="accordion__more-btn">Показать еще</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="info">
+                <div class="info__text"><p>Наша компания - это специализированный поставщик и продавец систем вентиляции и кондиционирования воздуха для широкого спектра клиентов.
+                    Мы предлагаем широкий выбор продуктов, которые отвечают самым высоким стандартам качества и эффективности.</p></div>
+                <div class="info__text"><p>Наша команда состоит из профессиональных инженеров и экспертов в области вентиляции и кондиционирования, которые обладают глубокими знаниями и опытом в данной сфере. Мы работаем с ведущими производителями оборудования и материалов, чтобы предложить нашим клиентам самые инновационные и надежные решения.</p></div>
+                <div class="info__text"><p>Мы понимаем, что каждый клиент имеет свои индивидуальные потребности и требования, поэтому мы стремимся предложить наиболее подходящее решение для каждого проекта. Мы предлагаем консультации и рекомендации для определения наилучшего решения в соответствии с требованиями нашего клиента.</p></div>
+            </section>
+        </div>
+    </main>
     <footer class="footer">
         <div class="container">
             <div class="footer__wrapper">
@@ -66,5 +292,8 @@
             </div>
         </div>
     </footer>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
