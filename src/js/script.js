@@ -33,6 +33,35 @@ window.addEventListener('DOMContentLoaded', () => {
 		});
 	});
 
+	//Basket
+
+	const basketInputOnlinePay = document.querySelector('#online'),
+		  basketInputCryptoPay = document.querySelector('#crypto'),
+		  basketFormOnlinePay = document.querySelector('.basket__pay__choice__form__online'),
+		  basketFormCryptoPay = document.querySelector('.basket__pay__choice__form__crypto'),
+		  basketOpenPopapBtn = document.querySelector('#basket'),
+		  basketClosePopapBtn = document.querySelector('.basket__title__wrapper span'),
+		  basketPopap = document.querySelector('.basket');
+
+	basketOpenPopapBtn.addEventListener('click', () => {
+		basketPopap.classList.toggle('active');
+	});
+
+	basketClosePopapBtn.addEventListener('click', () => {
+		basketPopap.classList.remove('active');
+	});
+
+
+	basketInputOnlinePay.addEventListener('change', (e) => {
+		basketFormOnlinePay.classList.add('active');
+		basketFormCryptoPay.classList.remove('active');
+	});
+
+	basketInputCryptoPay.addEventListener('change', (e) => {
+		basketFormOnlinePay.classList.remove('active');
+		basketFormCryptoPay.classList.add('active');
+	});
+
 	//slider Brands
 	$('.brands__slider').slick({
 		dots: true,

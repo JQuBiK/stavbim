@@ -21,6 +21,7 @@
     background-color: #fff
     width: 100%
     padding: 18px 0
+    z-index: 1
     &__mobil-btn
         display: none
     &__wrapper
@@ -83,6 +84,7 @@
         padding: 0 35.5px
         margin: 0 -15px
         &-btn
+            cursor: pointer
             padding: 0 15px
             img
                 cursor: pointer
@@ -124,6 +126,407 @@
             border: none
             padding: 13px 0
             cursor: pointer
+.basket.active
+    top: 56px
+    z-index: -1
+.basket
+    width: 595px
+    height: auto
+    background-color: #fff
+    position: absolute
+    right: 192px
+    top: -1175px
+    z-index: -1
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.15)
+    border-radius: 2px
+    padding: 20px 9px 20px 30px
+    transition: .5s all
+    &__title
+        font-weight: 500
+        font-size: 38px
+        line-height: 44px
+        color: #1A1A1A
+       
+        padding: 0 21px 0 0
+        &__wrapper
+            border-bottom: 1px solid #EFEFEF
+            padding-bottom: 25px
+        span
+            position: absolute
+            top: 25%
+            right: 0
+            transform: translateY(-50%)
+            width: 20px
+            height: 10px
+            cursor: pointer
+            &::before,
+            &::after    
+                content: ''
+                position: absolute
+                display: block
+                width: 12px
+                height: 1px
+                background-color: #1A1A1A
+                right: 0
+                top: 50%
+            &::before
+                transform: rotate(-45deg)
+                left: 0
+            &::after
+                transform: rotate(45deg)
+    &__list
+        max-height: 475px
+        padding: 25px 0
+        &__scroll
+            max-height: 425px 
+            overflow-y: auto
+            padding-right: 18px
+            &::-webkit-scrollbar
+                width: 5px
+            &::-webkit-scrollbar-track
+                background-color: #EFEFEF
+                border-radius: 5px
+            &::-webkit-scrollbar-thumb
+                background-color: #1A1A1A
+                border-radius: 5px
+    &__item
+        display: flex
+        align-items: center
+        justify-content: space-between
+        border-bottom: 1px solid #efefef
+        padding: 25px 0
+        &:first-child
+            padding-top: 0
+        &__thing
+            display: flex
+            align-items: center
+            &__icon
+                img
+                    width: 65px
+                    height: 65px
+            &__descr
+                &__title
+                    font-weight: 700
+                    font-size: 18px
+                    line-height: 21px
+                    color: #1A1A1A
+                &__price
+                    font-weight: 400
+                    font-size: 16px
+                    line-height: 18px
+                    color: #1A1A1A
+        &__remove
+            cursor: pointer
+            font-size: 18px
+    &__pay
+        display: flex
+        align-items: center
+        justify-content: space-between
+        padding-right: 21px
+        margin-top: 15px
+        &__title
+            font-weight: 500
+            font-size: 24px
+            line-height: 28px
+            color: #1A1A1A
+        &__sum
+            font-weight: 500
+            font-size: 24px
+            line-height: 28px
+            color: #1A1A1A
+        &__form
+            padding-right: 21px
+            margin-top: 30px
+            &__name-phone
+                display: flex
+                align-items: center
+            &__name
+                border: none
+                border-bottom: 1px solid #1A1A1A
+                padding: 0 0 5px 5px
+                font-weight: 400
+                font-size: 18px
+                line-height: 140%
+                width: 100%
+                color: #1A1A1A
+                margin-right: 15px
+                &::placeholder
+                    color: #818181
+                &:active,
+                &:focus
+                    outline: none
+            &__phone
+                border: none
+                border-bottom: 1px solid #1A1A1A
+                padding: 0 0 5px 5px
+                font-weight: 400
+                font-size: 18px
+                line-height: 140%
+                color: #1A1A1A
+                margin-left: 15px
+                width: 100%
+                &::placeholder
+                    color: #818181
+                &:active,
+                &:focus
+                    outline: none
+            &__mail
+                border: none
+                border-bottom: 1px solid #1A1A1A
+                padding: 0 0 5px 5px
+                font-weight: 400
+                font-size: 18px
+                line-height: 140%
+                color: #1A1A1A
+                width: 100%
+                margin-top: 25px
+                &::placeholder
+                    color: #818181
+                &:active,
+                &:focus
+                    outline: none
+        &__choice
+            margin-top: 40px
+            padding-right: 21px
+            &__title
+                font-weight: 500
+                font-size: 24px
+                line-height: 28px
+                color: #1A1A1A
+            &__btn
+                margin-top: 30px
+                display: flex
+                &-online
+                    margin-right: 15px
+                    display: flex
+                    align-items: center
+                    input[type='radio']
+                        cursor: pointer
+                        width: 14px
+                        height: 14px
+                        -webkit-appearance: none
+                        -moz-appearance: none
+                        appearance: none
+                        outline: none
+                        margin-right: 2.5px
+                        &::before
+                            width: 14px
+                            height: 14px
+                            content: ''
+                            position: absolute
+                            top: 50%
+                            left: 50%
+                            border-radius: 50%
+                            transform: translate(-50%, -50%)
+                            background-color: white
+                            border: 2px solid #1A1A1A
+                        &:checked
+                            &::after
+                                content: ''
+                                position: absolute
+                                top: 50%
+                                left: 50%
+                                width: 10px
+                                height: 10px
+                                border-radius: 50%
+                                background-color: #1A1A1A
+                                transform: translate(-50%, -50%)
+                                visibility: visible
+                    label
+                        font-weight: 400
+                        font-size: 18px
+                        line-height: 140%
+                        color: #1A1A1A
+                        margin-left: 2.5px
+                        cursor: pointer
+                &-crypto
+                    margin-right: 15px
+                    display: flex
+                    align-items: center
+                    input[type='radio']
+                        cursor: pointer
+                        width: 14px
+                        height: 14px
+                        -webkit-appearance: none
+                        -moz-appearance: none
+                        appearance: none
+                        outline: none
+                        margin-right: 2.5px
+                        &::before
+                            width: 14px
+                            height: 14px
+                            content: ''
+                            position: absolute
+                            top: 50%
+                            left: 50%
+                            border-radius: 50%
+                            transform: translate(-50%, -50%)
+                            background-color: white
+                            border: 2px solid #1A1A1A
+                        &:checked
+                            &::after
+                                content: ''
+                                position: absolute
+                                top: 50%
+                                left: 50%
+                                width: 10px
+                                height: 10px
+                                border-radius: 50%
+                                background-color: #1A1A1A
+                                transform: translate(-50%, -50%)
+                                visibility: visible
+                    label
+                        font-weight: 400
+                        font-size: 18px
+                        line-height: 140%
+                        color: #1A1A1A
+                        cursor: pointer
+                        margin-left: 2.5px
+            &__form
+                &__online.active
+                    display: block
+                &__online
+                    display: none
+                &__name-secondname
+                    margin-top: 30px
+                    display: flex
+                    align-items: center
+                &__name
+                    border: none
+                    border-bottom: 1px solid #1A1A1A
+                    padding: 0 0 5px 5px
+                    font-weight: 400
+                    font-size: 18px
+                    line-height: 140%
+                    color: #1A1A1A
+                    margin-right: 15px
+                    width: 100%
+                    &::placeholder
+                        color: #818181
+                    &:active,
+                    &:focus
+                        outline: none
+                &__secondname
+                    border: none
+                    border-bottom: 1px solid #1A1A1A
+                    padding: 0 0 5px 5px
+                    font-weight: 400
+                    font-size: 18px
+                    line-height: 140%
+                    color: #1A1A1A
+                    margin-left: 15px
+                    width: 100%
+                    &::placeholder
+                        color: #818181
+                    &:active,
+                    &:focus
+                        outline: none
+                &__card
+                    border: none
+                    border-bottom: 1px solid #1A1A1A
+                    padding: 0 0 5px 5px
+                    font-weight: 400
+                    font-size: 18px
+                    line-height: 140%
+                    color: #1A1A1A
+                    width: 100%
+                    margin-top: 25px
+                    &::placeholder
+                        color: #818181
+                    &:active,
+                    &:focus
+                        outline: none
+                    &-info
+                        margin-top: 25px
+                        display: flex
+                        align-items: center
+                    &-time
+                        border: none
+                        border-bottom: 1px solid #1A1A1A
+                        padding: 0 0 5px 5px
+                        font-weight: 400
+                        font-size: 18px
+                        line-height: 140%
+                        color: #1A1A1A
+                        width: 100%
+                        margin-right: 15px
+                        &::placeholder
+                            color: #818181
+                        &:active,
+                        &:focus
+                            outline: none
+                    &-cvv
+                        border: none
+                        border-bottom: 1px solid #1A1A1A
+                        padding: 0 0 5px 5px
+                        font-weight: 400
+                        font-size: 18px
+                        line-height: 140%
+                        color: #1A1A1A
+                        width: 100%
+                        margin-left: 15px
+                        &::placeholder
+                            color: #818181
+                        &:active,
+                        &:focus
+                            outline: none
+                &__crypto.active
+                    margin-top: 30px
+                    display: block
+                &__crypto
+                    display: none
+                    margin-top: 30px
+                &__wallet-number
+                    border: none
+                    border-bottom: 1px solid #1A1A1A
+                    padding: 0 0 5px 5px
+                    font-weight: 400
+                    font-size: 18px
+                    line-height: 140%
+                    color: #1A1A1A
+                    width: 100%
+                    &::placeholder
+                        color: #818181
+                    &:active,
+                    &:focus
+                        outline: none
+        &__btn
+            margin-top: 40px
+            display: block
+            width: 100%
+            height: 45px
+            background-color: #1A1A1A
+            color: #FFFFFF
+            outline: none
+            border: none
+            cursor: pointer
+            &:active,
+            &:focus
+                outline: none
+                border: none
+            &__block
+                display: block
+                padding-right: 21px
+    &__copyright
+        margin-top: 10px
+        padding-right: 21px
+        text-align: center
+        p
+            font-weight: 400
+            font-size: 12px
+            line-height: 14px
+            color: #1A1A1A
+        span
+            font-weight: 400
+            font-size: 12px
+            line-height: 14px
+            color: #1A1A1A
+            text-decoration: underline
+            cursor: pointer
+
+
+
+
 .preview
     padding: 215px 216px 217px 216px
     background: url('../img/preview.jpg')center center/cover no-repeat
