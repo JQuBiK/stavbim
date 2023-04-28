@@ -34,6 +34,125 @@
                 img
                     width: 24px
                     height: 24px
+        .search-panel
+            right: 3%
+            bottom: -45px
+            &__input
+                height: 35px
+                width: 559px
+            &__btn
+                height: 35px
+                padding: 9.5px 0
+                font-size: 14px
+                line-height: 16px
+    .basket.active
+        top: 66px
+    .basket
+        top: -1085px
+        right: 5px
+        width: 583px
+        &__title
+            font-size: 28px
+            line-height: 32px 
+            &__wrapper
+                padding-bottom: 15px
+        &__item
+            padding: 15px 0
+            &__thing
+                &__icon
+                    margin-right: 5px
+                    img
+                        width: 45px
+                        height: 45px
+                &__descr
+                    margin-left: 5px
+                    &__title
+                        font-size: 16px
+                        line-height: 18px
+                    &__price
+                        font-size: 14px
+                        line-height: 16px
+        &__list
+            padding: 15px 0
+            height: auto
+            &__scroll
+                max-height: 337px   
+        &__pay
+            &__title
+                font-size: 18px
+                line-height: 21px
+            &__sum
+                font-size: 18px
+                line-height: 21px
+            &__form
+                &__name,
+                &__phone,
+                &__mail
+                    font-size: 16px
+                    line-height: 140%
+                    &::placeholder
+                        font-size: 16px
+                        line-height: 140%
+            &__choice
+                margin-top: 30px
+                &__title
+                    font-size: 18px
+                    line-height: 21px
+                &__btn
+                    &-online
+                        input[type='radio']
+                            &::before
+                                width: 12px
+                                height: 12px
+                            &:checked
+                                &::after
+                                    width: 8px
+                                    height: 8px
+                        label
+                            font-size: 16px
+                            line-height: 140%
+                    &-crypto
+                        input[type='radio']
+                            &::before
+                                width: 12px
+                                height: 12px
+                            &:checked
+                                &::after
+                                    width: 8px
+                                    height: 8px
+                        label
+                            font-size: 16px
+                            line-height: 140%
+                &__form
+                    &__name,
+                    &__secondname,
+                    &__card
+                        font-size: 16px
+                        line-height: 140%
+                        &::placeholder
+                            font-size: 16px
+                            line-height: 140
+                        &-time,
+                        &-cvv
+                            font-size: 16px
+                            line-height: 140%
+                            &::placeholder
+                                font-size: 16px
+                                line-height: 140
+                    &__wallet-number
+                        font-size: 16px
+                        line-height: 140%
+                        &::placeholder
+                            font-size: 16px
+                            line-height: 140
+            &__btn
+                font-size: 14px
+                line-height: 16px
+                padding: 14.5px 0
+        &__copyright
+            font-size: 12px
+            line-height: 14px
+    
     .preview
         padding: 162px 0 163px 2px
         &__title
@@ -289,7 +408,7 @@
         &__link
             display: block
             margin-top: 13px
-            width: 70%
+            width: 100%
             a
                 font-size: 14px
                 line-height: 16px

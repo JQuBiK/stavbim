@@ -39,16 +39,19 @@ window.addEventListener('DOMContentLoaded', () => {
 		  basketInputCryptoPay = document.querySelector('#crypto'),
 		  basketFormOnlinePay = document.querySelector('.basket__pay__choice__form__online'),
 		  basketFormCryptoPay = document.querySelector('.basket__pay__choice__form__crypto'),
-		  basketOpenPopapBtn = document.querySelector('#basket'),
-		  basketClosePopapBtn = document.querySelector('.basket__title__wrapper span'),
-		  basketPopap = document.querySelector('.basket');
+		  basketOpenPopupBtn = document.querySelector('#basket'),
+		  basketClosePopupBtn = document.querySelector('.basket__title__wrapper span'),
+		  basketPopup = document.querySelector('.basket'),
+		  basketPopupParent = document.querySelector('.basket__list__scroll'),
+		  basketPopupItem = document.querySelectorAll('.basket__item'),
+		  basketPrice = document.querySelector('.basket__pay__sum');
 
-	basketOpenPopapBtn.addEventListener('click', () => {
-		basketPopap.classList.toggle('active');
+	basketOpenPopupBtn.addEventListener('click', () => {
+		basketPopup.classList.toggle('active');
 	});
 
-	basketClosePopapBtn.addEventListener('click', () => {
-		basketPopap.classList.remove('active');
+	basketClosePopupBtn.addEventListener('click', () => {
+		basketPopup.classList.remove('active');
 	});
 
 
@@ -60,6 +63,44 @@ window.addEventListener('DOMContentLoaded', () => {
 	basketInputCryptoPay.addEventListener('change', (e) => {
 		basketFormOnlinePay.classList.remove('active');
 		basketFormCryptoPay.classList.add('active');
+	});
+
+	basketPopupItem.forEach((item, index) => {
+		const removeBlockBtn = document.querySelectorAll('.basket__item__remove');
+		removeBlockBtn[index].addEventListener('click', () => {
+			item.remove();
+			countPrice();
+		});
+	});
+
+	function countPrice() {
+		const result = [];
+
+		let sum = 0;
+
+		document.querySelectorAll('.basket__item__thing__descr__price').forEach(item => {
+			const digits = item.innerHTML.match(/\d+/g).join('');
+			result.push(+digits);
+		});
+
+		for (let i = 0; i < result.length; i++) {
+			sum += result[i];
+		}
+
+		basketPrice.textContent = `${sum} ₽`;
+	}
+
+	countPrice();
+
+
+	//mobile menu
+
+	const mobileMenuBtn = document.querySelector('.header__mobil-btn'),
+		  mobileMenuContent = document.querySelector('.mobile__menu');
+
+	mobileMenuBtn.addEventListener('click', () => {
+		mobileMenuBtn.classList.toggle('active');
+		mobileMenuContent.classList.toggle('active');
 	});
 
 	//slider Brands

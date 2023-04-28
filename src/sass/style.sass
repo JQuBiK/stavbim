@@ -17,11 +17,20 @@
     max-width: 1470px
     margin: 0 auto
 
+.mobile__menu
+    display: none
+
 .header
     background-color: #fff
     width: 100%
     padding: 18px 0
-    z-index: 1
+    z-index: 3
+    position: relative
+    &__content
+        width: 100%
+        background-color: #fff
+        position: relative
+        z-index: 5
     &__mobil-btn
         display: none
     &__wrapper
@@ -94,6 +103,7 @@
         opacity: 1
         transition: .5s all
         z-index: 3
+        visibility: visible
     .search-panel
         display: flex
         position: absolute
@@ -102,6 +112,8 @@
         right: 14.5%
         opacity: 0
         transition: .5s all
+        filter: drop-shadow(0px 0px 24px rgba(0, 0, 0, 0.06))
+        visibility: hidden
         &__input
             width: 533px
             height: 45px
@@ -127,16 +139,16 @@
             padding: 13px 0
             cursor: pointer
 .basket.active
-    top: 56px
-    z-index: -1
+    top: 79px
 .basket
     width: 595px
     height: auto
+    overflow: hidden
     background-color: #fff
     position: absolute
     right: 192px
-    top: -1175px
-    z-index: -1
+    top: -1075px
+    z-index: 2
     box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.15)
     border-radius: 2px
     padding: 20px 9px 20px 30px
@@ -146,11 +158,11 @@
         font-size: 38px
         line-height: 44px
         color: #1A1A1A
-       
         padding: 0 21px 0 0
         &__wrapper
             border-bottom: 1px solid #EFEFEF
             padding-bottom: 25px
+            position: relative
         span
             position: absolute
             top: 25%
@@ -201,10 +213,12 @@
             display: flex
             align-items: center
             &__icon
+                margin-right: 9px
                 img
                     width: 65px
                     height: 65px
             &__descr
+                margin-left: 9px
                 &__title
                     font-weight: 700
                     font-size: 18px
@@ -215,9 +229,15 @@
                     font-size: 16px
                     line-height: 18px
                     color: #1A1A1A
+                    margin-top: 10px
         &__remove
             cursor: pointer
             font-size: 18px
+            font-weight: 400
+            transition: .3s all
+            &:hover
+                transition: .3s all
+                font-weight: 800
     &__pay
         display: flex
         align-items: center
@@ -309,6 +329,7 @@
                         appearance: none
                         outline: none
                         margin-right: 2.5px
+                        position: relative
                         &::before
                             width: 14px
                             height: 14px
@@ -352,6 +373,7 @@
                         appearance: none
                         outline: none
                         margin-right: 2.5px
+                        position: relative
                         &::before
                             width: 14px
                             height: 14px
@@ -500,6 +522,8 @@
             outline: none
             border: none
             cursor: pointer
+            font-size: 16px
+            line-height: 18px
             &:active,
             &:focus
                 outline: none
@@ -774,6 +798,7 @@
             display: block
             padding: 73.5px 22.5px
             border: 1px solid #EFEFEF
+            position: relative
     &__slider
         display: none
 .footer
