@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 window.addEventListener('DOMContentLoaded', () => {
 	
@@ -9,30 +9,7 @@ window.addEventListener('DOMContentLoaded', () => {
 		searchPanel.classList.toggle('active');
   	});
 
-  //Accrodions Functions
-
-	const accordionParent = document.querySelectorAll('.accordion__wrapper');
-		  
-
-	accordionParent.forEach((item, index) => {
-		const accordionBtn = document.querySelectorAll('.accordion__more-btn');
-
-		accordionBtn[index].addEventListener('click', () => {
-			accordionBtn[index].classList.toggle('active');
-			item.classList.toggle('active');
-
-			const accordionContent = document.querySelectorAll('.accordion__hidden');
-
-			if (item.classList.contains('active')) {
-				accordionContent[index].style.height = `${accordionContent[index].scrollHeight}px`;
-				accordionBtn[index].textContent = 'Скрыть';
-			} else {
-				accordionContent[index].style.height = `0px`;
-				accordionBtn[index].textContent = 'Показать еще';
-			}
-		});
-	});
-
+  
 	//Basket
 
 	const basketInputOnlinePay = document.querySelector('#online'),
@@ -92,6 +69,27 @@ window.addEventListener('DOMContentLoaded', () => {
 
 	countPrice();
 
+	//Accrodions Functions
+
+	const accordion = document.querySelectorAll('.accordion__wrapper');
+	const accordionBtn = document.querySelectorAll('.accordion__more-btn');
+	const accordionContent = document.querySelectorAll('.accordion__hidden');
+
+	accordionBtn.forEach((item, index) => {
+		item.addEventListener('click', () => {
+			item.classList.toggle('active');
+			accordion[index].classList.toggle('active');
+
+			if (accordion[index].classList.contains('active')) {
+				accordionContent[index].style.height = `${accordionContent[index].scrollHeight}px`;
+				item.textContent = 'Скрыть';
+			} else {
+				accordionContent[index].style.height = `0px`;
+				item.textContent = 'Показать еще';
+			}
+		});
+
+	});
 
 	//mobile menu
 
@@ -101,6 +99,41 @@ window.addEventListener('DOMContentLoaded', () => {
 	mobileMenuBtn.addEventListener('click', () => {
 		mobileMenuBtn.classList.toggle('active');
 		mobileMenuContent.classList.toggle('active');
+	});
+
+	//filter
+	const filterPrice = document.querySelector('.catalog-cards__sort-panel__price'),
+		  filterPopular = document.querySelector('.catalog-cards__sort-panel__popular');
+
+	filterPrice.addEventListener('click', () => {
+		filterPrice.classList.toggle('active');
+		filterPopular.classList.remove('active');
+	});
+
+	filterPopular.addEventListener('click', () => {
+		filterPopular.classList.toggle('active');
+		filterPrice.classList.remove('active');
+	});
+
+
+	//catalog list
+
+	const catalogLinks = document.querySelectorAll('.catalog-cards-links-item'),
+		  catalogPrev = document.querySelector('.catalog-cards-navigation-prev'),
+		  catalogNext = document.querySelector('.catalog-cards-navigation-next');
+
+	
+
+	function disactiveCatalogLink() {
+		catalogLinks.forEach(item => item.classList.remove('active'));
+	}
+
+	catalogLinks.forEach((item) => {
+		item.addEventListener('click', (e) => {
+			e.preventDefault();
+			disactiveCatalogLink();
+			item.classList.add('active');
+		});
 	});
 
 	//slider Brands

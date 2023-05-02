@@ -15,6 +15,27 @@
                     height: 18px
         &__mobil-btn
             margin-right: 16px
+    .mobile__menu
+        width: 100.2%
+        border-right: none
+        padding: 20px 15px
+        top: -222px
+        &__change-language
+            display: flex
+            margin-top: 30px
+            &-btn
+                margin-right: 15px
+                p
+                    cursor: pointer
+                    font-size: 14px
+                    line-height: 16px
+                    color: #D2D2D2
+                &:last-child
+                    margin: 0
+            &-btn.active
+                p
+                    color: #1A1A1A
+
     .preview
         padding: 124px 0 114px 0
         &__title
@@ -34,6 +55,120 @@
                 margin-bottom: 7px
                 font-size: 16px
                 line-height: 18px
+    .basket.active
+        top: 50px
+    .basket
+        width: 100%
+        border-radius: 0
+        padding: 20px 5px 20px 15px
+        &__title
+            padding-right: 5px
+            &__wrapper
+                font-size: 24px
+                line-height: 28px
+                padding-bottom: 18px
+            span
+                width: 16px
+                height: 8px
+                &::after,
+                &::before
+                    width: 10px
+                &::before
+                    left: -1px
+        &__list
+            max-height: 475px
+            padding: 18px 0
+            &__scroll
+                padding-right: 8px
+        &__item
+            padding: 18px 0
+            &__thing
+                &__descr
+                    &__title
+                        font-size: 14px
+                        line-height: 16px
+                    &__price
+                        font-size: 12px
+                        line-height: 14px
+            &__remove
+                font-size: 14px
+                line-height: 16px
+        &__pay
+            margin-top: 7px
+            padding-right: 10px
+            &__title
+                font-size: 16px
+                line-height: 18px
+            &__sum
+                font-size: 18px
+                line-height: 21px
+            &__form
+                padding-right: 10px
+                margin-top: 20px
+                &__name-phone
+                    display: block
+                &__name,
+                &__phone,
+                &__mail
+                    margin: 15px 0 0 0
+                    font-size: 14px
+                    line-height: 140%
+                    &::placeholder
+                        font-size: 14px
+                        line-height: 140%
+            &__choice
+                margin-top: 25px
+                padding-right: 10px
+                &__title
+                    font-size: 16px
+                    line-height: 18px
+                &__btn
+                    margin-top: 20px
+                    &-online
+                        margin-right: 30px
+                        label
+                            font-size: 14px
+                            line-height: 140%
+                    &-crypto
+                        label
+                            font-size: 14px
+                            line-height: 140%
+                &__form
+                    &__online 
+                    &__name-secondname
+                        margin-top: 5px
+                        display: block
+                    &__name,
+                    &__secondname
+                        margin: 15px 0 0 0
+                        font-size: 14px
+                        line-height: 140%
+                        &::placeholder
+                            font-size: 14px
+                            line-height: 140%
+                    &__card
+                        margin-top: 15px
+                        font-size: 14px
+                        line-height: 140%
+                        &::placeholder
+                            font-size: 14px
+                            line-height: 140%
+                        &-info
+                            margin-top: 15px
+                        &-time,
+                        &-cvv
+                            font-size: 14px
+                            line-height: 140%
+                            &::placeholder
+                                font-size: 14px
+                                line-height: 140%
+            &__btn
+                margin-top: 25px
+                height: 45px
+                font-size: 12px
+                line-height: 14px
+                padding: 13px 0
+
     .about-company
         padding: 60px 0
         &__title

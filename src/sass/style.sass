@@ -37,6 +37,7 @@
         display: flex
         align-items: center
         margin: 0 -35.5px
+        overflow: hidden
     &__mobile-wrapper
         display: flex
         align-items: center
@@ -147,7 +148,7 @@
     background-color: #fff
     position: absolute
     right: 192px
-    top: -1075px
+    top: -1145px
     z-index: 2
     box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.15)
     border-radius: 2px
@@ -621,6 +622,7 @@
         -webkit-flex-wrap: wrap
         -ms-flex-wrap: wrap
         flex-wrap: wrap
+        overflow: hidden
     &__card
         width: 25%
         padding: 0 15px
@@ -667,6 +669,7 @@
         -ms-flex-wrap: wrap
         flex-wrap: wrap
         margin: 40px -15px 0 -15px
+        overflow: hidden
     &__row
         width: 33.33%
         padding: 0 15px
@@ -715,6 +718,7 @@
         flex-wrap: wrap
         margin: 38px -46px 0 -46px
         align-items: center
+        overflow: hidden
     &__item
         padding: 0 46px
     &__slider
@@ -748,6 +752,7 @@
         -ms-flex-wrap: wrap
         flex-wrap: wrap
         margin: 40px -15px 0 -15px
+        overflow: hidden
     &__card
         width: 25%
         padding: 0 15px
@@ -891,7 +896,7 @@
     width: auto
 
 
-                        //Catalog
+//Разводная
 
 .main
     &__title
@@ -1001,7 +1006,7 @@
         border-top: none
         padding: 15px 17px
         position: absolute
-        z-index: 3
+        z-index: 1
         background-color: #fff
         min-height: 180px
     &__link
@@ -1106,7 +1111,212 @@
             font-size: 18px
             line-height: 140%
             color: #818181
-            
+
+
+
+//Каталог
+.back-to-page
+    display: flex
+    padding: 40px 0 30px 0
+    align-items: center
+    text-decoration: none
+    &-img
+        width: 16px
+        height: 12px
+        margin-right: 10px
+    &-text
+        font-weight: 400
+        font-size: 16px
+        line-height: 18px
+        color: #1A1A1A
+.product
+    background-color: #F8F8F8
+    border-radius: 2px
+    &__info
+        padding: 20px 36px 20px 59px
+        display: flex
+        align-items: center
+        border-bottom: 1px solid #818181
+        &-img
+            margin-right: 89px
+            img
+                width: 102px
+                height: 174px
+        &-block
+            &-title
+                font-weight: 500
+                font-size: 38px
+                line-height: 44px
+                color: #1A1A1A
+            &-descr
+                font-weight: 400
+                font-size: 18px
+                line-height: 140%
+                color: #818181
+                margin-top: 20px
+    &__list
+        display: -webkit-flex
+        display: -ms-flexbox
+        display: flex
+        -webkit-flex-wrap: wrap
+        -ms-flex-wrap: wrap
+        flex-wrap: wrap
+        padding: 17.5px
+        &-block
+            width: 20%
+            padding: 7.5px
+            &-item
+                background-color: #1A1A1A
+                width: 100%
+                height: 75px
+                display: flex
+                align-items: center
+                justify-content: center
+                text-align: center
+                text-decoration: none
+                padding: 0 15px
+                &-link
+                    font-weight: 700
+                    font-size: 18px
+                    line-height: 21px
+                    color: #FFFFFF
+.catalog-cards
+    padding: 40px 0
+    &__sort-panel
+        display: flex
+        align-items: center
+        &__title
+            margin-right: 20px
+            font-weight: 400
+            font-size: 16px
+            line-height: 18px
+            color: #818181
+        &__price
+            display: flex
+            align-items: center
+            margin-right: 20px
+            cursor: pointer
+            p
+                margin-right: 5px
+                font-weight: 400
+                font-size: 16px
+                line-height: 18px
+                color: #1A1A1A
+            img
+        &__popular
+            display: flex
+            align-items: center
+            cursor: pointer
+            p
+                margin-right: 5px
+                font-weight: 400
+                font-size: 16px
+                line-height: 18px
+                color: #1A1A1A
+            img
+        &__price.active
+            img
+                transform: scale(1, -1)
+        &__popular.active
+            img
+                transform: scale(1, -1)
+    &-block
+        display: -webkit-flex
+        display: -ms-flexbox
+        display: flex
+        -webkit-flex-wrap: wrap
+        -ms-flex-wrap: wrap
+        flex-wrap: wrap
+        margin: -15px
+        margin-top: 15px
+        &-item
+            padding: 15px
+            width: 25%
+            &-wrapper
+                width: 100%
+                // height: 534px
+            &-img
+                width: 100%
+                border: 1px solid #EFEFEF
+                padding: 27.5px 0
+            &-text
+                padding: 15px 0 20px 0
+                &-title
+                    font-weight: 400
+                    font-size: 14px
+                    line-height: 16px
+                    color: #818181
+                &-descr
+                    font-weight: 500
+                    font-size: 18px
+                    line-height: 21px
+                    color: #1A1A1A
+                    margin-top: 15px
+                    width: 90%
+                &-price
+                    font-weight: 700
+                    font-size: 18px
+                    line-height: 21px
+                    color: #1A1A1A
+                    margin-top: 15px
+                &-btn
+                    width: 100%
+                    height: 45px
+                    background: #1A1A1A
+                    padding: 13.5px 0
+                    font-weight: 400
+                    font-size: 16px
+                    line-height: 18px
+                    color: #FFFFFF
+                    border: none
+                    outline: none
+                    cursor: pointer
+    &-navigation
+        display: flex
+        align-items: center
+        justify-content: end
+        margin-top: 40px
+        &-prev
+            margin-right: 15px
+            background-color: #fff
+            border: none
+            outline: none
+            cursor: pointer 
+        &-next
+            margin-left: 15px
+            background-color: #fff
+            border: none
+            outline: none
+            cursor: pointer
+    &-links
+        display: flex
+        align-items: end
+        margin: 0 -7.5px
+        &-item
+            padding: 0 7.5px
+            a
+                width: 45px
+                height: 45px
+                text-decoration: none
+                background-color: #fff
+                color: #1a1a1a
+                text-align: center
+                display: flex
+                align-items: center
+                justify-content: center
+                border: 1px solid #1a1a1a
+                border-radius: 2px
+                transition: .3s all
+                font-weight: 300
+                font-size: 18px
+                line-height: 21px
+                color: #1A1A1A
+        &-item.active
+            a
+                background: #1A1A1A
+                transition: .3s all
+                color: #fff
+
                         //Imorts
 @import medium
 @import tablet

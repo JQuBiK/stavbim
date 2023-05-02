@@ -143,7 +143,7 @@
     .basket.active
         top: 50px
     .basket
-        right: -1px
+        right: 0
     .preview
         padding: 123px 0 122px 2px
         &__title
@@ -159,6 +159,7 @@
                 line-height: 21px
     .about-company
         padding: 60px 0
+        overflow-x: hidden
         &__title
             font-size: 28px
             line-height: 32px
@@ -173,6 +174,7 @@
                 display: none
             &-tablet
                 display: block
+        &__wrapperv
     .catalog
         padding: 0 0 60px 0
         &__title
@@ -337,6 +339,12 @@
         &__wrapper
             width: 91.5%
             min-height: 170px
+        &__hidden
+            &__link
+                a
+                    font-size: 14px
+                    line-height: 16px
+
     .info
         padding: 40px 0 108px 0
         &__text
