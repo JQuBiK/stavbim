@@ -69,6 +69,37 @@ window.addEventListener('DOMContentLoaded', () => {
 
 	countPrice();
 
+	//slider Brands
+	$('.brands__slider').slick({
+		dots: true,
+		infinite: false,
+		speed: 300,
+		slidesToShow: 1,
+		variableWidth: true,
+		arrows: false,
+		dotsClass: 'slick-dots brands__dots',
+	});
+	//Slider Works
+	$('.works__slider').slick({
+		dots: true,
+		infinite: false,
+		speed: 300,
+		slidesToShow: 1,
+		variableWidth: true,
+		arrows: false,
+		dotsClass: 'slick-dots works__dots',
+	});
+	//slider Product
+	$('.product__list-slider').slick({
+		dots: false,
+		infinite: false,
+		speed: 300,
+		slidesToShow: 1,
+		variableWidth: true,
+		arrows: false,
+		dotsClass: 'slick-dots works__dots',
+	});
+
 	//Accrodions Functions
 
 	const accordion = document.querySelectorAll('.accordion__wrapper');
@@ -118,42 +149,55 @@ window.addEventListener('DOMContentLoaded', () => {
 
 	//catalog list
 
-	const catalogLinks = document.querySelectorAll('.catalog-cards-links-item'),
+	const catalogLink = document.querySelectorAll('.catalog-cards-links-item'),
 		  catalogPrev = document.querySelector('.catalog-cards-navigation-prev'),
 		  catalogNext = document.querySelector('.catalog-cards-navigation-next');
+
+	let linkIndex = 0;
 
 	
 
 	function disactiveCatalogLink() {
-		catalogLinks.forEach(item => item.classList.remove('active'));
+		catalogLink.forEach(item => item.classList.remove('active'));
 	}
 
-	catalogLinks.forEach((item) => {
+	function activeCatalogLink(i) {
+		catalogLink[i].classList.add('active');
+	}
+
+	catalogLink.forEach((item,index) => {
 		item.addEventListener('click', (e) => {
 			e.preventDefault();
+			linkIndex = index;
 			disactiveCatalogLink();
-			item.classList.add('active');
+			activeCatalogLink(linkIndex);
 		});
 	});
 
-	//slider Brands
-	$('.brands__slider').slick({
-		dots: true,
-		infinite: false,
-		speed: 300,
-		slidesToShow: 1,
-		variableWidth: true,
-		arrows: false,
-		dotsClass: 'slick-dots brands__dots',
+	catalogPrev.addEventListener('click', () => {
+		linkIndex -= 1;
+		disactiveCatalogLink();
+		if (linkIndex < 0) {
+			linkIndex = catalogLink.length - 1
+			activeCatalogLink(linkIndex);
+		} else {
+			activeCatalogLink(linkIndex);
+		}
 	});
-	//Slider Works
-	$('.works__slider').slick({
-		dots: true,
-		infinite: false,
-		speed: 300,
-		slidesToShow: 1,
-		variableWidth: true,
-		arrows: false,
-		dotsClass: 'slick-dots works__dots',
+
+	catalogNext.addEventListener('click', () => {
+		linkIndex += 1;
+		disactiveCatalogLink();
+		if (linkIndex > catalogLink.length - 1) {
+			linkIndex = 0
+			activeCatalogLink(linkIndex);
+		} else {
+			activeCatalogLink(linkIndex);
+		}
 	});
+
+	disactiveCatalogLink();
+	activeCatalogLink(linkIndex);
+
+	
 });

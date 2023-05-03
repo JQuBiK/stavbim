@@ -917,7 +917,7 @@
         &-link.active
             color: #1A1A1A
         span
-            margin: 0 3px
+            margin: 0 4px
             font-weight: 400
             font-size: 14px
             line-height: 16px
@@ -1117,13 +1117,15 @@
 //Каталог
 .back-to-page
     display: flex
-    padding: 40px 0 30px 0
+    padding: 24px 0 42px 0
     align-items: center
     text-decoration: none
     &-img
         width: 16px
         height: 12px
         margin-right: 10px
+        &-mobile
+            display: none
     &-text
         font-weight: 400
         font-size: 16px
@@ -1133,7 +1135,7 @@
     background-color: #F8F8F8
     border-radius: 2px
     &__info
-        padding: 20px 36px 20px 59px
+        padding: 20px 36px 31px 59px
         display: flex
         align-items: center
         border-bottom: 1px solid #818181
@@ -1162,6 +1164,8 @@
         -ms-flex-wrap: wrap
         flex-wrap: wrap
         padding: 17.5px
+        &-slider
+            display: none
         &-block
             width: 20%
             padding: 7.5px
@@ -1175,13 +1179,14 @@
                 text-align: center
                 text-decoration: none
                 padding: 0 15px
+                border-radius: 2px
                 &-link
                     font-weight: 700
                     font-size: 18px
                     line-height: 21px
                     color: #FFFFFF
 .catalog-cards
-    padding: 40px 0
+    padding: 40px 0 101px 0
     &__sort-panel
         display: flex
         align-items: center
@@ -1228,7 +1233,7 @@
         -ms-flex-wrap: wrap
         flex-wrap: wrap
         margin: -15px
-        margin-top: 15px
+        margin-top: 0
         &-item
             padding: 15px
             width: 25%
@@ -1238,7 +1243,7 @@
             &-img
                 width: 100%
                 border: 1px solid #EFEFEF
-                padding: 27.5px 0
+                padding: 27.5px 0 22px 0
             &-text
                 padding: 15px 0 20px 0
                 &-title
@@ -1271,6 +1276,11 @@
                     border: none
                     outline: none
                     cursor: pointer
+                    transition: .3s all
+                    &:active
+                        transition: .3s all
+                        background-color: #252525
+                        
     &-navigation
         display: flex
         align-items: center
@@ -1292,6 +1302,8 @@
         display: flex
         align-items: end
         margin: 0 -7.5px
+        span
+            margin: 0 7.5px
         &-item
             padding: 0 7.5px
             a
