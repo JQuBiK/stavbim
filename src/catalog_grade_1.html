@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>stavbim.</title>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+        <link rel="stylesheet" href="css/style.min.css">
+    </head>
+    <body>
+        <header class="header">
+            <div class="container">
+                <div class="header__wrapper">
+                    <div class="header__mobile-wrapper">
+                        <div class="header__mobil-btn">
+                            <span class="header__mobil-btn-top"></span>
+                            <span class="header__mobil-btn-custom"></span>
+                        </div>
+                        <a href="index.html" class="header__logo">
+                            <img src="img/logo.svg" alt="logo" class="StavBim">
+                        </a>
+                    </div>
+                    <ul class="header__list">
+                        <li class="header__list-item"><a href="" class="header__link">О компании</a></li>
+                        <li class="header__list-item"><a href="adjustable.html" class="header__link">Каталог</a></li>
+                        <li class="header__list-item"><a href="" class="header__link">Как купить</a></li>
+                        <li class="header__list-item"><a href="" class="header__link">Бренды</a></li>
+                        <li class="header__list-item"><a href="" class="header__link">Мои работы</a></li>
+                        <li class="header__list-item"><a href="" class="header__link">Заказать разработку семейства</a></li>
+                    </ul>
+                    <div class="header__mobile-wrapper">
+                        <div class="header__change-language">
+                            <div class="header__change-language-btn active"><p>RUS</p></div>
+                            <div class="header__change-language-btn"><p>ENG</p></div>
+                        </div>
+                        <div class="header__search-basket">
+                            <div id="search" class="header__search-basket-btn">
+                                <img src="img/search.svg" alt="Searc">
+                            </div>
+                            <div id="basket" class="header__search-basket-btn">
+                                <img src="img/basket.svg" alt="Basket">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="search-panel">
+                <input placeholder="Поиск" type="search" id="search" name="" class="search-panel__input">
+                <button class="search-panel__btn">Найти</button>
+            </div>
+        </header>
+    
+        <!-- Меню -->
+        
+        <div class="mobile__menu">
+            <ul class="mobile__menu__list">
+                <li class="mobile__menu__list-item"><a href="" class="mobile__menu__link">О компании</a></li>
+                <li class="mobile__menu__list-item"><a href="adjustable.html" class="mobile__menu__link">Каталог</a></li>
+                <li class="mobile__menu__list-item"><a href="" class="mobile__menu__link">Как купить</a></li>
+                <li class="mobile__menu__list-item"><a href="" class="mobile__menu__link">Бренды</a></li>
+                <li class="mobile__menu__list-item"><a href="" class="mobile__menu__link">Мои работы</a></li>
+                <li class="mobile__menu__list-item"><a href="" class="mobile__menu__link">Заказать разработку семейства</a></li>
+            </ul>
+            <div class="mobile__menu__change-language">
+                <div class="mobile__menu__change-language-btn active"><p>RUS</p></div>
+                <div class="mobile__menu__change-language-btn"><p>ENG</p></div>
+            </div>
+        </div>
+    
+        <!-- Меню -->
+    
+        <!-- КОРЗИНА -->
+    
+        <div class="basket">
+            <div class="basket__title">
+               <div class="basket__title__wrapper">
+                    Корзина <span></span>
+               </div>
+            </div>
+            <div class="basket__list">
+                <div class="basket__list__scroll">
+                    <div class="basket__item">
+                        <div class="basket__item__thing">
+                            <div class="basket__item__thing__icon"><img src="icons/works_icon.svg" alt=""></div>
+                            <div class="basket__item__thing__descr">
+                                <div class="basket__item__thing__descr__title">Модель для проектирования</div>
+                                <div class="basket__item__thing__descr__price">500 ₽</div>
+                            </div>
+                        </div>
+                        <div class="basket__item__remove">&#10006;</div>
+                    </div>
+                    <div class="basket__item">
+                        <div class="basket__item__thing">
+                            <div class="basket__item__thing__icon"><img src="icons/works_icon.svg" alt=""></div>
+                            <div class="basket__item__thing__descr">
+                                <div class="basket__item__thing__descr__title">Модель для проектирования</div>
+                                <div class="basket__item__thing__descr__price">500 ₽</div>
+                            </div>
+                        </div>
+                        <div class="basket__item__remove">&#10006;</div>
+                    </div>
+                    <div class="basket__item">
+                        <div class="basket__item__thing">
+                            <div class="basket__item__thing__icon"><img src="icons/works_icon.svg" alt=""></div>
+                            <div class="basket__item__thing__descr">
+                                <div class="basket__item__thing__descr__title">Модель для проектирования</div>
+                                <div class="basket__item__thing__descr__price">500 ₽</div>
+                            </div>
+                        </div>
+                        <div class="basket__item__remove">&#10006;</div>
+                    </div>
+                    <div class="basket__item">
+                        <div class="basket__item__thing">
+                            <div class="basket__item__thing__icon"><img src="icons/works_icon.svg" alt=""></div>
+                            <div class="basket__item__thing__descr">
+                                <div class="basket__item__thing__descr__title">Модель для проектирования</div>
+                                <div class="basket__item__thing__descr__price">500 ₽</div>
+                            </div>
+                        </div>
+                        <div class="basket__item__remove">&#10006;</div>
+                    </div>
+                    <div class="basket__item">
+                        <div class="basket__item__thing">
+                            <div class="basket__item__thing__icon"><img src="icons/works_icon.svg" alt=""></div>
+                            <div class="basket__item__thing__descr">
+                                <div class="basket__item__thing__descr__title">Модель для проектирования</div>
+                                <div class="basket__item__thing__descr__price">500 ₽</div>
+                            </div>
+                        </div>
+                        <div class="basket__item__remove">&#10006;</div>
+                    </div>
+                    <div class="basket__item">
+                        <div class="basket__item__thing">
+                            <div class="basket__item__thing__icon"><img src="icons/works_icon.svg" alt=""></div>
+                            <div class="basket__item__thing__descr">
+                                <div class="basket__item__thing__descr__title">Модель для проектирования</div>
+                                <div class="basket__item__thing__descr__price">500 ₽</div>
+                            </div>
+                        </div>
+                        <div class="basket__item__remove">&#10006;</div>
+                    </div>
+                    <div class="basket__item">
+                        <div class="basket__item__thing">
+                            <div class="basket__item__thing__icon"><img src="icons/works_icon.svg" alt=""></div>
+                            <div class="basket__item__thing__descr">
+                                <div class="basket__item__thing__descr__title">Модель для проектирования</div>
+                                <div class="basket__item__thing__descr__price">500 ₽</div>
+                            </div>
+                        </div>
+                        <div class="basket__item__remove">&#10006;</div>
+                    </div>
+                    <div class="basket__item">
+                        <div class="basket__item__thing">
+                            <div class="basket__item__thing__icon"><img src="icons/works_icon.svg" alt=""></div>
+                            <div class="basket__item__thing__descr">
+                                <div class="basket__item__thing__descr__title">Модель для проектирования</div>
+                                <div class="basket__item__thing__descr__price">500 ₽</div>
+                            </div>
+                        </div>
+                        <div class="basket__item__remove">&#10006;</div>
+                    </div>
+                </div>
+            </div>
+            <div class="basket__pay">
+                <div class="basket__pay__title">Сумма закза:</div>
+                <div class="basket__pay__sum">0 ₽</div>
+            </div>
+            <form action="" class="basket__pay__form">
+                <div class="basket__pay__form__name-phone">
+                    <input placeholder="Имя" type="text" class="basket__pay__form__name">
+                    <input placeholder="Номер телефона" type="text" class="basket__pay__form__phone">
+                </div>
+                <input placeholder="Электронная почта" type="text" class="basket__pay__form__mail">
+            </form>
+            <div class="basket__pay__choice">
+                <div class="basket__pay__choice__title">Способ оплаты</div>
+                <div class="basket__pay__choice__btn">
+                    <div class="basket__pay__choice__btn-online">
+                        <input type="radio" id="online" name="choice" value="online" checked>
+                        <label for="online">Онлайн</label>
+                    </div>
+                    <div class="basket__pay__choice__btn-crypto">
+                        <input type="radio" id="crypto" name="choice" value="crypto">
+                        <label for="crypto">Криптовалюта</label>
+                    </div>
+                </div>
+                <form action="" class="basket__pay__choice__form__online active">
+                    <div class="basket__pay__choice__form__name-secondname">
+                        <input placeholder="Имя" type="text" class="basket__pay__choice__form__name">
+                        <input placeholder="Фамилия" type="text" class="basket__pay__choice__form__secondname">
+                    </div>
+                    <input placeholder="Номер карты" type="text" class="basket__pay__choice__form__card">
+                    <div class="basket__pay__choice__form__card-info">
+                        <input placeholder="Действует до " type="text" class="basket__pay__choice__form__card-time">
+                        <input placeholder="CVV - код" type="text" class="basket__pay__choice__form__card-cvv">
+                    </div>
+                </form>
+                <form action="" class="basket__pay__choice__form__crypto">
+                    <input placeholder="Номер кошелька" type="text" class="basket__pay__choice__form__wallet-number">
+                </form>
+            </div>
+            <div class="basket__pay__btn__block">
+                <button class="basket__pay__btn">Купить</button>
+            </div>
+            <div class="basket__copyright"><p>Нажимая кнопку «Купить» вы соглашаетесь с <span>политикой конфиденциальности</span></p></div>
+        </div>
+    
+        <!-- КОРЗИНА -->
+
+    <div class="container">
+        <div class="directory">
+            <div class="directory__way"><a href="" class="directory__way-link">Главная</a><span>/</span></div>
+            <div class="directory__way"><a href="" class="directory__way-link">Каталог</a><span>/</span></div>
+            <div class="directory__way"><a href="" class="directory__way-link active">Арматура трубопроводов</a></div>
+        </div>
+    </div>
+    <div class="container product-container">
+        <a href="" class="back-to-page">
+            <img src="icons/back-to-page.svg" alt="Back Arrow" class="back-to-page-img">
+            <p class="back-to-page-text">Вернуться назад</p>
+            <img src="icons/back-to-page-mobile.svg" alt="Back Arrow" class="back-to-page-img-mobile">
+        </a>
+        <section class="product">
+            <div class="product__info">
+                <div class="product__info-img"><img src="img/catalog/catalog_card2.png" alt=""></div>
+                <div class="product__info-block">
+                    <h1 class="product__info-block-title">Арматура трубопроводов</h1>
+                    <h2 class="product__info-block-descr">Наша компания - это специализированный поставщик и продавец систем вентиляции и кондиционирования воздуха для широкого спектра клиентов. Мы предлагаем широкий выбор продуктов, которые отвечают самым высоким стандартам качества и эффективности.</h2>
+                </div>
+            </div>
+            <div class="product__list">
+                <div class="product__list-block">
+                    <a href="catalog_grade_2.html" class="product__list-block-item">
+                        <div class="product__list-block-item-link">Краны шаровые</div>
+                    </a>
+                </div>
+                <div class="product__list-block">
+                    <a href="catalog_grade_2.html" class="product__list-block-item">
+                        <div class="product__list-block-item-link">Вентили</div>
+                    </a>
+                </div>
+                <div class="product__list-block">
+                    <a href="catalog_grade_2.html" class="product__list-block-item">
+                        <div class="product__list-block-item-link">Задвижки</div>
+                    </a>
+                </div>
+                <div class="product__list-block">
+                    <a href="catalog_grade_2.html" class="product__list-block-item">
+                        <div class="product__list-block-item-link">Обратные клапаны </div>
+                    </a>
+                </div>
+                <div class="product__list-block">
+                    <a href="catalog_grade_2.html" class="product__list-block-item">
+                        <div class="product__list-block-item-link">Предохранительные клапаны</div>
+                    </a>
+                </div>
+                <div class="product__list-block">
+                    <a href="catalog_grade_2.html" class="product__list-block-item">
+                        <div class="product__list-block-item-link">Балансировочные клапаны</div>
+                    </a>
+                </div>
+                <div class="product__list-block">
+                    <a href="catalog_grade_2.html" class="product__list-block-item">
+                        <div class="product__list-block-item-link">Манометр</div>
+                    </a>
+                </div>
+                <div class="product__list-block">
+                    <a href="catalog_grade_2.html" class="product__list-block-item">
+                        <div class="product__list-block-item-link">Термометры</div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Слайдер -->
+
+            <div class="product__list-slider">
+                <div class="product__list-slider-block">
+                    <a href="catalog_grade_2.html" class="product__list-slider-block-item">
+                        <div class="product__list-slider-block-item-link">Краны шаровые</div>
+                    </a>
+                </div>
+                <div class="product__list-slider-block">
+                    <a href="catalog_grade_2.html" class="product__list-slider-block-item">
+                        <div class="product__list-slider-block-item-link">Вентили</div>
+                    </a>
+                </div>
+                <div class="product__list-slider-block">
+                    <a href="catalog_grade_2.html" class="product__list-slider-block-item">
+                        <div class="product__list-slider-block-item-link">Задвижки</div>
+                    </a>
+                </div>
+                <div class="product__list-slider-block">
+                    <a href="catalog_grade_2.html" class="product__list-slider-block-item">
+                        <div class="product__list-slider-block-item-link">Обратные клапаны </div>
+                    </a>
+                </div>
+                <div class="product__list-slider-block">
+                    <a href="catalog_grade_2.html" class="product__list-slider-block-item">
+                        <div class="product__list-slider-block-item-link">Предохранительные клапаны</div>
+                    </a>
+                </div>
+                <div class="product__list-slider-block">
+                    <a href="catalog_grade_2.html" class="product__list-slider-block-item">
+                        <div class="product__list-slider-block-item-link">Балансировочные клапаны</div>
+                    </a>
+                </div>
+                <div class="product__list-slider-block">
+                    <a href="catalog_grade_2.html" class="product__list-slider-block-item">
+                        <div class="product__list-slider-block-item-link">Манометр</div>
+                    </a>
+                </div>
+                <div class="product__list-slider-block">
+                    <a href="catalog_grade_2.html" class="product__list-slider-block-item">
+                        <div class="product__list-slider-block-item-link">Термометры</div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+    <section class="catalog-cards">
+        <div class="container">
+            <div class="catalog-cards__sort-panel">
+                <div class="catalog-cards__sort-panel__title">Сортировать по:</div>
+                <div class="catalog-cards__sort-panel__price">
+                    <p>цене</p>
+                    <img src="icons/arrow_upp.svg" alt="">
+                </div>
+                <div class="catalog-cards__sort-panel__popular">
+                    <p>популярности</p>
+                    <img src="icons/arrow_upp.svg" alt="">
+                </div>
+            </div>
+            <div class="catalog-cards-block">
+                <div class="catalog-cards-block-item">
+                    <div class="catalog-cards-block-item-wrapper">
+                        <div class="catalog-cards-block-item-img">
+                            <img src="img/catalog_lvl_1/card1.png" alt="">
+                        </div>
+                        <div class="catalog-cards-block-item-text">
+                            <div class="catalog-cards-block-item-text-title">Название раздела</div>
+                            <div class="catalog-cards-block-item-text-descr">Mirai R32 monosplit (indoor unit) RAS-24BKVG-E</div>
+                            <div class="catalog-cards-block-item-text-price">24 900 ₽</div>
+                        </div>
+                        <button class="catalog-cards-block-item-text-btn">Добавить в корзину</button>
+                    </div>
+                </div>
+                <div class="catalog-cards-block-item">
+                    <div class="catalog-cards-block-item-wrapper">
+                        <div class="catalog-cards-block-item-img">
+                            <img src="img/catalog_lvl_1/card2.png" alt="">
+                        </div>
+                        <div class="catalog-cards-block-item-text">
+                            <div class="catalog-cards-block-item-text-title">Название раздела</div>
+                            <div class="catalog-cards-block-item-text-descr">Mirai R32 monosplit (indoor unit) RAS-24BKVG-E</div>
+                            <div class="catalog-cards-block-item-text-price">24 900 ₽</div>
+                        </div>
+                        <button class="catalog-cards-block-item-text-btn">Добавить в корзину</button>
+                    </div>
+                </div>
+                <div class="catalog-cards-block-item">
+                    <div class="catalog-cards-block-item-wrapper">
+                        <div class="catalog-cards-block-item-img">
+                            <img src="img/catalog_lvl_1/card3.png" alt="">
+                        </div>
+                        <div class="catalog-cards-block-item-text">
+                            <div class="catalog-cards-block-item-text-title">Название раздела</div>
+                            <div class="catalog-cards-block-item-text-descr">Mirai R32 monosplit (indoor unit) RAS-24BKVG-E</div>
+                            <div class="catalog-cards-block-item-text-price">24 900 ₽</div>
+                        </div>
+                        <button class="catalog-cards-block-item-text-btn">Добавить в корзину</button>
+                    </div>
+                </div>
+                <div class="catalog-cards-block-item">
+                    <div class="catalog-cards-block-item-wrapper">
+                        <div class="catalog-cards-block-item-img">
+                            <img src="img/catalog_lvl_1/card4.png" alt="">
+                        </div>
+                        <div class="catalog-cards-block-item-text">
+                            <div class="catalog-cards-block-item-text-title">Название раздела</div>
+                            <div class="catalog-cards-block-item-text-descr">Mirai R32 monosplit (indoor unit) RAS-24BKVG-E</div>
+                            <div class="catalog-cards-block-item-text-price">24 900 ₽</div>
+                        </div>
+                        <button class="catalog-cards-block-item-text-btn">Добавить в корзину</button>
+                    </div>
+                </div>
+                <div class="catalog-cards-block-item">
+                    <div class="catalog-cards-block-item-wrapper">
+                        <div class="catalog-cards-block-item-img">
+                            <img src="img/catalog_lvl_1/card5.png" alt="">
+                        </div>
+                        <div class="catalog-cards-block-item-text">
+                            <div class="catalog-cards-block-item-text-title">Название раздела</div>
+                            <div class="catalog-cards-block-item-text-descr">Mirai R32 monosplit (indoor unit) RAS-24BKVG-E</div>
+                            <div class="catalog-cards-block-item-text-price">24 900 ₽</div>
+                        </div>
+                        <button class="catalog-cards-block-item-text-btn">Добавить в корзину</button>
+                    </div>
+                </div>
+                <div class="catalog-cards-block-item">
+                    <div class="catalog-cards-block-item-wrapper">
+                        <div class="catalog-cards-block-item-img">
+                            <img src="img/catalog_lvl_1/card6.png" alt="">
+                        </div>
+                        <div class="catalog-cards-block-item-text">
+                            <div class="catalog-cards-block-item-text-title">Название раздела</div>
+                            <div class="catalog-cards-block-item-text-descr">Mirai R32 monosplit (indoor unit) RAS-24BKVG-E</div>
+                            <div class="catalog-cards-block-item-text-price">24 900 ₽</div>
+                        </div>
+                        <button class="catalog-cards-block-item-text-btn">Добавить в корзину</button>
+                    </div>
+                </div>
+                <div class="catalog-cards-block-item">
+                    <div class="catalog-cards-block-item-wrapper">
+                        <div class="catalog-cards-block-item-img">
+                            <img src="img/catalog_lvl_1/card7.png" alt="">
+                        </div>
+                        <div class="catalog-cards-block-item-text">
+                            <div class="catalog-cards-block-item-text-title">Название раздела</div>
+                            <div class="catalog-cards-block-item-text-descr">Mirai R32 monosplit (indoor unit) RAS-24BKVG-E</div>
+                            <div class="catalog-cards-block-item-text-price">24 900 ₽</div>
+                        </div>
+                        <button class="catalog-cards-block-item-text-btn">Добавить в корзину</button>
+                    </div>
+                </div>
+                <div class="catalog-cards-block-item">
+                    <div class="catalog-cards-block-item-wrapper">
+                        <div class="catalog-cards-block-item-img">
+                            <img src="img/catalog_lvl_1/card8.png" alt="">
+                        </div>
+                        <div class="catalog-cards-block-item-text">
+                            <div class="catalog-cards-block-item-text-title">Название раздела</div>
+                            <div class="catalog-cards-block-item-text-descr">Mirai R32 monosplit (indoor unit) RAS-24BKVG-E</div>
+                            <div class="catalog-cards-block-item-text-price">24 900 ₽</div>
+                        </div>
+                        <button class="catalog-cards-block-item-text-btn">Добавить в корзину</button>
+                    </div>
+                </div>
+                <div class="catalog-cards-block-item">
+                    <div class="catalog-cards-block-item-wrapper">
+                        <div class="catalog-cards-block-item-img">
+                            <img src="img/catalog_lvl_1/card9.png" alt="">
+                        </div>
+                        <div class="catalog-cards-block-item-text">
+                            <div class="catalog-cards-block-item-text-title">Название раздела</div>
+                            <div class="catalog-cards-block-item-text-descr">Mirai R32 monosplit (indoor unit) RAS-24BKVG-E</div>
+                            <div class="catalog-cards-block-item-text-price">24 900 ₽</div>
+                        </div>
+                        <button class="catalog-cards-block-item-text-btn">Добавить в корзину</button>
+                    </div>
+                </div>
+                <div class="catalog-cards-block-item">
+                    <div class="catalog-cards-block-item-wrapper">
+                        <div class="catalog-cards-block-item-img">
+                            <img src="img/catalog_lvl_1/card10.png" alt="">
+                        </div>
+                        <div class="catalog-cards-block-item-text">
+                            <div class="catalog-cards-block-item-text-title">Название раздела</div>
+                            <div class="catalog-cards-block-item-text-descr">Mirai R32 monosplit (indoor unit) RAS-24BKVG-E</div>
+                            <div class="catalog-cards-block-item-text-price">24 900 ₽</div>
+                        </div>
+                        <button class="catalog-cards-block-item-text-btn">Добавить в корзину</button>
+                    </div>
+                </div>
+                <div class="catalog-cards-block-item">
+                    <div class="catalog-cards-block-item-wrapper">
+                        <div class="catalog-cards-block-item-img">
+                            <img src="img/catalog_lvl_1/card11.png" alt="">
+                        </div>
+                        <div class="catalog-cards-block-item-text">
+                            <div class="catalog-cards-block-item-text-title">Название раздела</div>
+                            <div class="catalog-cards-block-item-text-descr">Mirai R32 monosplit (indoor unit) RAS-24BKVG-E</div>
+                            <div class="catalog-cards-block-item-text-price">24 900 ₽</div>
+                        </div>
+                        <button class="catalog-cards-block-item-text-btn">Добавить в корзину</button>
+                    </div>
+                </div>
+                <div class="catalog-cards-block-item">
+                    <div class="catalog-cards-block-item-wrapper">
+                        <div class="catalog-cards-block-item-img">
+                            <img src="img/catalog_lvl_1/card12.png" alt="">
+                        </div>
+                        <div class="catalog-cards-block-item-text">
+                            <div class="catalog-cards-block-item-text-title">Название раздела</div>
+                            <div class="catalog-cards-block-item-text-descr">Mirai R32 monosplit (indoor unit) RAS-24BKVG-E</div>
+                            <div class="catalog-cards-block-item-text-price">24 900 ₽</div>
+                        </div>
+                        <button class="catalog-cards-block-item-text-btn">Добавить в корзину</button>
+                    </div>
+                </div>
+            </div>
+            <div class="catalog-cards-navigation">
+                <button class="catalog-cards-navigation-prev"><img src="icons/nav_prev.svg" alt=""></button>
+                <div class="catalog-cards-links">
+                    <div class="catalog-cards-links-item active"><a href="">1</a></div>
+                    <div class="catalog-cards-links-item"><a href="">2</a></div>
+                    <div class="catalog-cards-links-item"><a href="">3</a></div>
+                    <div class="catalog-cards-links-item"><a href="">4</a></div>
+                    <span>...</span>
+                    <div class="catalog-cards-links-item"><a href="">150</a></div>
+                </div>
+                <button class="catalog-cards-navigation-next"><img src="icons/nav_next.svg" alt=""></button>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrapper">
+                <div class="footer__list-container">
+                    <div class="footer__logo-mobile"><img src="img/footer_logo.svg" alt="StavBim"></div>
+                    <h4 class="footer__title">Меню сайта</h4>
+                    <ul class="footer__list">
+                        <li class="footer__item"><a href="" class="footer__item__link">О компании</a></li>
+                        <li class="footer__item"><a href="" class="footer__item__link">Каталог</a></li>
+                        <li class="footer__item"><a href="" class="footer__item__link">Как купить</a></li>
+                        <li class="footer__item"><a href="" class="footer__item__link">Бренды</a></li>
+                        <li class="footer__item"><a href="" class="footer__item__link">Мои работы</a></li>
+                        <li class="footer__item"><a href="" class="footer__item__link">Заказать разработку семейства</a></li>
+                    </ul>
+                </div>
+                <div class="footer__logo"><img src="img/footer_logo.svg" alt="StavBim"></div>
+            </div>
+            <div class="footer__moreinfo">
+                <div class="footer__copyright"><p>Политика конфиденциальности</p></div>
+                <div class="footer__date"><p>© 2023 ООО «stavbim»</p></div>
+                <div class="footer__prodaction">
+                    <div class="footer__prodaction-content">
+                        <p>Создание сайта</p>
+                        <img src="img/DapSiteLogo.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

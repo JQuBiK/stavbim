@@ -1244,6 +1244,8 @@
                 width: 100%
                 border: 1px solid #EFEFEF
                 padding: 27.5px 0 22px 0
+                img
+                    width: 100%
             &-text
                 padding: 15px 0 20px 0
                 &-title
@@ -1328,6 +1330,281 @@
                 background: #1A1A1A
                 transition: .3s all
                 color: #fff
+
+
+
+
+
+
+
+.item__catalog
+    &-cards-block-item
+        width: 33.33%
+        padding: 15px
+    &__wrapper
+        display: -webkit-flex
+        display: -ms-flexbox
+        display: flex
+        -webkit-flex-wrap: wrap
+        -ms-flex-wrap: wrap
+        flex-wrap: wrap
+    &__filter-block
+        width: 25%
+        &__kind
+            background-color: #F8F8F8
+            &__title.active
+                 span
+                    &::before
+                        transform: rotate(-45deg)
+                        transition: .3s all
+                    &::after
+                        transform: rotate(45deg)
+                        transition: .3s all
+            &__title
+                display: flex
+                align-items: center
+                justify-content: space-between
+                padding: 17px 15px
+                cursor: pointer
+                p   
+                    font-weight: 500
+                    font-size: 18px
+                    line-height: 21px
+                    color: #1A1A1A
+                    display: block
+                span
+                    width: 10px
+                    height: 5px
+                    display: block
+                    &::before,
+                    &::after
+                        content: ''
+                        display: block
+                        position: absolute
+                        width: 5px
+                        height: 1px
+                        background-color: #1A1A1A
+                        top: 50%
+                    &::before
+                        transform: rotate(-135deg)
+                        transition: .3s all
+                        left: 1px
+                    &::after
+                        transform: rotate(135deg)
+                        transition: .3s all
+                        right: 1px
+            &__descr
+                height: auto
+                padding: 0 15px 0 15px
+                overflow: hidden
+                list-style: none
+                transition: .3s all
+                &-link
+                    padding: 3px 0
+                    display: block
+                    &:first-child
+                        padding: 0 0 3px 0
+                    &:last-child
+                        padding: 3px 0 15px 0
+                    a
+                        font-weight: 400
+                        font-size: 18px
+                        line-height: 140%
+                        color: #1A1A1A
+                        text-decoration: none
+                        &:hover
+                            &::after
+                                width: 100%
+                                transition: .3s all
+                        &::after
+                            content: ''
+                            display: block
+                            position: absolute
+                            bottom: -1px
+                            left: 0
+                            background-color: #1A1A1A
+                            width: 0
+                            height: 1px
+                            transition: .3s all
+        &__manufacturer,
+        &__version
+            background-color: #F8F8F8
+            margin-top: 20px
+            &__title.active
+                 span
+                    &::before
+                        transform: rotate(-45deg)
+                        transition: .3s all
+                    &::after
+                        transform: rotate(45deg)
+                        transition: .3s all
+            &__title
+                display: flex
+                align-items: center
+                justify-content: space-between
+                padding: 17px 15px
+                cursor: pointer
+                p
+                    font-weight: 500
+                    font-size: 18px
+                    line-height: 21px
+                    color: #1A1A1A
+                span
+                    width: 10px
+                    height: 5px
+                    display: block
+                    &::before,
+                    &::after
+                        content: ''
+                        display: block
+                        position: absolute
+                        width: 5px
+                        height: 1px
+                        background-color: #1A1A1A
+                        top: 50%
+                    &::before
+                        transform: rotate(-135deg)
+                        transition: .3s all
+                        left: 1px
+                    &::after
+                        transform: rotate(135deg)
+                        transition: .3s all
+                        right: 1px
+            &__descr
+                height: auto
+                padding: 0 15px 0 15px
+                overflow: hidden
+                list-style: none
+                transition: .3s all
+                &-input
+                    padding: 2.5px 0
+                    &:first-child
+                        padding: 0 0 2.5px 0
+                    &:last-child
+                        padding: 2.5px 0 15px 0
+                    label
+                        font-weight: 400
+                        font-size: 18px
+                        line-height: 140%
+                        color: #1A1A1A
+                        display: flex
+                        align-items: center
+                        &::before
+                            content: ''
+                            display: flex
+                            align-items: center
+                            justify-content: center
+                            position: relative
+                            width: 16px
+                            height: 16px
+                            border-radius: 2px
+                            border: 1px solid #1A1A1A
+                            margin-right: 10px
+                    input[type=checkbox]
+                        display: none
+                    input[type=checkbox]:checked + label::before
+                        content: '✓'
+                        color: #fff
+                        background-color: #1A1A1A
+                        font-size: 12px
+    &__content-block
+        width: 75%
+        padding: 0 0 62px 30px
+        &-mobile
+            display: none
+        &-preview
+            background-color: #F8F8F8
+            display: flex
+            align-items: center
+            padding: 20px 45px 20px 0
+            &-img
+                margin-right: 30px
+            &-text
+                &__title
+                    font-weight: 500
+                    font-size: 38px
+                    line-height: 44px
+                    color: #1A1A1A
+                &__descr
+                    margin-top: 20px
+                    font-weight: 400
+                    font-size: 18px
+                    line-height: 140%
+                    color: #818181
+        &-filters
+            display: -webkit-flex
+            display: -ms-flexbox
+            display: flex
+            -webkit-flex-wrap: wrap
+            -ms-flex-wrap: wrap
+            flex-wrap: wrap
+            padding: 20px 0
+            &-show
+                width: 68.5%
+                padding-right: 37px
+                display: flex
+                flex-wrap: wrap
+                align-items: center
+                margin: -5px
+                &-item
+                    display: flex
+                    padding: 5px 10px
+                    align-items: center
+                    background-color: #1A1A1A
+                    color: #fff
+                    margin: 5px
+                    p
+                        font-weight: 400
+                        font-size: 16px
+                        line-height: 18px
+                        color: #FFFFFF
+                        margin-right: 8px
+                    a
+                        cursor: pointer
+                        font-size: 12px
+                        line-height: 15px
+                        text-decoration: none
+                        color: #FFFFFF
+                    
+            &-sort
+                width: 31.5%
+                padding-top: 10px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
                         //Imorts
 @import medium
