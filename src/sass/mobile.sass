@@ -578,3 +578,40 @@
     .directory__way 
         span
             margin: 0 3px
+    .item__catalog
+        &-cards-block-item
+            width: 100%
+            padding: 6px 0
+            &:nth-child(2n + 1)
+                display: none
+                
+        &__content
+            &-block
+                &-preview
+                    display: block
+                    margin-top: 20px
+                    padding: 20px 15px
+                    &-img
+                        display: block
+                        margin: 0 auto
+                        img
+                            display: block
+                            margin: 0 auto
+                &-text
+                    &-title
+                        font-size: 24px
+                        line-height: 28px
+                    &-descr
+                        font-size: 14px
+                        line-height: 140%
+                &-filters
+                    &-sort
+                &-mobile
+                    &-filter
+                        &-main
+                            &-sort 
+                                .item__catalog__content-block-filters-sort
+                                    display: none
+                    .item__catalog__content-block-filters-sort
+                        display: flex
+                        width: 100%

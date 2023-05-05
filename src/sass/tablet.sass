@@ -378,17 +378,45 @@
         padding: 20px 0 30px 0
                     
     .item__catalog
+        &-cards
+            &-block
+                &-item
+                    padding: 10px
         &__filter-block
             display: none
         &__content-block
             width: 100%
+            padding: 0 0 62px 0
             &-filters
                 display: none
+                &-show-items-mobile
+                    display: flex
+                    flex-wrap: wrap
+                    margin-top: 11px
+                &-show-item-mobile
+                    display: flex
+                    align-items: center
+                    padding: 5px 10px
+                    background-color: #1A1A1A
+                    p
+                        margin-right: 8px
+                        font-size: 14px
+                        line-height: 16px
+                        color: #FFFFFF
+
+                    a
+                        text-decoration: none
+                        color: #fff
+                        font-size: 12px
             &-mobile
                 display: block
+                .item__catalog__content-block-filters-sort
+                    display: none
                 &-filters
                     display: flex
                     padding: 40px 0 0 0
+                    justify-content: space-between
+                    align-items: start
                 &-filter
                     &-main
                         height: auto
@@ -415,6 +443,11 @@
                             height: auto
                             overflow: hidden
                             transition: .3s all
+                            margin-top: 4px
+                            position: absolute
+                            width: 290px
+                            z-index: 1
+                            
                         &__kind
                             background-color: #F8F8F8
                             &__title.active
@@ -571,3 +604,8 @@
                                         color: #fff
                                         background-color: #1A1A1A
                                         font-size: 12px
+                        &-sort
+                            .item__catalog__content-block-filters-sort
+                                width: 100%
+                                padding-top: 28px
+                                display: flex

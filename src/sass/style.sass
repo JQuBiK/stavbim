@@ -907,6 +907,7 @@
 .directory
     display: flex
     padding: 17px 0
+    flex-wrap: wrap
     &__way
         &-link
             font-weight: 400
@@ -1570,18 +1571,311 @@
                 width: 31.5%
                 padding-top: 10px
 
+.product-card
+    padding: 0 0 80px 0
+    .slick-prev,
+    .slick-next
+        width: 8px
+        height: 16px
+        &::before,
+        &::after
+            content: ''
+            display: block
+            position: absolute
+            cursor: pointer
+            width: 9px
+            height: 1px
+            background-color: #1A1A1A
+            opacity: 1
+    .slick-prev
+        left: -100px
+        &::before
+            transform: rotate(-45deg)
+            top: 4px
+        &::after
+            transform: rotate(45deg)
+            bottom: 4px
+    .slick-next
+        right: -100px
+        &::before
+            transform: rotate(-135deg)
+            top: 4px
+        &::after
+            transform: rotate(135deg)
+            bottom: 4px
+    .product-card__dots
+        display: flex
+        left: 50%
+        transform: translateX(-50%)
+        bottom: -42px
+        li
+            width: 12px
+            height: 12px
+            border: 1px solid #1A1A1A
+            border-radius: 50%
+            transition: .3s all
+            margin: 0 2.5px
+            button
+                display: none
+        li.slick-active
+            transition: .3s all
+            background-color: #1A1A1A
+    &__wrapper
+        display: flex
+        align-items: start
+    &__slider
+        &__item
 
+        &__wrapper
+            width: 845px
+            border: 1px solid #EFEFEF
+            border-radius: 2px
+            padding: 73px 135px
+    &__text
+        padding-left: 30px
+        &__prevtitle
+            font-weight: 400
+            font-size: 16px
+            line-height: 18px
+            color: #818181
+        &__title
+            font-weight: 500
+            font-size: 38px
+            line-height: 44px
+            color: #1A1A1A
+            margin-top: 10px
+        &__price
+            font-weight: 500
+            font-size: 24px
+            line-height: 28px
+            color: #1A1A1A
+            margin-top: 10px
+        &__btn
+            width: 100%
+            height: 45px
+            background: #1A1A1A
+            border-radius: 2px
+            font-weight: 400
+            font-size: 16px
+            line-height: 18px
+            color: #FFFFFF
+            text-align: center
+            margin-top: 40px
+            border: none
+            cursor: pointer
+        &__wrapper
+            margin-top: 28px
+        &__vendor,
+        &__manufacturer,
+        &__category,
+        &__number,
+        &__title,
+        &__link,
+        &__version
+            &__block
+                display: flex
+                align-items: center
+                justify-content: space-between
+                margin-top: 7px
+            &__item,
+            &__value
+                font-weight: 400
+                font-size: 16px
+                line-height: 18px
+                color: #1A1A1A
+                text-decoration: none
+        &__sizes
+            font-weight: 500
+            font-size: 18px
+            line-height: 21px
+            color: #1A1A1A
+            margin-top: 35px
+            &__block
+                padding: 10px 7px
+                background: #F8F8F8
+                border-radius: 2px
+                margin: 15px -10px 0 -10px
+                td
+                    font-weight: 400
+                    font-size: 14px
+                    line-height: 16px
+                    color: #1A1A1A
+                    // border-right: 1px solid #F8F8F8
+                    border-right: 1px solid #D9D9D9
+                    padding: 10px
+                    &:last-child
+                        border-right: none
+                .hidden
+                    position: absolute
+                    z-index: 1
+                    background-color: #F8F8F8
+                    padding: 10px 7px
+                    left: 0
+                    top: 38px
+                    overflow: hidden
+                    height: 0
+                    transition: .3s all
+                .visible
+                    z-index: 2
+            &__btn
+                &-open
+                    text-align: right
+                    font-weight: 400
+                    font-size: 14px
+                    line-height: 16px
+                    text-decoration-line: underline
+                    color: #1A1A1A
+                    margin-top: 10px
+                    cursor: pointer
+                &-close
+                    display: block
+                    width: 16px
+                    height: 8px
+                    margin: 10px auto 0 auto
+                    cursor: pointer
+                    &::before,
+                    &::after
+                        content: ''
+                        display: block
+                        position: absolute
+                        top: 50%
+                        height: 1px
+                        width: 8px
+                        background-color: #1A1A1A
+                    &::before
+                        left: 1px
+                        transform: rotate(-45deg)
+                    &::after
+                        right: 1px
+                        transform: rotate(45deg)
+    &__description
+        padding: 60px 0 80px 0
+        &__title
+            font-weight: 500
+            font-size: 38px
+            line-height: 44px
+            color: #1A1A1A
+        &__subtitle
+            font-weight: 400
+            font-size: 18px
+            line-height: 140%
+            color: #818181
+            margin-top: 30px
+        &__descr
+            font-weight: 700
+            font-size: 18px
+            line-height: 21px
+            color: #1A1A1A
+            margin-top: 15px
+        &__subdescr
+            font-weight: 400
+            font-size: 18px
+            line-height: 140%
+            color: #818181
+            margin-top: 5px
+.similar
+    .slick-prev,
+    .slick-next
+        width: 8px
+        height: 16px
+        &::before,
+        &::after
+            content: ''
+            display: block
+            position: absolute
+            cursor: pointer
+            width: 9px
+            height: 1px
+            background-color: #1A1A1A
+            opacity: 1
+    .slick-prev
+        left: -100px
+        &::before
+            transform: rotate(-45deg)
+            top: 4px
+        &::after
+            transform: rotate(45deg)
+            bottom: 4px
+    .slick-next
+        right: -100px
+        &::before
+            transform: rotate(-135deg)
+            top: 4px
+        &::after
+            transform: rotate(135deg)
+            bottom: 4px
+    .similar__dots
+        display: flex
+        left: 50%
+        transform: translateX(-50%)
+        top: -60px
+        li
+            width: 12px
+            height: 12px
+            border: 1px solid #1A1A1A
+            border-radius: 50%
+            transition: .3s all
+            margin: 0 2.5px
+            button
+                display: none
+        li.slick-active
+            transition: .3s all
+            background-color: #1A1A1A
 
-
-
-
-
-
-
-
-
-
-
+    .slick-list
+        margin: 0 -15px
+    &__wrapper
+        border-bottom: 1px solid #1A1A1A
+        padding: 0 0 80px 0
+    &__title
+        font-weight: 500
+        font-size: 38px
+        line-height: 44px
+        color: #1A1A1A
+    &__slider
+        margin-top: 40px
+        &__item
+            padding: 0 15px
+            &-wrapper
+                width: 345px
+            &-img
+                border: 1px solid #EFEFEF
+                border-radius: 2px
+                padding: 27.5px 0
+                img
+                    width: 100%
+            &-text
+                margin-top: 15px
+                &-title
+                    font-weight: 400
+                    font-size: 14px
+                    line-height: 16px
+                    color: #818181
+                &-descr
+                    font-weight: 500
+                    font-size: 18px
+                    line-height: 21px
+                    color: #1A1A1A
+                    margin-top: 15px
+                &-price
+                    font-weight: 700
+                    font-size: 18px
+                    line-height: 21px
+                    color: #1A1A1A
+                    margin-top: 15px
+                &-btn
+                    margin-top: 20px
+                    width: 100%
+                    height: 45px
+                    background: #1A1A1A
+                    border: none
+                    border-radius: 2px
+                    padding: 13.5px 0
+                    font-weight: 400
+                    font-size: 16px
+                    line-height: 18px
+                    color: #FFFFFF
+                    cursor: pointer
 
 
 
