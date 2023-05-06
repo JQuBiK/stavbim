@@ -609,3 +609,66 @@
                                 width: 100%
                                 padding-top: 28px
                                 display: flex
+    .product-card
+        padding: 0 0 40px 0
+        .slick-dotted.slick-slider
+                margin-bottom: 0 
+        &__slider
+            .slick-prev
+                left: -25px
+            .slick-next
+                right: -25px
+            &__wrapper
+                width: 350px
+                padding: 70.5px 41px
+            &__item
+                height: 209px
+        &__text
+            padding-left: 20px
+            &__sizes
+                &__wrapper
+                    padding: 15.5px 22.5px
+                &__item__inner.active
+                    border-right: 1px solid #d9d9d9
+                    &:nth-child(4n)
+                        border-right: none
+        &__description
+            padding: 40px 0 0 0
+    .yousee
+        .similar__dots
+            top: -40px
+        .slick-prev,
+        .slick-next
+            top: -27px
+        .slick-list
+            margin: -10px
+        &__slider
+            display: none
+            &__inner
+                &__item
+                    padding: 10px
+                    &-img   
+                        padding: 19px 15px
+            &__item
+                &-img   
+                    padding: 19px 15px
+            &__mobile
+                display: block
+                margin-top: 30px
+                &__dots
+                    display: flex
+                    right: 0
+                    transform: translateX(-50%)
+                    top: -35px
+                    li
+                        width: 12px
+                        height: 12px
+                        border: 1px solid #1A1A1A
+                        border-radius: 50%
+                        transition: .3s all
+                        margin: 0 2.5px
+                        button
+                            display: none
+                    li.slick-active
+                        transition: .3s all
+                        background-color: #1A1A1A

@@ -119,7 +119,34 @@ window.addEventListener('DOMContentLoaded', () => {
 		arrows: true,
 		dotsClass: 'slick-dots similar__dots',
 		slidesToShow: 4,
-  		slidesToScroll: 4
+  		slidesToScroll: 4,
+		responsive: [
+			{
+				breakpoint: 321,
+				settings: {
+					arrows: false,
+					slidesToShow: 1,
+					slidesToScroll: 1,
+				}
+			}
+		]
+	});
+	//slider Yousee
+	$('.yousee__slider').slick({
+		dots: true,
+		infinite: false,
+		arrows: true,
+		dotsClass: 'slick-dots similar__dots',
+		slidesToShow: 1,
+		slidesToScroll: 1,
+	});
+	$('.yousee__slider__mobile').slick({
+		dots: true,
+		infinite: false,
+		arrows: true,
+		dotsClass: 'slick-dots yousee__slider__mobile__dots',
+		slidesToShow: 3,
+		slidesToScroll: 3,
 	});
 	//Accrodions Functions
 
@@ -304,20 +331,24 @@ window.addEventListener('DOMContentLoaded', () => {
 	// 	});
 	// });
 
-	const productCardTableContent = document.querySelector('.hidden'),
+	const productCardTableContent = document.querySelector('.product-card__text__sizes__accordion'),
+		  productCardTableBorder = document.querySelectorAll('.product-card__text__sizes__item__inner'),
 		  productCardTableOpenBtn = document.querySelector('.product-card__text__sizes__btn-open'),
 		  productCardTableCloseBtn = document.querySelector('.product-card__text__sizes__btn-close');
 
-	productCardTableOpenBtn.addEventListener('click', () => {
-		productCardTableContent.classList.add('active');
-		productCardTableContent.style.padding = '10px 7px';
-		productCardTableContent.style.height = productCardTableContent.maxheight ='306px';
-		
-	});
+	let dinamicHeight;
 
-	productCardTableCloseBtn.addEventListener('click', () => {
-		productCardTableContent.classList.remove('active');
-		productCardTableContent.style.height = 0;
-		productCardTableContent.style.padding = '0 7px';
+	productCardTableOpenBtn.addEventListener('click', () => {
+		dinamicHeight = window.getComputedStyle(productCardTableContent).getPropertyValue("height");
+		// productCardTableContent.classList.add('active');
+		productCardTableContent.style.height = `${productCardTableContent.scrollHeight}px`;
+		// productCardTableContent.classList.add('active');
+		productCardTableBorder.forEach(item => item.classList.add('active'));
+	});
+	productCardTableCloseBtn.addEventListener('click', () => { 
+		// productCardTableContent.classList.remove('active');
+		// productCardTableContent.classList.remove('active');
+		productCardTableContent.style.height = `${dinamicHeight}`;
+		productCardTableBorder.forEach(item => item.classList.remove('active'));
 	});
 });

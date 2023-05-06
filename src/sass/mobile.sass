@@ -615,3 +615,91 @@
                     .item__catalog__content-block-filters-sort
                         display: flex
                         width: 100%
+    .product-card
+        padding: 20px 0 40px 0
+        .slick-next,
+        .slick-prev
+            z-index: -10
+            &::before,
+            &::after
+                display: none
+        &__wrapper
+            flex-wrap: wrap
+        &__slider
+            &__wrapper
+                width: 290px
+                padding: 50px 23px
+            &__item
+                height: 190px
+        &__text
+            margin-top: 20px
+            padding: 0
+            &__prevtitle
+                font-size: 12px
+                line-height: 14px
+            &__title    
+                font-size: 24px
+                line-height: 28px
+            &__price
+                font-size: 16px
+                line-height: 18px
+            &__btn
+                font-size: 14px
+                line-height: 16px
+            &__vendor,
+            &__manufacturer,
+            &__category,
+            &__number,
+            &__title,
+            &__link,
+            &__version
+                &__item,
+                &__value
+                    font-size: 10px
+                    line-height: 11px
+            &__sizes
+                &__block
+                &__accordion
+                    height: 42px
+                &__wrapper
+                    padding: 17px 14.5px
+                &__item__inner
+                    padding: 7px
+                    p   
+                        font-size: 10px
+                        line-height: 11px
+                &__btn-close
+                &__btn-open
+                    font-size: 10px
+                    line-height: 11px
+        &__description
+            &__title
+                font-size: 24px
+                line-height: 28px
+            &__subtitle
+                font-size: 14px
+                line-height: 140%
+                margin-top: 20px
+            &__descr
+                font-size: 14px
+                line-height: 16px
+                margin-top: 15px
+            &__subdescr
+                font-size: 14px
+                line-height: 140%
+    .similar 
+        &__title
+            font-size: 24px
+            line-height: 28px
+        &__slider 
+            &__item
+                    
+        .similar__dots
+            top: auto
+            bottom: -30px
+            left: 50%
+            transform: translateX(-50%)
+            width: 100%
+
+
+        
