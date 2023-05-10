@@ -688,18 +688,179 @@
                 font-size: 14px
                 line-height: 140%
     .similar 
+        .slick-list
+            margin: 0 -10px
+        &__wrapper
+            padding: 0 0 30px 0
         &__title
             font-size: 24px
             line-height: 28px
-        &__slider 
-            &__item
-                    
         .similar__dots
             top: auto
             bottom: -30px
             left: 50%
             transform: translateX(-50%)
+            width: auto
+            right: auto
+            li
+                width: 8px
+                height: 8px
+        &__slider
+            &__item
+                &-wrapper
+                    width: 290px
+    .yousee 
+        .similar__dots
+            top: auto
+            bottom: -30px
+            left: 50%
+            transform: translateX(-50%)
+            width: auto
+            right: auto
+            li
+                width: 8px
+                height: 8px
+        .slick-list
+            margin: 0 -10px
+        .similar__slider
+            height: 454px
+
+    .myworks
+        &__searchpanel
+            height: 35px
+            margin-top: 4px
+        &__block
+            padding: 25px 0 40px 0
+            &__slider
+                margin-top: 15px
+                &__inner
+                    &__mobile
+                        display: flex
+                        flex-wrap: wrap
+                        margin: -15px 0
+                    &__item
+                        padding: 15px 0
+                        width: 100%
+                &__item
+                    &-wrapper
+                        width: 100%
+                    &-img
+                        border: 1px solid #EFEFEF
+                        border-radius: 2px
+                        padding: 52px 4px
+                        &-main
+                            width: 100%
+                    &-text
+                        margin-top: 15px
+                        &-title
+                            font-size: 12px
+                            line-height: 14px
+                        &-descr
+                            font-size: 16px
+                            line-height: 18px
+                        &-price
+                            font-size: 16px
+                            line-height: 18px
+                        &-btn
+                            font-size: 14px
+                            line-height: 16px
+        &__text
+            padding: 0 0 80px 0
+            &__title
+                font-size: 24px
+                line-height: 28px
+            &__descr
+                font-size: 14px
+                line-height: 140%
+            &__subdescr
+                font-size: 14px
+                line-height: 140%
+    #myworks__searchpanel__input
+        font-size: 12px
+        line-height: 14px
+        &::placeholder
+            font-size: 12px
+            line-height: 14px
+
+    .not-found
+        padding: 40px 0 80px 0
+        &__wrapper
+            padding: 28px 15px
+        &__img
             width: 100%
+        &__btn
+            font-size: 12px
+            line-height: 14px
+            padding: 15.5px 0
+            width: 250px
+            height: 45px
 
-
-        
+    .order
+        padding: 4px 0 40px 0
+        &__wrapper
+            display: flex
+            flex-wrap: wrap
+        &__text
+            width: 100%
+        &__img
+            width: 100%
+            display: flex
+            align-items: center
+            justify-content: center
+            padding: 45px 0
+            margin-top: 35px
+            img
+                width: 290px
+                display: block
+        &__title
+            font-size: 24px
+            line-height: 28px
+        &__descr
+            margin-top: 30px
+            p
+                font-size: 14px
+                line-height: 140%
+                &:last-child
+                    display: none
+        &__btn
+            width: 100%
+            height: 45px
+            padding: 10.5px 0
+            display: flex
+            align-items: center
+            justify-content: center
+            background: #29A9EB
+            border: none
+            border-radius: 2px
+            margin-top: 30px
+            p
+                font-size: 14px
+                line-height: 16px
+            img
+                width: 24px
+                height: 24px
+    .examples
+        .yousee__slider
+            &__inner
+                margin: -15px -10px
+                &__item.big
+                    display: none
+                    .yousee__slider__item
+                        &-img
+                            padding: 30px 20px
+                            img
+                                height: 190px
+                        &-text
+                            &-price
+                                margin-top: 15px
+                &__item
+                    width: 100%
+                    display: none
+                    &:first-child
+                        display: block
+                        width: 100%
+            &__item
+                &-img
+                    padding: 20px 10px
+    .container-hide
+        display: none

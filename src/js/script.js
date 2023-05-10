@@ -122,6 +122,14 @@ window.addEventListener('DOMContentLoaded', () => {
   		slidesToScroll: 4,
 		responsive: [
 			{
+				breakpoint: 769,
+				settings: {
+					arrows: true,
+					slidesToShow: 3,
+					slidesToScroll: 3,
+				}
+			},
+			{
 				breakpoint: 321,
 				settings: {
 					arrows: false,
@@ -139,14 +147,6 @@ window.addEventListener('DOMContentLoaded', () => {
 		dotsClass: 'slick-dots similar__dots',
 		slidesToShow: 1,
 		slidesToScroll: 1,
-	});
-	$('.yousee__slider__mobile').slick({
-		dots: true,
-		infinite: false,
-		arrows: true,
-		dotsClass: 'slick-dots yousee__slider__mobile__dots',
-		slidesToShow: 3,
-		slidesToScroll: 3,
 	});
 	//Accrodions Functions
 
