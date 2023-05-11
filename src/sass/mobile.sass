@@ -25,11 +25,18 @@
             margin-top: 30px
             &-btn
                 margin-right: 15px
+                text-decoration: none
+                transition: .3s all
+                &:hover
+                    p
+                        transition: .3s all
+                        color: #1A1A1A
                 p
                     cursor: pointer
                     font-size: 14px
                     line-height: 16px
                     color: #D2D2D2
+                    transition: .3s all
                 &:last-child
                     margin: 0
             &-btn.active
@@ -864,3 +871,74 @@
                     padding: 20px 10px
     .container-hide
         display: none
+
+    .brandsBlock
+        padding: 30px 0
+        &__title
+            font-size: 28px
+            line-height: 32px
+        &__wrapper
+            display: flex
+            flex-wrap: wrap
+            align-items: center
+            margin: -10px 0 
+        &__item
+            padding: 30px 0px
+            width: 100%
+            img
+                width: 100%
+    .brandsBlockText
+        padding: 0 0 80px 0
+        &__text
+            margin-top: 30px
+            display: block
+            p
+                font-size: 14px
+                line-height: 140%
+
+    .confidentiality 
+        padding: 20px 0 80px 0
+        &__title
+            font-size: 24px
+            line-height: 28px
+            margin-bottom: 5px
+        &__subtitle
+            font-size: 16px
+            line-height: 18px
+            margin-top: 25px
+        &__descr
+            font-size: 14px
+            line-height: 140%
+        &__list
+            padding-left: 10px
+            margin-top: 15px
+            p
+                font-size: 14px
+                line-height: 140%
+
+    .howToBuy
+        padding: 10px 0 80px 0
+        &__title
+            font-size: 24px
+            line-height: 28px
+        &__wrapper
+            margin: 30px auto 0 auto
+            display: block
+        &__img
+            padding: 0
+            &__wrapper
+                width: 290px
+                height: 250px
+                img
+                    width: 120px
+                    height: 120px
+        &__text
+            padding: 0
+            &__title
+                font-size: 16px
+                line-height: 18px
+                margin-top: 15px
+            &__descr
+                font-size: 14px
+                line-height: 140%
+                margin-top: 15px

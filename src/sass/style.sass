@@ -66,7 +66,7 @@
             position: absolute
             width: 0
             height: 1px
-            bottom: -2px
+            bottom: -3px
             left: 0
             background-color: #1A1A1A
             transition: .3s all
@@ -79,6 +79,11 @@
         padding: 0 35.5px
         &-btn
             padding: 0 8.5px
+            text-decoration: none
+            &:hover
+                p
+                    color: #1A1A1A
+                    transition: .3s all
             p
                 font-style: normal
                 font-weight: 300
@@ -86,6 +91,8 @@
                 line-height: 21px
                 color: #D2D2D2
                 cursor: pointer
+                transition: .3s all
+                text-decoration: none
         &-btn.active
                 p
                     color: #1A1A1A
@@ -96,6 +103,10 @@
         &-btn
             cursor: pointer
             padding: 0 15px
+            color: #1A1A1A
+            transition: .3s all
+            &:hover
+                color: #777777
             img
                 cursor: pointer
                 width: 30px
@@ -541,8 +552,9 @@
             font-size: 12px
             line-height: 14px
             color: #1A1A1A
-        span
+        a
             font-weight: 400
+            text-decoration: none
             font-size: 12px
             line-height: 14px
             color: #1A1A1A
@@ -702,6 +714,11 @@
         display: flex
         align-items: end
         text-decoration: none
+        &:hover
+            p,
+            svg
+                transition: .3s all
+                color: #777777
         p
             font-style: normal
             font-weight: 400
@@ -709,8 +726,11 @@
             line-height: 18px
             color: #1A1A1A
             text-decoration: none
-        img
+            transition: .3s all
+        svg
             margin-left: 10px
+            color: #1A1A1A
+            transition: .3s all
     &__wrapper
         display: -webkit-flex
         display: -ms-flexbox
@@ -737,6 +757,11 @@
         display: flex
         align-items: end
         text-decoration: none
+        &:hover
+            p,
+            svg
+                transition: .3s all
+                color: #777777
         p
             font-style: normal
             font-weight: 400
@@ -744,8 +769,11 @@
             line-height: 18px
             color: #1A1A1A
             text-decoration: none
-        img
+            transition: .3s all
+        svg
             margin-left: 10px
+            color: #1A1A1A
+            transition: .3s all
     &__wrapper
         display: -webkit-flex
         display: -ms-flexbox
@@ -799,8 +827,14 @@
             width: 100%
             height: 45px
             cursor: pointer
+            transition: .3s all
             span
                 margin-left: 10px
+            &:hover,
+            &:active
+                transition: .3s all
+                background-color: #252525
+                
     &__icon
         position: absolute
         left: 15px
@@ -844,6 +878,21 @@
             font-size: 18px
             line-height: 21px
             color: #FFFFFF
+            &::after
+                content: ''
+                display: block
+                position: absolute
+                width: 0
+                height: 1px
+                background-color: #fff
+                left: 0
+                bottom: -1
+                transition: .5s all
+            &:hover
+                &::after
+                    width: 100%
+                    transition: .5s all
+
     &__logo
         width: 50%
         img
@@ -862,14 +911,28 @@
         align-items: center
     &__copyright
         width: 33.33%
-        p
+        a
+            text-decoration: none
             font-style: normal
             font-weight: 400
             font-size: 16px
             line-height: 18px
-            text-decoration-line: underline
             color: #FFFFFF
             cursor: pointer
+            &::after
+                content: ''
+                display: block
+                position: absolute
+                background-color: #fff
+                width: 0
+                height: 1px
+                left: 0
+                bottom: -1px
+                transition: .3s all
+            &:hover
+                &::after
+                    transition: .3s all
+                    width: 100%
     &__date
         width: 33.33%
         margin: 0 auto
@@ -884,20 +947,29 @@
             color: #FFFFFF
     &__prodaction
         width: 33.33%
+        text-decoration: none
         &-content
             display: flex
             align-items: center
             float: right
+            text-decoration: none
+            &:hover
+                p,
+                svg
+                    color: #FFFFFF
+                    transition: .3s all
             p
                 text-align: center
                 font-style: normal
                 font-weight: 400
                 font-size: 16px
                 line-height: 18px
-                color: #FFFFFF
-                opacity: .5
-            img
+                color: #777777
+                transition: .3s all
+            svg
                 margin-left: 15px
+                color: #777777
+                transition: .3s all
 #hide,
 #hideCard
     display: block
@@ -1130,10 +1202,20 @@
     padding: 24px 0 42px 0
     align-items: center
     text-decoration: none
+    cursor: default
+    &:hover
+        p,
+        svg
+            color: #777777
+            transition: .3s all
+    svg
+        transition: .3s all
     &-img
         width: 16px
         height: 12px
         margin-right: 10px
+        cursor: pointer
+        color: #1A1A1A
         &-mobile
             display: none
     &-text
@@ -1141,6 +1223,8 @@
         font-size: 16px
         line-height: 18px
         color: #1A1A1A
+        cursor: pointer
+        transition: .3s all
 .product
     background-color: #F8F8F8
     border-radius: 2px
@@ -1190,6 +1274,11 @@
                 text-decoration: none
                 padding: 0 15px
                 border-radius: 2px
+                transition: .3s all
+                &:hover,
+                &:active
+                    transition: .3s all
+                    background-color: #252525
                 &-link
                     font-weight: 700
                     font-size: 18px
@@ -1293,7 +1382,8 @@
                     outline: none
                     cursor: pointer
                     transition: .3s all
-                    &:active
+                    &:active,
+                    &:hover
                         transition: .3s all
                         background-color: #252525
                         
@@ -1514,6 +1604,7 @@
                             border-radius: 2px
                             border: 1px solid #1A1A1A
                             margin-right: 10px
+                            cursor: pointer
                     input[type=checkbox]
                         display: none
                     input[type=checkbox]:checked + label::before
@@ -1679,6 +1770,10 @@
             margin-top: 40px
             border: none
             cursor: pointer
+            transition: .3s all
+            &:hover
+                background-color: #252525
+                transition: .3s all
         &__wrapper
             margin-top: 28px
         &__vendor,
@@ -1914,6 +2009,10 @@
                     line-height: 18px
                     color: #FFFFFF
                     cursor: pointer
+                    transition: .3s all
+                    &:hover
+                        background-color: #252525
+                        transition: .3s all
 .yousee 
     padding: 80px 0 100px 0
     .similar__slider
@@ -2043,6 +2142,10 @@
                     line-height: 18px
                     color: #FFFFFF
                     cursor: pointer
+                    transition: .3s all
+                    &:hover
+                        background-color: #252525
+                        transition: .3s all
 .myworks
     &__searchpanel
         width: 100%
@@ -2133,6 +2236,10 @@
                         line-height: 18px
                         color: #FFFFFF
                         cursor: pointer
+                        transition: .3s all
+                        &:hover
+                            transition: .3s all
+                            background-color: #252525
     &__text
         padding: 0 0 100px 0
         &__title
@@ -2231,6 +2338,10 @@
         border-radius: 2px
         margin-top: 40px
         cursor: pointer
+        transition: .3s all
+        &:hover
+            transition: .3s all
+            background-color: #0599E6
         p
             font-weight: 400
             font-size: 16px
@@ -2251,16 +2362,124 @@
         display: block
         text-decoration: none
 
+.brandsBlock
+    padding: 40px 0
+    &__title
+        font-size: 24px
+        line-height: 28px
+    &__wrapper
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+        margin: 20px -30px 0 -30px
+    &__item
+        padding: 0 30px
+        width: 20%
+        img
+            width: 100%
+.brandsBlockText
+    padding: 0 0 100px 0
+    &__text
+        margin-top: 40px
+        display: block
+        p
+            font-weight: 400
+            font-size: 18px
+            line-height: 140%
+            color: #818181
+            margin-top: 15px
 
+.confidentiality 
+    padding: 40px 0 100px 0
+    &__title
+        font-weight: 500
+        font-size: 38px
+        line-height: 44px
+        color: #1A1A1A
+        margin-bottom: 15px
+        display: block
+    &__subtitle
+        font-weight: 500
+        font-size: 24px
+        line-height: 28px
+        color: #1A1A1A
+        margin-top: 25px
+    &__descr
+        font-weight: 400
+        font-size: 18px
+        line-height: 140%
+        color: #818181
+        margin-top: 15px
+    &__list
+        padding-left: 30px
+        margin-top: 15px
+        p
+            margin-top: 15px
+            font-weight: 400
+            font-size: 18px
+            line-height: 140%
+            color: #818181
 
-
-
-
-
-
-
-
-
+.howToBuy
+    padding: 40px 0 100px 0
+    &__title
+        font-weight: 500
+        font-size: 38px
+        line-height: 44px
+        color: #1A1A1A
+    &__wrapper
+        display: flex
+        align-items: start
+        margin: 30px -15px 0 -15px
+    &__img
+        padding: 0 15px
+        &__wrapper
+            background: #F8F8F8
+            border-radius: 2px
+            width: 345px
+            height: 270px
+            display: flex
+            align-items: center
+            justify-content: center
+    &__text
+        padding: 20px 15px
+        &__title
+            font-weight: 500
+            font-size: 24px
+            line-height: 28px
+            color: #1A1A1A
+        &__descr
+            font-weight: 400
+            font-size: 18px
+            line-height: 140%
+            color: #818181
+            margin-top: 20px
+            
+.aboutCompany
+    padding: 40px 0 60px 0
+    &__wrapper
+        display: flex
+        align-items: start
+        margin: 0 -15px 40px -15px
+    &__title
+        font-weight: 500
+        font-size: 38px
+        line-height: 44px
+        color: #1A1A1A
+        margin-bottom: 40px
+        display: block
+    &__text
+        padding: 0 15px
+        p
+            margin-top: 15px
+            font-weight: 400
+            font-size: 18px
+            line-height: 140%
+            color: #818181
+            &:first-child
+                margin-top: 0
+    &__img
+        padding: 0 15px
 
 
 
