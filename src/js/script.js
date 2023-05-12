@@ -338,17 +338,29 @@ window.addEventListener('DOMContentLoaded', () => {
 
 	let dinamicHeight;
 
-	productCardTableOpenBtn.addEventListener('click', () => {
-		dinamicHeight = window.getComputedStyle(productCardTableContent).getPropertyValue("height");
-		// productCardTableContent.classList.add('active');
-		productCardTableContent.style.height = `${productCardTableContent.scrollHeight}px`;
-		// productCardTableContent.classList.add('active');
-		productCardTableBorder.forEach(item => item.classList.add('active'));
-	});
-	productCardTableCloseBtn.addEventListener('click', () => { 
-		// productCardTableContent.classList.remove('active');
-		// productCardTableContent.classList.remove('active');
-		productCardTableContent.style.height = `${dinamicHeight}`;
-		productCardTableBorder.forEach(item => item.classList.remove('active'));
-	});
+	if (productCardTableOpenBtn == null || productCardTableCloseBtn ==null) {
+	} else {
+		productCardTableOpenBtn.addEventListener('click', () => {
+			dinamicHeight = window.getComputedStyle(productCardTableContent).getPropertyValue("height");
+			// productCardTableContent.classList.add('active');
+			productCardTableContent.style.height = `${productCardTableContent.scrollHeight}px`;
+			// productCardTableContent.classList.add('active');
+			productCardTableBorder.forEach(item => item.classList.add('active'));
+		});
+		productCardTableCloseBtn.addEventListener('click', () => { 
+			// productCardTableContent.classList.remove('active');
+			// productCardTableContent.classList.remove('active');
+			productCardTableContent.style.height = `${dinamicHeight}`;
+			productCardTableBorder.forEach(item => item.classList.remove('active'));
+		});
+	}
+
+	window.addEventListener('scroll', () => {
+        const parallax = document.querySelector('.howtobuy');
+        const scrollY = window.pageYOffset;
+		if (parallax == null) {
+		} else {
+			parallax.style.backgroundPositionY = scrollY * -0.8 + 'px';
+		}
+      });
 });
