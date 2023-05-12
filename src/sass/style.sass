@@ -4,15 +4,12 @@
     font-size: 38px
     line-height: 44px
     color: #1A1A1A
-
-    
 *
     padding: 0
     margin: 0
     box-sizing: border-box
     font-family: 'Ubuntu', sans-serif
     position: relative
-
 .container
     max-width: 1470px
     margin: 0 auto
@@ -107,7 +104,7 @@
             transition: .3s all
             &:hover
                 color: #777777
-            img
+            svg
                 cursor: pointer
                 width: 30px
                 height: 30px
@@ -159,8 +156,8 @@
     background-color: #fff
     position: absolute
     right: 192px
-    top: -1145px
-    z-index: 2
+    top: -1200px
+    z-index: 10
     box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.15)
     border-radius: 2px
     padding: 20px 9px 20px 30px
@@ -644,7 +641,7 @@
             width: 100%
             height: 100%
             border: 1px solid #EFEFEF
-            padding: 25px 15px 15px 17px
+            padding: 25px 15px 20px 17px
             display: block
             text-decoration: none
         &-descr
@@ -671,7 +668,12 @@
             height: 148px
 .howtobuy
     padding: 62px 0
-    background: url('../img/how_to_buy/how_to_buy_bg.jpg') center center/cover no-repeat
+    background-image: url("../img/paralax.png")
+    background-attachment: fixed
+    background-position: center
+    background-size: cover
+    position: relative
+    overflow: hidden
     &__title
         @include titles
         color: #fff
@@ -701,6 +703,8 @@
             font-size: 24px
             line-height: 28px
             color: #FFFFFF
+
+
 .brands
     padding: 78px 0 40px 0
     &__title
@@ -999,7 +1003,7 @@
         &-link.active
             color: #1A1A1A
         span
-            margin: 0 4px
+            margin: 0 3.5px
             font-weight: 400
             font-size: 14px
             line-height: 16px
@@ -1199,10 +1203,11 @@
 //Каталог
 .back-to-page
     display: flex
-    padding: 24px 0 42px 0
+    padding: 24px 0 29px 0
     align-items: center
     text-decoration: none
     cursor: default
+    max-width: 155px
     &:hover
         p,
         svg
@@ -1229,7 +1234,7 @@
     background-color: #F8F8F8
     border-radius: 2px
     &__info
-        padding: 20px 36px 31px 59px
+        padding: 33px 36px 31px 56px
         display: flex
         align-items: center
         border-bottom: 1px solid #818181
@@ -1285,7 +1290,7 @@
                     line-height: 21px
                     color: #FFFFFF
 .catalog-cards
-    padding: 40px 0 101px 0
+    padding: 40px 0 100px 0
     &__sort-panel
         display: flex
         align-items: center
@@ -1331,10 +1336,10 @@
         -webkit-flex-wrap: wrap
         -ms-flex-wrap: wrap
         flex-wrap: wrap
-        margin: -15px
+        margin: -16.5px -15px
         margin-top: 0
         &-item
-            padding: 15px
+            padding: 16.5px 15px
             width: 25%
             &-wrapper
                 width: 100%
@@ -1444,7 +1449,7 @@
 .item__catalog
     &-cards-block-item
         width: 33.33%
-        padding: 15px
+        padding: 16px 15px
     &__wrapper
         display: -webkit-flex
         display: -ms-flexbox
@@ -1453,7 +1458,7 @@
         -ms-flex-wrap: wrap
         flex-wrap: wrap
     &__filter-block
-        width: 25%
+        width: 23.5%
         &__kind
             background-color: #F8F8F8
             &__title.active
@@ -1504,7 +1509,7 @@
                 list-style: none
                 transition: .3s all
                 &-link
-                    padding: 3px 0
+                    padding: 2.5px 0
                     display: block
                     &:first-child
                         padding: 0 0 3px 0
@@ -1546,7 +1551,7 @@
                 display: flex
                 align-items: center
                 justify-content: space-between
-                padding: 17px 15px
+                padding: 16px 15px
                 cursor: pointer
                 p
                     font-weight: 500
@@ -1599,8 +1604,8 @@
                             align-items: center
                             justify-content: center
                             position: relative
-                            width: 16px
-                            height: 16px
+                            width: 14px
+                            height: 14px
                             border-radius: 2px
                             border: 1px solid #1A1A1A
                             margin-right: 10px
@@ -1613,7 +1618,7 @@
                         background-color: #1A1A1A
                         font-size: 12px
     &__content-block
-        width: 75%
+        width: 76.5%
         padding: 0 0 62px 30px
         &-mobile
             display: none
@@ -1643,10 +1648,9 @@
             -webkit-flex-wrap: wrap
             -ms-flex-wrap: wrap
             flex-wrap: wrap
-            padding: 20px 0
+            padding: 20px 0 4px 0
             &-show
-                width: 68.5%
-                padding-right: 37px
+                width: 66.5%
                 display: flex
                 flex-wrap: wrap
                 align-items: center
@@ -1657,7 +1661,7 @@
                     align-items: center
                     background-color: #1A1A1A
                     color: #fff
-                    margin: 5px
+                    margin: 5px 4px
                     p
                         font-weight: 400
                         font-size: 16px
@@ -1672,8 +1676,21 @@
                         color: #FFFFFF
                     
             &-sort
-                width: 31.5%
-                padding-top: 10px
+                width: 33.5%
+                padding: 45px 0 0 37px
+                .catalog-cards__sort-panel
+                    margin: 0 -10px
+                .catalog-cards__sort-panel__title
+                    p
+                        width: 125px
+                    margin: 0
+                    padding: 0 10px
+                .catalog-cards__sort-panel__price
+                    margin: 0
+                    padding: 0 10px
+                .catalog-cards__sort-panel__popular
+                    margin: 0
+                    padding: 0 10px
 
 .product-card
     padding: 0 0 80px 0
@@ -1681,6 +1698,7 @@
     .slick-next
         width: 8px
         height: 16px
+        top: 53.5%
         &::before,
         &::after
             content: ''
@@ -1692,7 +1710,7 @@
             background-color: #1A1A1A
             opacity: 1
     .slick-prev
-        left: -100px
+        left: -105px
         &::before
             transform: rotate(-45deg)
             top: 4px
@@ -1700,7 +1718,7 @@
             transform: rotate(45deg)
             bottom: 4px
     .slick-next
-        right: -100px
+        right: -105px
         &::before
             transform: rotate(-135deg)
             top: 4px
@@ -1711,7 +1729,7 @@
         display: flex
         left: 50%
         transform: translateX(-50%)
-        bottom: -42px
+        bottom: -63px
         li
             width: 12px
             height: 12px
@@ -1729,12 +1747,11 @@
         align-items: start
     &__slider
         &__item
-
         &__wrapper
             width: 845px
             border: 1px solid #EFEFEF
             border-radius: 2px
-            padding: 73px 135px
+            padding: 57px 135px
     &__text
         padding-left: 30px
         width: 100%
@@ -1775,7 +1792,7 @@
                 background-color: #252525
                 transition: .3s all
         &__wrapper
-            margin-top: 28px
+            margin-top: 35px
         &__vendor,
         &__manufacturer,
         &__category,
@@ -1843,7 +1860,7 @@
                     line-height: 16px
                     text-decoration-line: underline
                     color: #1A1A1A
-                    margin-top: 10px
+                    margin-top: 81px
                     cursor: pointer
                 &-close
                     display: block
@@ -1867,7 +1884,7 @@
                         right: 1px
                         transform: rotate(45deg)
     &__description
-        padding: 60px 0 80px 0
+        padding: 60px 0 0 0
         &__title
             font-weight: 500
             font-size: 38px
@@ -1914,8 +1931,8 @@
             opacity: 1
     .slick-prev
         left: auto
-        right: 145px
-        top: -53px
+        right: 137px
+        top: -47px
         &::before
             transform: rotate(-45deg)
             top: 2.5px
@@ -1923,8 +1940,8 @@
             transform: rotate(45deg)
             bottom: 2.5px
     .slick-next
-        right: 25px
-        top: -53px
+        right: 0
+        top: -47px
         &::before
             transform: rotate(-135deg)
             top: 2.5px
@@ -1934,8 +1951,8 @@
     .similar__dots
         display: flex
         right: 0
-        transform: translateX(-50%)
-        top: -60px
+        transform: translateX(-35%)
+        top: -53px
         li
             width: 12px
             height: 12px
@@ -1953,7 +1970,7 @@
         margin: 0 -15px
     &__wrapper
         border-bottom: 1px solid #1A1A1A
-        padding: 0 0 80px 0
+        padding: 0 0 50px 0
         .yousee__slider__mobile
             display: none
     &__title
@@ -1970,7 +1987,7 @@
             &-img
                 border: 1px solid #EFEFEF
                 border-radius: 2px
-                padding: 27.5px 0
+                padding: 37px 0
                 display: block
                 text-decoration: none
                 img
@@ -2014,7 +2031,7 @@
                         background-color: #252525
                         transition: .3s all
 .yousee 
-    padding: 80px 0 100px 0
+    padding: 80px 0 70px 0
     .similar__slider
         display: none
     .slick-prev,
@@ -2033,8 +2050,8 @@
             opacity: 1
     .slick-prev
         left: auto
-        right: 145px
-        top: -53px
+        right: 137px
+        top: -31px
         &::before
             transform: rotate(-45deg)
             top: 2.5px
@@ -2042,8 +2059,8 @@
             transform: rotate(45deg)
             bottom: 2.5px
     .slick-next
-        right: 25px
-        top: -53px
+        right: 0
+        top: -31px
         &::before
             transform: rotate(-135deg)
             top: 2.5px
@@ -2053,8 +2070,8 @@
     .similar__dots
         display: flex
         right: 0
-        transform: translateX(-50%)
-        top: -60px
+        transform: translateX(-35%)
+        top: -37px
         li
             width: 12px
             height: 12px
@@ -2109,7 +2126,7 @@
                     width: 100%
                     height: 290px
             &-text
-                margin-top: 15px
+                margin-top: 13px
                 display: block
                 text-decoration: none
                 &-title
@@ -2162,16 +2179,20 @@
             cursor: pointer
     &__block
         padding: 25px 0 40px 0
+        .item__catalog__content-block-filters-sort
+            padding: 0
+        .catalog-cards-navigation
+            margin-top: 38px
         &__slider
             margin-top: 15px
             &__inner
                 display: flex
                 flex-wrap: wrap
-                margin: -15px
+                margin: -13px -15px
                 &__mobile
                     display: none
                 &__item.big
-                    padding: 15px
+                    padding: 13px 15px
                     width: 50%
                     .myworks__block__slider__item-img
                         border: 1px solid #EFEFEF
@@ -2182,7 +2203,7 @@
                     .myworks__block__slider__item-text-price
                         margin-top: 36px
                 &__item
-                    padding: 15px
+                    padding: 13px 15px
                     width: 25%
             &__item
                 &-wrapper
@@ -2241,7 +2262,7 @@
                             transition: .3s all
                             background-color: #252525
     &__text
-        padding: 0 0 100px 0
+        padding: 0 0 98px 0
         &__title
             font-weight: 500
             font-size: 38px
@@ -2301,7 +2322,7 @@
         text-decoration: none
 
 .order
-    padding: 0 0 80px 0
+    padding: 24px 0 59px 0
     &__wrapper
         display: flex
         flex-wrap: wrap
@@ -2309,7 +2330,7 @@
         width: 66%
     &__img
         width: 34%
-        padding-top: 70px
+        padding-top: 80px
         img
             width: 397px
             display: block
@@ -2320,12 +2341,13 @@
         line-height: 44px
         color: #1A1A1A
     &__descr
-        margin-top: 25px
+        margin-top: 40px
         p
             font-weight: 400
             font-size: 18px
             line-height: 140%
             color: #818181
+            margin-top: 15px
     &__btn
         width: 345px
         height: 45px
@@ -2352,7 +2374,7 @@
     padding: 0 0 100px 0
     .yousee__slider
         &__item
-            margin-top: 33px
+            margin-top: 43px
         &__inner
             margin: -15px
     .yousee__slider__item-img
@@ -2361,12 +2383,20 @@
     .yousee__slider__item-text
         display: block
         text-decoration: none
+    .yousee__slider__inner__item.big
+        padding: 12px 15px
+    .yousee__slider__inner__item
+        padding: 12px 15px
+    .catalog-cards-navigation
+        margin-top: 44px
 
 .brandsBlock
-    padding: 40px 0
+    padding: 25px 0 51px 0
     &__title
-        font-size: 24px
-        line-height: 28px
+        font-weight: 500
+        font-size: 38px
+        line-height: 44px
+        color: #1A1A1A
     &__wrapper
         display: flex
         flex-wrap: wrap
@@ -2377,8 +2407,10 @@
         width: 20%
         img
             width: 100%
+.lastblock
+    padding: 25px 0 37px 0
 .brandsBlockText
-    padding: 0 0 100px 0
+    padding: 0 0 97px 0
     &__text
         margin-top: 40px
         display: block
@@ -2390,20 +2422,20 @@
             margin-top: 15px
 
 .confidentiality 
-    padding: 40px 0 100px 0
+    padding: 25px 0 97px 0
     &__title
         font-weight: 500
         font-size: 38px
         line-height: 44px
         color: #1A1A1A
-        margin-bottom: 15px
+        margin-bottom: 40px
         display: block
     &__subtitle
         font-weight: 500
         font-size: 24px
         line-height: 28px
         color: #1A1A1A
-        margin-top: 25px
+        margin-top: 23px
     &__descr
         font-weight: 400
         font-size: 18px
@@ -2419,14 +2451,14 @@
             font-size: 18px
             line-height: 140%
             color: #818181
-
 .howToBuy
-    padding: 40px 0 100px 0
+    padding: 24px 0 100px 0
     &__title
         font-weight: 500
         font-size: 38px
         line-height: 44px
         color: #1A1A1A
+        margin-bottom: 40px
     &__wrapper
         display: flex
         align-items: start
@@ -2442,7 +2474,7 @@
             align-items: center
             justify-content: center
     &__text
-        padding: 20px 15px
+        padding: 21px 15px 0 15px
         &__title
             font-weight: 500
             font-size: 24px
@@ -2456,11 +2488,11 @@
             margin-top: 20px
             
 .aboutCompany
-    padding: 40px 0 60px 0
+    padding: 24px 0 42px 0
     &__wrapper
         display: flex
         align-items: start
-        margin: 0 -15px 40px -15px
+        margin: 0 -15px 36px -15px
     &__title
         font-weight: 500
         font-size: 38px
@@ -2480,6 +2512,10 @@
                 margin-top: 0
     &__img
         padding: 0 15px
+.onlytablevisible
+    display: none
+.onlymobilevisible
+    display: none
 
 
 

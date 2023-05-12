@@ -31,7 +31,7 @@
             margin: 0 -10px
             &-btn
                 padding: 0 10px
-                img
+                svg
                     width: 24px
                     height: 24px
         .search-panel
@@ -200,8 +200,10 @@
                     margin: 0 auto
                 &-tablet.vozd
                     padding-top: 12px
+                    width: 100%
                 &-tablet.trubs
                     padding-top: 18px
+                    width: 100%
                 &-desc
                     display: none
             &-descr
@@ -326,6 +328,7 @@
             span
                 font-size: 14px
                 line-height: 16px
+                margin: 0 4px
     .vent
         padding: 30px 0 15px 0
         &__title
@@ -625,23 +628,32 @@
                         font-size: 16px
                         line-height: 140%
     .product-card
+        padding: 0 0 53px 0
+        .product-card__dots
+            bottom: -39px
+        
+        .slick-next
+            right: -65px
         &__slider
+            .slick-prev,
+            .slick-next
+                top: 54.5%
+            .slick-prev
+                left: -65px
             &__wrapper
-                padding: 48px 94px
+                padding: 32px 94px
                 width: 635px
             &__item
                 height: 349px
-            .slick-next
-                right: -80px
-            .slick-prev
-                left: -80px
         &__text
             &__prevtitle
                 font-size: 14px
                 line-height: 16px
+                margin-bottom: 10px
             &__title
                 font-size: 28px
                 line-height: 32px
+                margin-top: 10px
             &__price
                 font-size: 18px
                 line-height: 21px
@@ -651,7 +663,7 @@
                 font-size: 14px
                 line-height: 16px
             &__wrapper
-                margin-top: 13px
+                margin-top: 22px
             &__vendor,
             &__manufacturer,
             &__category,
@@ -659,6 +671,7 @@
             &__title,
             &__link,
             &__version
+                margin-top: 7px
                 &__item,
                 &__value
                     font-size: 12px
@@ -669,7 +682,7 @@
                 line-height: 18px
                 &__block
                     background: #f8f8f8
-                    margin: 15px 0 70px 0
+                    margin: 13px 0 0 0
                 &__accordion.active
                     height: auto
                     transition: .3s all
@@ -693,8 +706,9 @@
                     &-open
                         font-size: 12px
                         line-height: 14px
+                        margin-top: 70px
         &__description
-            padding: 60px 0 0 0
+            padding: 41px 0 0 0
             &__title
                 font-size: 28px
                 line-height: 32px
@@ -714,16 +728,23 @@
                     line-height: 140%
                     width: 100%
     .similar
+        .slick-next,
+        .slick-prev
+            top: -36px
+        .similar__dots
+            top: -42px
         &__wrapper
-            padding: 0 0 40px 0
+            padding: 0 0 9px 0
         &__title
             font-size: 28px
             line-height: 32px
         &__slider
+            margin-top: 29px
             &__item
                 &-wrapper
                     width: 255px
                 &-img
+                    padding: 28px 0
                 &-text
                     &-title
                         font-size: 12px
@@ -837,8 +858,9 @@
                 font-size: 16px
                 line-height: 140%
     .not-found
+        padding: 60px 0 79px 0
         &__wrapper
-            padding: 60px 190px 40px 190px
+            padding: 38px 190px 40px 190px
         &__img
             width: 100%
         &__btn
@@ -847,7 +869,7 @@
             padding: 14.5px 0
 
     .order
-        padding: 0 0 80px 0
+        padding: 41px 0 20px 0
         &__wrapper
             display: flex
             flex-wrap: wrap
@@ -861,10 +883,8 @@
                 display: block
                 float: right
         &__title
-            font-weight: 500
-            font-size: 38px
-            line-height: 44px
-            color: #1A1A1A
+            font-size: 28px
+            line-height: 32px
         &__descr
             margin-top: 30px
             p
@@ -874,28 +894,20 @@
                 &:last-child
                     display: none
         &__btn
-            width: 345px
-            height: 45px
-            padding: 13.5px 0
-            display: flex
-            align-items: center
-            justify-content: center
-            background: #29A9EB
-            border: none
-            border-radius: 2px
-            margin-top: 40px
+            width: 350px
+            margin-top: 28px
             p
-                font-weight: 400
-                font-size: 16px
-                line-height: 18px
-                color: #FFFFFF
+                font-size: 14px
+                line-height: 16px
                 margin-right: 10px
     .examples
-        padding: 0 0 80px 0
+        padding: 0 0 82px 0
         .yousee__slider__item-img
             padding: 20px 15px 45px 15px
+        .yousee__slider__item
+            margin-top: 30px
     .brandsBlock
-        padding: 30px 0
+        padding: 24px 0 32px 0
         &__title
             font-size: 28px
             line-height: 32px
@@ -909,8 +921,10 @@
             width: 20%
             img
                 width: 100%
+    .lastblock
+        padding: 24px 0 36px 0
     .brandsBlockText
-        padding: 0 0 80px 0
+        padding: 0 0 76px 0
         &__text
             margin-top: 30px
             display: block
@@ -940,7 +954,7 @@
 
 
     .howToBuy
-        padding: 40px 0 80px 0
+        padding: 23px 0 69px 0
         &__title
             font-size: 28px
             line-height: 32px
@@ -953,6 +967,7 @@
                     width: 120px
                     height: 120px
         &__text
+            padding: 10px 15px 0 15px
             &__title
                 font-size: 18px
                 line-height: 21px
@@ -967,23 +982,17 @@
             align-items: start
             margin: 0 -15px 40px -15px
         &__title
-            font-weight: 500
-            font-size: 38px
-            line-height: 44px
-            color: #1A1A1A
-            margin-bottom: 40px
-            display: block
+            font-size: 28px
+            line-height: 32px
         &__text
             padding: 0 15px
             p
-                margin-top: 15px
-                font-weight: 400
-                font-size: 18px
+                font-size: 16px
                 line-height: 140%
-                color: #818181
                 &:first-child
                     margin-top: 0
-                &:last-child
-                    display: none
         &__img
             padding: 0 15px
+            img
+                width: 350px
+                height: 350px
