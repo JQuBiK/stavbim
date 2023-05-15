@@ -1,4 +1,4 @@
-@media only screen and ( max-width: 320px)
+@media only screen and ( max-width: 420px)
     .container
         width: 95.71%
     .header
@@ -254,7 +254,7 @@
                 font-size: 12px
                 line-height: 14px
                 text-decoration-line: underline
-            img
+            svg
                 display: none
         &__wrapper
             display: none
@@ -302,7 +302,7 @@
                 transition: .3s all
                 background-color: #1A1A1A
     .works
-        padding: 30px 0 83px 0
+        padding: 30px 0 79px 0
         &__title
             font-size: 24px
             line-height: 28px
@@ -312,7 +312,7 @@
                 font-size: 12px
                 line-height: 14px
                 text-decoration-line: underline
-            img
+            svg
                 display: none
         &__wrapper
             display: none
@@ -320,6 +320,9 @@
             margin-top: 30px
         &__card
             width: 81%
+            display: block
+            &:last-child
+                display: block
             &-modal
                 margin-top: 10px
             &-descr
@@ -375,13 +378,13 @@
                 line-height: 16px
         &__moreinfo
             display: block
-            margin-top: 50px
+            margin-top: 47px
         &__copyright
             width: 100%
             padding: 0
             margin: 0
             margin-bottom: 14px
-            p
+            a
                 font-size: 12px
                 line-height: 14px
         &__date
@@ -484,11 +487,12 @@
                 display: inline-block
                 margin-left: 6px
     .product
+        margin-top: 16px
         &-container
             width: 100%
         &__info
             display: block
-            padding: 37px 7px
+            padding: 21px 7px 20px 7px
             &-img
                 margin: 0 auto
                 img
@@ -501,7 +505,7 @@
                     line-height: 28px
                 &-descr
                     font-size: 16px
-                    line-height: 140%
+                    line-height: 137%
         &__list
             display: none
             &-slider
@@ -542,10 +546,13 @@
                 font-size: 12px
                 line-height: 14px
                 margin-right: 10px
+            &__price
+                margin-right: 16px
             &__price,
             &__popular
-                font-size: 12px
-                line-height: 14px
+                p
+                    font-size: 12px
+                    line-height: 14px
                 img 
                     width: 6px
                     height: 3px
@@ -564,6 +571,8 @@
                         width: 90%
                         display: block
                         margin: 0 auto
+                        width: 290px
+                        height: 243px
                 &-text
                     &-title
                         font-size: 12px
@@ -575,6 +584,7 @@
                         font-size: 16px
                         line-height: 18px
         &-navigation
+            margin-top: 39px
         &-links
             &-item
                 a
@@ -597,7 +607,15 @@
                 &-preview
                     display: block
                     margin-top: 20px
-                    padding: 20px 15px
+                    padding: 20px 0
+                    &-text
+                        padding-top: 26px
+                        &__title
+                            font-size: 24px
+                            line-height: 28px
+                        &__descr
+                            font-size: 14px
+                            line-height: 142%
                     &-img
                         display: block
                         margin: 0 auto
@@ -613,7 +631,19 @@
                         line-height: 140%
                 &-filters
                     &-sort
+                        padding: 19px 0 0 0
+                        .catalog-cards__sort-panel__price
+                            padding: 0 1px
+                        .catalog-cards__sort-panel__popular
+                            padding: 0 14px
+                    &-show
+                        &-items-mobile
+                            margin-top: 8px
+                        &-item-mobile
+                            padding: 5px 7px
                 &-mobile
+                    &-filters
+                        padding: 40px 0 0 0
                     &-filter
                         &-main
                             &-sort 
@@ -623,7 +653,9 @@
                         display: flex
                         width: 100%
     .product-card
-        padding: 20px 0 40px 0
+        padding: 16px 0 40px 0
+        .product-card__dots
+            bottom: -32px
         .slick-next,
         .slick-prev
             z-index: -10
@@ -635,12 +667,14 @@
         &__slider
             &__wrapper
                 width: 290px
-                padding: 50px 23px
+                padding: 49px 23px
             &__item
                 height: 190px
         &__text
             margin-top: 20px
             padding: 0
+            &__wrapper
+                margin-top: 20px
             &__prevtitle
                 font-size: 12px
                 line-height: 14px
@@ -665,6 +699,8 @@
                     font-size: 10px
                     line-height: 11px
             &__sizes
+                font-size: 14px
+                line-height: 16px
                 &__block
                 &__accordion
                     height: 42px
@@ -685,7 +721,7 @@
                 line-height: 28px
             &__subtitle
                 font-size: 14px
-                line-height: 140%
+                line-height: 143%
                 margin-top: 20px
             &__descr
                 font-size: 14px
@@ -693,18 +729,18 @@
                 margin-top: 15px
             &__subdescr
                 font-size: 14px
-                line-height: 140%
+                line-height: 143%
     .similar 
         .slick-list
             margin: 0 -10px
         &__wrapper
-            padding: 0 0 30px 0
+            padding: 0 0 52px 0
         &__title
             font-size: 24px
             line-height: 28px
         .similar__dots
             top: auto
-            bottom: -30px
+            bottom: -40px
             left: 50%
             transform: translateX(-50%)
             width: auto
@@ -714,12 +750,15 @@
                 height: 8px
         &__slider
             &__item
+                &-img
+                    padding: 32px 0
                 &-wrapper
                     width: 290px
     .yousee 
+        padding: 40px 0 77px 0
         .similar__dots
             top: auto
-            bottom: -30px
+            bottom: -55px
             left: 50%
             transform: translateX(-50%)
             width: auto
@@ -731,7 +770,10 @@
             margin: 0 -10px
         .similar__slider
             height: 454px
-
+            margin-bottom: 59px
+        &__title
+            font-size: 24px     
+            line-height: 28px
     .myworks
         &__searchpanel
             height: 35px
@@ -803,7 +845,7 @@
             height: 45px
 
     .order
-        padding: 4px 0 40px 0
+        padding: 4px 0 42px 0
         &__wrapper
             display: flex
             flex-wrap: wrap
@@ -815,7 +857,7 @@
             align-items: center
             justify-content: center
             padding: 45px 0
-            margin-top: 35px
+            margin-top: 29px
             img
                 width: 290px
                 display: block
@@ -826,7 +868,8 @@
             margin-top: 30px
             p
                 font-size: 14px
-                line-height: 140%
+                line-height: 143%
+                margin-top: 15px
                 &:last-child
                     display: none
         &__btn
@@ -847,6 +890,10 @@
                 width: 24px
                 height: 24px
     .examples
+        .brands__link
+            p
+                font-size: 14px
+                line-height: 16px
         .yousee__slider
             &__inner
                 margin: -15px -10px
@@ -854,7 +901,7 @@
                     display: none
                     .yousee__slider__item
                         &-img
-                            padding: 30px 20px
+                            padding: 47px 20px
                             img
                                 height: 190px
                         &-text
@@ -873,28 +920,36 @@
         display: none
 
     .brandsBlock
-        padding: 30px 0
+        padding: 5px 0
         &__title
-            font-size: 28px
-            line-height: 32px
+            font-size: 24px
+            line-height: 28px
         &__wrapper
             display: flex
             flex-wrap: wrap
             align-items: center
             margin: -10px 0 
         &__item
-            padding: 30px 0px
+            padding: 29px 0px
             width: 100%
             img
                 width: 100%
     .brandsBlockText
-        padding: 0 0 80px 0
+        padding: 20px 0 80px 0
         &__text
             margin-top: 30px
             display: block
             p
                 font-size: 14px
-                line-height: 140%
+                line-height: 143%
+    .brandsBlockPumps
+        padding: 31px 0 0 0
+    .lastblock
+        padding: 39px 0 0 0
+        .brandsBlock__item
+            padding: 28px 0
+        .brandsBlock__wrapper
+            margin-top: 9px
 
     .confidentiality 
         padding: 20px 0 80px 0
@@ -917,7 +972,7 @@
                 line-height: 140%
 
     .howToBuy
-        padding: 10px 0 80px 0
+        padding: 5px 0 77px 0
         &__title
             font-size: 24px
             line-height: 28px
@@ -938,9 +993,10 @@
                 font-size: 16px
                 line-height: 18px
                 margin-top: 15px
+                width: 65%
             &__descr
                 font-size: 14px
-                line-height: 140%
+                line-height: 143%
                 margin-top: 15px
 
     .aboutCompany

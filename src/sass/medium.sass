@@ -294,7 +294,7 @@
         &__moreinfo
             margin-top: 41px
         &__copyright
-            p
+            a
                 font-size: 14px
                 line-height: 16px
         &__date
@@ -370,7 +370,7 @@
                 margin: 0 auto
                 height: 148px
         .catalog__card
-            height: 429px
+            height: 412px
             margin-top: -2px
             &-descr.over
                 margin-top: -2px
@@ -378,7 +378,7 @@
             height: auto
 
     .plumbing
-        padding: 0
+        padding: 3px 0
         &__title
             font-size: 18px
             line-height: 21px
@@ -391,7 +391,7 @@
             -ms-flex-wrap: wrap
             flex-wrap: wrap
         .catalog__card
-            height: 429px
+            height: 412px
             &-descr.over
                 margin-top: -2px
         .catalog__card-wrapper
@@ -407,7 +407,7 @@
             position: absolute
             z-index: 3
             background-color: #fff
-            min-height: 186px
+            min-height: 170px
         &__link
             display: block
             margin-top: 13px
@@ -490,7 +490,7 @@
                 transition: .3s all
 
     .info
-        padding: 0 0 81px 0
+        padding: 13px 0 77px 0
         &__text
             margin-bottom: 15px
             &:last-child
@@ -547,6 +547,7 @@
                     height: 5px
         &-block
             &-item
+                padding: 15px
                 &-img
                     padding: 19px 0
                     img
@@ -585,14 +586,20 @@
         &__filter-block
             &__kind
                 &__title
+                    padding: 20px 20px 20px 16px
                     p
                         font-size: 16px
                         line-height: 18px
                 &__descr
                     &-link
+                        padding: 2px 0
+                        &:last-child
+                            padding: 4px 0 13px 0
                         a
                             font-size: 16px
                             line-height: 140% 
+            &__manufacturer
+                margin-top: 24px
             &__manufacturer,
             &__version
                 &__title
@@ -605,15 +612,22 @@
                             font-size: 16px
                             line-height: 140%
         &__content-block
+            padding: 0 0 79px 25px
             &-filters
                 &-show
                     width: 63%
+                    margin: -5px -8px
                     &-item
+                        margin: 5px 8px
                         p
                             font-size: 14px
                             line-height: 16px
                 &-sort
                     width: 38%
+                    padding: 9px 0 0 15px
+                    .catalog-cards__sort-panel__title
+                        p
+                            width: 110px
             &-preview
                 padding: 20px 40px 20px 0
                 &-img
@@ -627,6 +641,8 @@
                     &__descr
                         font-size: 16px
                         line-height: 140%
+        &-cards-block-item
+            padding: 15px
     .product-card
         padding: 0 0 53px 0
         .product-card__dots
@@ -733,6 +749,7 @@
             top: -36px
         .similar__dots
             top: -42px
+            transform: translateX(-33%)
         &__wrapper
             padding: 0 0 9px 0
         &__title
@@ -761,17 +778,28 @@
                         line-height: 16px
                         padding: 14.5px 0
     .yousee
-        padding: 40px 0 80px 0
+        padding: 40px 0 52px 0
+        .similar__dots
+            top: -29px
+            transform: translateX(-33%)
+        .slick-next,
+        .slick-prev
+            top: -23px
+        &__slider
+            margin-top: 32px
         &__title
             font-size: 28px
             line-height: 32px
         &__slider__inner__item.big 
+            padding: 13px 15px
             .yousee__slider__item-img
                 padding: 7px 127px
                 img
                     height: 240px
             .yousee__slider__item-text-price
                 margin-top: 34px
+        &__slider__inner__item
+            padding: 13px 15px
         &__slider__item
             &-img
                 padding: 20px 30px 45px 30px
@@ -794,25 +822,27 @@
     .myworks
         &__block
             padding: 25px 0 40px 0
+            .catalog-cards-navigation
+                margin-top: 34px
             &__slider
-                margin-top: 15px
+                margin-top: 9px
                 &__inner
                     display: flex
                     flex-wrap: wrap
                     margin: -15px
                     &__item.big
-                        padding: 15px
+                        padding: 19px 15px
                         width: 50%
                         .myworks__block__slider__item-img
                             border: 1px solid #EFEFEF
                             border-radius: 2px
-                            padding: 40px 137px
+                            padding: 39px 137px
                             &-main
                                 width: 100%
                         .myworks__block__slider__item-text-price
                             margin-top: 34px
                     &__item
-                        padding: 15px
+                        padding: 19px 15px
                         width: 25%
                 &__item
                     &-wrapper
@@ -820,7 +850,7 @@
                     &-img
                         border: 1px solid #EFEFEF
                         border-radius: 2px
-                        padding: 55px 17px
+                        padding: 54px 17px
                         &-main
                             width: 100%
                         &-pdf
@@ -846,7 +876,7 @@
                             line-height: 16px
                             padding: 14.5px 0
         &__text
-            padding: 0 0 80px 0
+            padding: 0 0 75px 0
             &__title
                 font-size: 28px
                 line-height: 32px
@@ -933,7 +963,7 @@
                 line-height: 140%
 
     .confidentiality 
-        padding: 40px 0 80px 0
+        padding: 24px 0 80px 0
         &__title
             font-size: 28px
             line-height: 32px
@@ -941,7 +971,7 @@
         &__subtitle
             font-size: 18px
             line-height: 21px
-            margin-top: 25px
+            margin-top: 29px
         &__descr
             font-size: 16px
             line-height: 140%
@@ -976,19 +1006,21 @@
                 line-height: 140%
 
     .aboutCompany
-        padding: 40px 0 60px 0
+        padding: 23px 0 39px 0
         &__wrapper
             display: flex
             align-items: start
-            margin: 0 -15px 40px -15px
+            margin: 0 -15px 37px -15px
         &__title
             font-size: 28px
             line-height: 32px
+            margin-bottom: 30px
         &__text
             padding: 0 15px
             p
                 font-size: 16px
                 line-height: 140%
+                margin-top: 13.5px
                 &:first-child
                     margin-top: 0
         &__img
@@ -996,3 +1028,33 @@
             img
                 width: 350px
                 height: 350px
+
+@media only screen and (max-width: 1199px)
+    .header
+        &__logo
+            padding: 0 23px
+            img
+                width: 110px
+                height: 20px
+        &__list
+            padding: 0 10px
+            &-item
+                padding: 0 5px
+        &__link
+            font-size: 14px
+            line-height: 16px
+        &__change-language
+            padding: 0 10px
+            &-btn
+                padding: 0 7.5px
+                p
+                    font-size: 14px
+                    line-height: 16px
+        &__search-basket
+            padding: 0 10px
+            &-btn
+                padding: 0 10px
+                svg
+                    width: 22px
+                    height: 22px
+

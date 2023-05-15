@@ -1,4 +1,4 @@
-@media only screen and ( max-width:  970px)
+@media only screen and ( max-width:  962px)
     .container
         width: 95.874%
         overflow: hidden
@@ -184,7 +184,7 @@
                 display: block
         &__wrapperv
     .catalog
-        padding: 0 0 60px 0
+        padding: 0 0 59px 0
         &__title
             font-size: 28px
             line-height: 32px
@@ -214,7 +214,9 @@
             &-descr.ind
                 margin-top: -13px
     .howtobuy
-        padding: 40px 0
+        padding: 39px 0
+        &__wrapper
+            margin: 40px -10px 0 -10px
         &__title
             font-size: 28px
             line-height: 32px
@@ -241,7 +243,7 @@
             img
                 width: 150px
     .works
-        padding: 27px 0 78px 0
+        padding: 27px 0 80px 0
         &__title
             font-size: 28px
             line-height: 32px
@@ -260,6 +262,8 @@
         &__card
             width: 33.33%
             padding: 0 10px
+            &:last-child
+                display: none
             &-modal
                 font-size: 12px
                 line-height: 14px
@@ -326,7 +330,7 @@
             &-wrapper
                 padding: 15px 0 0 0
             &-descr
-                padding: 1px 0 14px 13px
+                padding: 3px 0 14px 13px
             &-descr.over
                 margin-top: -13px
         &__cards-block
@@ -340,13 +344,14 @@
             &-wrapper
                 padding: 15px 0 0 0
             &-descr
-                padding: 1px 0 14px 13px
+                padding: 0 0 14px 13px
             &-descr.over
                 margin-top: -13px
     .accordion
         &__wrapper
             width: 91.5%
             min-height: 170px
+            padding: 11px 15px
         &__hidden
             &__link
                 a
@@ -354,9 +359,11 @@
                     line-height: 16px
 
     .info
-        padding: 40px 0 108px 0
+        padding: 37px 0 110px 0
         &__text
-            width: 95%
+            width: 98%
+            p
+                line-height: 138%
 
     .product
         &__info
@@ -389,18 +396,23 @@
         &-cards
             &-block
                 &-item
-                    padding: 10px
+                    padding: 10.5px 10px
         &__filter-block
             display: none
         &__content-block
             width: 100%
-            padding: 0 0 62px 0
+            padding: 0 0 78px 0
+            .catalog-cards-block
+                margin: -10px
+                margin-top: 5px
+            .catalog-cards-navigation
+                margin-top: 42px
             &-filters
                 display: none
                 &-show-items-mobile
                     display: flex
                     flex-wrap: wrap
-                    margin-top: 11px
+                    margin-top: 15px
                 &-show-item-mobile
                     display: flex
                     align-items: center
@@ -422,7 +434,7 @@
                     display: none
                 &-filters
                     display: flex
-                    padding: 40px 0 0 0
+                    padding: 37px 0 0 0
                     justify-content: space-between
                     align-items: start
                 &-filter
@@ -618,14 +630,20 @@
                                 padding-top: 28px
                                 display: flex
     .product-card
-        padding: 0 0 40px 0
+        padding: 0 0 35px 0
+        margin-top: -22px
         .slick-dotted.slick-slider
                 margin-bottom: 0 
+        .product-card__dots
+            bottom: -49px
         &__slider
             .slick-prev
-                left: -25px
+                left: -27px
             .slick-next
-                right: -25px
+                right: -27px
+            .slick-prev,
+            .slick-next
+                top: 49.5%
             &__wrapper
                 width: 350px
                 padding: 70.5px 41px
@@ -633,23 +651,35 @@
                 height: 209px
         &__text
             padding-left: 20px
-            &__price.worksPrice
-                margin-top: 20px
             &__sizes
-                &__wrapper
-                    padding: 15.5px 22.5px
                 &__item__inner.active
                     border-right: 1px solid #d9d9d9
                     &:nth-child(4n)
                         border-right: none
+                &__wrapper
+                    padding: 15.5px 22.5px
+            &__vendor__block,
+            &__manufacturer__block,
+            &__category__block,
+            &__number__block,
+            &__title__block,
+            &__link__block,
+            &__version__block
+                margin-top: 7px
+        &__wrapper
+            margin-top: 21px
+            &__price.worksPrice
+                margin-top: 20px
+            
         &__description
             padding: 40px 0 0 0
     .similar
         .slick-prev
             right: 164px
         .similar__dots
-            right: 5%
+            right: 3.5%
             transform: translateX(0)
+            top: -41px
         .slick-list
             margin: 0 -10px
         &__slider
@@ -657,26 +687,30 @@
                 padding: 0 10px
                 &-wrapper
                     width: 226px
+                &-img
+                    padding: 26px 0
     .yousee
+        padding: 40px 0 48px 0
         .slick-prev,
         .slick-next
-            top: -36px
+            top: -35px
         .slick-prev
             right: 164px
         .similar__dots
-            right: 5%
+            right: 3.5%
             transform: translateX(0)
-            top: -42px
+            top: -40px
         .similar__slider
             display: block
         &__slider
             display: none
+        .slick-list
+            margin: 0 -10px
     .myworks
-        
         &__searchpanel
             width: 100%
             height: 45px
-            margin-top: 23px
+            margin-top: 20px
             &__btn
                 background-color: transparent
                 z-index: 2
@@ -690,6 +724,8 @@
             padding: 25px 0 40px 0
             .item__catalog__content-block-filters-sort
                 width: 100%
+            .catalog-cards-navigation
+                margin-top: 41px
             &__slider
                 margin-top: 15px
                 &__inner
@@ -697,9 +733,9 @@
                     &__mobile
                         display: flex
                         flex-wrap: wrap
-                        margin: -15px -10px
+                        margin: -13px -10px
                     &__item
-                        padding: 15px 10px
+                        padding: 13px 10px
                         width: 33.33%
                 &__item
                     &-wrapper
@@ -726,6 +762,7 @@
                             font-size: 14px
                             line-height: 16px
         &__text
+            padding: 0 0 77px 0
             &__title
                 font-size: 28px
                 line-height: 32px
@@ -736,7 +773,7 @@
             &__subdescr
                 font-size: 16px
                 line-height: 140%
-                margin-top: 15px
+                margin-top: 13.5px
     #myworks__searchpanel__input
         font-size: 14px
         line-height: 16px
@@ -746,7 +783,7 @@
     
     .not-found
         &__wrapper
-            padding: 56.5px 123px 36.5px 123px
+            padding: 34.5px 123px 36.5px 123px
         &__img
             width: 100%
         &__btn
@@ -757,7 +794,7 @@
             height: 45px
 
     .order
-        padding: 0 0 80px 0
+        padding: 20px 0 39px 0
         &__wrapper
             display: flex
             flex-wrap: wrap
@@ -779,7 +816,8 @@
             margin-top: 30px
             p
                 font-size: 16px
-                line-height: 140%
+                line-height: 139%
+                margin-top: 13px
                 &:last-child
                     display: none
         &__btn
@@ -792,7 +830,7 @@
             background: #29A9EB
             border: none
             border-radius: 2px
-            margin-top: 40px
+            margin-top: 29px
             p
                 font-size: 14px
                 line-height: 16px
@@ -800,6 +838,9 @@
                 width: 24px
                 height: 24px
     .examples
+        padding: 0 0 79px 0
+        .catalog-cards-navigation
+            margin-top: 40px
         .yousee__slider
             &__inner
                 margin: -15px -10px
@@ -808,7 +849,7 @@
                     padding: 15px 10px
                     .yousee__slider__item
                         &-img
-                            padding: 20px 0
+                            padding: 16px 0
                             img
                                 height: 190px
                         &-text
@@ -819,16 +860,18 @@
                     padding: 15px 10px
             &__item
                 &-img
-                    padding: 20px 0
+                    padding: 16px 0
     .howToBuy
-        padding: 40px 0 80px 0
+        padding: 21px 0 59px 0
         &__wrapper
-            margin: 30px -10px 0 -10px
+            margin: 10px -10px 0 -10px
+        &__title
+            margin-bottom: 30px
         &__img
             padding: 0 10px
             &__wrapper
-                width: 255px
-                height: 255px
+                width: 227px
+                height: 200px
                 img
                     width: 120px
                     height: 120px
@@ -841,7 +884,7 @@
                 font-size: 16px
                 line-height: 140%
     .aboutCompany
-        padding: 20px 0 65px 0
+        padding: 20px 0 48px 0
         &__wrapper
             display: flex
             align-items: start
@@ -854,7 +897,7 @@
             padding: 0 10px
             p
                 font-size: 16px
-                line-height: 140%
+                line-height: 139%
                 &:first-child
                     margin-top: 0
         &__img
@@ -866,9 +909,30 @@
     .onlytablevisible
         font-weight: 400
         font-size: 16px
-        line-height: 140%
+        line-height: 137%
         color: #818181
         display: block
         margin-bottom: 30px
     .pHidden
         display: none
+    .brandsBlock
+        padding: 22.5px 0 34px 0
+    .brandsBlockText
+        padding: 0 0 78px 0
+        &__text
+            p
+                margin-top: 13px
+    .directory__way
+        span
+            margin: 0 3.5px
+    .confidentiality
+        padding: 20px 0 80px 0
+        &__title
+            margin-bottom: 29px
+        &__subtitle
+            margin-top: 26px
+        &__list
+            p
+                line-height: 137%
+    .main__title
+        padding: 20px 0 0 0
