@@ -40,9 +40,15 @@
         align-items: center
     &__logo
         padding: 0 35.5px
-        img
+        svg
+            color: #1A1A1A
+            transition: .3s all
             width: 220px
             height: 40px
+            &:hover,
+            &:active
+                transition: .3s all
+                color: #777777
     &__list
         display: flex
         list-style: none
@@ -1095,6 +1101,11 @@
         z-index: 1
         background-color: #fff
         min-height: 180px
+        transition: .3s all
+        box-shadow: 0
+    &__wrapper.active
+        transition: .3s all
+        box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.02), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0143771), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0119221), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.01), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.00807786), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.00562291)
     &__link
         display: block
         margin-top: 15px
