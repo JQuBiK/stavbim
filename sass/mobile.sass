@@ -963,6 +963,55 @@
             flex-wrap: wrap
             align-items: center
             margin: -10px 0 
+            display: none
+        &__slider
+            display: block
+            .brands__slider
+                display: flex
+                align-items: center
+            .brands__slide
+                margin: 0 15px
+                &-img
+                    max-width: 138px
+                    max-height: 58px
+            .slick-slider
+                margin: 30px auto 42px auto
+            .slick-track
+                display: flex
+                align-items: center
+            .slick-list
+                padding: 0 1%
+            .slick-slider 
+                position: relative
+            .slick-slide 
+                z-index: 1
+            .slick-slider:before 
+                content: ""
+                position: absolute
+                z-index: 2
+                bottom: 0
+                right: 0
+                height: 100%
+                width: 100px
+                background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #ffffff 100%)
+            .brands__dots
+                display: flex
+                left: 50%
+                transform: translateX(-50%)
+                bottom: -41px
+                z-index: 1
+                li
+                    width: 12px
+                    height: 12px
+                    border: 1px solid #1A1A1A
+                    border-radius: 50%
+                    transition: .3s all
+                    padding: 0 5px
+                    button
+                        display: none
+                li.slick-active
+                    transition: .3s all
+                    background-color: #1A1A1A
         &__item
             padding: 29px 0px
             width: 100%
@@ -1069,25 +1118,29 @@
 
     .search-resault
         .catalog-cards-block
-            margin: -10px
-            margin-top: 3px
+            margin: -15px 0
+            margin-top: -5px
         .item__catalog__content-block-filters-sort
             width: 100%
             padding: 26px 0 0 0
             display: flex
         .catalog-cards-block-item
-            padding: 9.5px 10px
+            padding: 15px 0
+            &:nth-child(5),
+            &:nth-child(6),
             &:nth-child(7),
             &:nth-child(8)
                 display: none
                 
         .catalog-cards-block-item-img
-            padding: 24px 0
+            padding: 42.5px 0
         .catalog-cards-navigation
-            margin-top: 40px
+            margin-top: 41px
         &__text
             padding: 40px 0 79px 0
+            .myworks__text__descr
+                line-height: 143%
             .myworks__text__subdescr
-                line-height: 138%
+                line-height: 143%
     .search-page
         padding: 14px 0 16px 0
