@@ -155,7 +155,7 @@
         &__title
             font-size: 48px
             line-height: 100%
-            width: 80%
+            width: 100%
             span
         &__wrapper
             margin-top: 11px
@@ -762,12 +762,10 @@
         &__text
             padding-left: 20px
             &__sizes
-                &__item__inner.active
-                    border-right: 1px solid #d9d9d9
-                    &:nth-child(4n)
-                        border-right: none
-                &__wrapper
-                    padding: 15.5px 22.5px
+                &__accordion
+                    padding: 13px 0
+                    &::after
+                        height: 6px
             &__vendor__block,
             &__manufacturer__block,
             &__category__block,
@@ -850,6 +848,7 @@
                 &__item
                     &-wrapper
                         width: 100%
+                        height: auto
                     &-img
                         border: 1px solid #EFEFEF
                         border-radius: 2px
@@ -1072,3 +1071,5 @@
             padding: 60px 0 250px 0
     .search-page
         padding: 15px 1px 20px 1px
+    .product-card-container
+        overflow: inherit

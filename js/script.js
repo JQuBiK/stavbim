@@ -130,7 +130,7 @@ window.addEventListener('DOMContentLoaded', () => {
 				}
 			},
 			{
-				breakpoint: 321,
+				breakpoint: 546,
 				settings: {
 					arrows: false,
 					slidesToShow: 1,
@@ -304,7 +304,6 @@ window.addEventListener('DOMContentLoaded', () => {
 	}
 
 	const productCardTableContent = document.querySelector('.product-card__text__sizes__accordion'),
-		  productCardTableBorder = document.querySelectorAll('.product-card__text__sizes__item__inner'),
 		  productCardTableOpenBtn = document.querySelector('.product-card__text__sizes__btn-open'),
 		  productCardTableCloseBtn = document.querySelector('.product-card__text__sizes__btn-close');
 
@@ -313,15 +312,23 @@ window.addEventListener('DOMContentLoaded', () => {
 	if (productCardTableOpenBtn == null || productCardTableCloseBtn ==null) {
 	} else {
 		productCardTableOpenBtn.addEventListener('click', () => {
-			dinamicHeight = window.getComputedStyle(productCardTableContent).getPropertyValue("height");
-			productCardTableContent.style.height = `${productCardTableContent.scrollHeight}px`;
-			productCardTableBorder.forEach(item => item.classList.add('active'));
+			addSize();
 		});
 		productCardTableCloseBtn.addEventListener('click', () => { 
-			productCardTableContent.style.height = `${dinamicHeight}`;
-			productCardTableBorder.forEach(item => item.classList.remove('active'));
+			removeSize();
 		});
 	}
+
+	function addSize() {
+		dinamicHeight = window.getComputedStyle(productCardTableContent).getPropertyValue("height");
+		productCardTableContent.style.height = `${productCardTableContent.scrollHeight}px`;
+	}
+
+	function removeSize() {
+		productCardTableContent.style.height = `${dinamicHeight}`;
+	}
+
+	window.addEventListener('resize', (addSize, removeSize));
 
 	window.addEventListener('scroll', () => {
         const parallax = document.querySelector('.howtobuy');
