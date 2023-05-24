@@ -150,7 +150,7 @@ window.addEventListener('DOMContentLoaded', () => {
 	});
 	//Accrodions Functions
 
-	const accordion = document.querySelectorAll('.accordion__wrapper');
+	const accordion = document.querySelectorAll('.openable');
 	const accordionBtn = document.querySelectorAll('.accordion__more-btn');
 	const accordionContent = document.querySelectorAll('.accordion__hidden');
 
@@ -320,15 +320,34 @@ window.addEventListener('DOMContentLoaded', () => {
 	}
 
 	function addSize() {
-		dinamicHeight = window.getComputedStyle(productCardTableContent).getPropertyValue("height");
-		productCardTableContent.style.height = `${productCardTableContent.scrollHeight}px`;
+		if ( productCardTableContent == null && productCardTableOpenBtn == null && productCardTableCloseBtn == null) {} else {
+			dinamicHeight = window.getComputedStyle(productCardTableContent).getPropertyValue("height");
+			productCardTableContent.style.height = `${productCardTableContent.scrollHeight}px`;
+		}
 	}
 
 	function removeSize() {
-		productCardTableContent.style.height = `${dinamicHeight}`;
+		if (productCardTableContent == null) {} else {
+			productCardTableContent.style.height = `${dinamicHeight}`;
+		}
 	}
 
-	window.addEventListener('resize', (addSize, removeSize));
+	const accordionWrapperSize = document.querySelectorAll('.accordion__wrapper'),
+		  accordionWrapperSizeHead = document.querySelector('.catalog__card-wrapper');
+	let dinamicWidth;
+
+	function getSizeandAdd() {
+		if (accordionWrapperSize == null && accordionWrapperSizeHead == null) {} else {
+			dinamicWidth = window.getComputedStyle(accordionWrapperSizeHead).getPropertyValue('width');
+			accordionWrapperSize.forEach(item => item.style.width = `${dinamicWidth}px`);
+		}
+	}
+
+	window.addEventListener('resize', () => {
+		addSize();
+		removeSize();
+		getSizeandAdd();
+	});
 
 	window.addEventListener('scroll', () => {
         const parallax = document.querySelector('.howtobuy');

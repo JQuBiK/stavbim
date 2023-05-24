@@ -504,19 +504,8 @@
     font-size: 14px;
     line-height: 16px;
   }
-  .accordion__link a::after {
-    content: "";
-    display: block;
-    width: 0%;
-    height: 1px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background-color: #1A1A1A;
-    transition: 0.3s all;
-  }
-  .accordion__link a:hover::after {
-    width: 100%;
+  .accordion__link a:hover {
+    text-decoration: underline;
   }
   .accordion__link:first-child {
     margin-top: 0;
@@ -540,19 +529,8 @@
     color: #1A1A1A;
     text-decoration: none;
   }
-  .accordion__hidden__link a::after {
-    content: "";
-    display: block;
-    width: 0%;
-    height: 1px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background-color: #1A1A1A;
-    transition: 0.3s all;
-  }
-  .accordion__hidden__link a:hover::after {
-    width: 100%;
+  .accordion__hidden__link a:hover {
+    text-decoration: underline;
   }
   .accordion__more-btn {
     font-size: 14px;
