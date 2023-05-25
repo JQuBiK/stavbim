@@ -1869,17 +1869,17 @@
   border: none;
   width: 8px;
   height: 8px;
-  background: #fff;
+  background: #000;
   border-radius: 50%;
 }
 .item__catalog__filter-block__manufacturer label.checkcontainer.error .checkmark, .item__catalog__filter-block__version label.checkcontainer.error .checkmark {
-  border-color: #fff;
+  border-color: #000;
 }
 .item__catalog__filter-block__manufacturer label.checkcontainer.success .checkmark, .item__catalog__filter-block__version label.checkcontainer.success .checkmark {
-  border-color: #fff;
+  border-color: #000;
 }
 .item__catalog__filter-block__manufacturer label.checkcontainer.warning .checkmark, .item__catalog__filter-block__version label.checkcontainer.warning .checkmark {
-  border-color: #fff;
+  border-color: #000;
 }
 .item__catalog__filter-block__manufacturer input, .item__catalog__filter-block__version input {
   position: absolute;
@@ -1889,14 +1889,14 @@
   width: 0;
 }
 .item__catalog__filter-block__manufacturer input:checked ~ .checkmark, .item__catalog__filter-block__version input:checked ~ .checkmark {
-  background-color: white;
+  background-color: #000;
 }
 .item__catalog__filter-block__manufacturer input:checked ~ .checkmark::after, .item__catalog__filter-block__version input:checked ~ .checkmark::after {
   opacity: 1;
   transition: all 300ms ease;
 }
 .item__catalog__filter-block__manufacturer input:hover input ~ .checkmark, .item__catalog__filter-block__version input:hover input ~ .checkmark {
-  background-color: #fff;
+  background-color: #000;
   transition: all 300ms;
 }
 .item__catalog__filter-block__manufacturer .checkmark, .item__catalog__filter-block__version .checkmark {
@@ -1906,7 +1906,7 @@
   height: 16px;
   width: 16px;
   box-sizing: border-box;
-  background-color: #FFFFFF;
+  background-color: #fff;
   border: none;
   border-radius: 2px;
   border: 1px solid #1A1A1A;
@@ -1922,7 +1922,7 @@
   top: 50%;
   width: 2px;
   height: 6px;
-  border: solid #000;
+  border: solid #fff;
   border-width: 0 2px 2px 0;
   -webkit-transform: translate(-50%, -50%) rotate(45deg);
   -ms-transform: translate(-50%, -50%) rotate(45deg);
@@ -2249,6 +2249,12 @@
   justify-content: space-between;
   margin-top: 7px;
 }
+.product-card__text__vendor__item, .product-card__text__manufacturer__item, .product-card__text__category__item, .product-card__text__number__item, .product-card__text__title__item, .product-card__text__link__item, .product-card__text__version__item {
+  text-align-last: left;
+}
+.product-card__text__vendor__value, .product-card__text__manufacturer__value, .product-card__text__category__value, .product-card__text__number__value, .product-card__text__title__value, .product-card__text__link__value, .product-card__text__version__value {
+  text-align-last: right;
+}
 .product-card__text__vendor__item, .product-card__text__vendor__value, .product-card__text__manufacturer__item, .product-card__text__manufacturer__value, .product-card__text__category__item, .product-card__text__category__value, .product-card__text__number__item, .product-card__text__number__value, .product-card__text__title__item, .product-card__text__title__value, .product-card__text__link__item, .product-card__text__link__value, .product-card__text__version__item, .product-card__text__version__value {
   font-weight: 400;
   font-size: 16px;
@@ -2278,7 +2284,7 @@
   width: 100%;
   border-radius: 2px;
   z-index: 2;
-  height: 50px;
+  height: 55px;
   padding: 15px 0;
   overflow: hidden;
   transition: 0.3s all;
@@ -2290,7 +2296,7 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 5px;
+  height: 10px;
   background-color: #F8F8F8;
 }
 .product-card__text__sizes__wrapper {
@@ -3988,7 +3994,10 @@
     transition: 0.3s all;
   }
   .product-card__text__sizes__accordion {
-    height: 45px;
+    height: 55px;
+  }
+  .product-card__text__sizes__accordion::after {
+    height: 10px;
   }
   .product-card__text__sizes__btn-open {
     font-size: 12px;
@@ -5367,9 +5376,10 @@
   }
   .product-card__text__sizes__accordion {
     padding: 13px 0;
+    height: 50px;
   }
   .product-card__text__sizes__accordion::after {
-    height: 6px;
+    height: 8px;
   }
   .product-card__text__vendor__block, .product-card__text__manufacturer__block, .product-card__text__category__block, .product-card__text__number__block, .product-card__text__title__block, .product-card__text__link__block, .product-card__text__version__block {
     margin-top: 7px;

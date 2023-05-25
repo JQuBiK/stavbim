@@ -895,9 +895,10 @@
   }
   .product-card__text__sizes__accordion {
     padding: 13px 0;
+    height: 50px;
   }
   .product-card__text__sizes__accordion::after {
-    height: 6px;
+    height: 8px;
   }
   .product-card__text__vendor__block, .product-card__text__manufacturer__block, .product-card__text__category__block, .product-card__text__number__block, .product-card__text__title__block, .product-card__text__link__block, .product-card__text__version__block {
     margin-top: 7px;

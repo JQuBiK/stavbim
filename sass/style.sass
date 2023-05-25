@@ -1588,17 +1588,17 @@
                             border: none
                             width: 8px
                             height: 8px
-                            background: #fff
+                            background: #000
                             border-radius: 50%
                 &.error 
                     .checkmark 
-                        border-color: #fff
+                        border-color: #000
                 &.success 
                     .checkmark 
-                        border-color: #fff
+                        border-color: #000
                 &.warning 
                     .checkmark 
-                        border-color: #fff
+                        border-color: #000
 
             input 
                 position: absolute
@@ -1607,7 +1607,7 @@
                 height: 0
                 width: 0
                 &:checked ~ .checkmark 
-                    background-color: white
+                    background-color: #000
                     &::after 
                         opacity: 1
                         transition: all 300ms ease
@@ -1615,7 +1615,7 @@
                 
 
                 &:hover input ~ .checkmark 
-                    background-color: #fff
+                    background-color: #000
                     transition: all 300ms
 
             .checkmark 
@@ -1625,7 +1625,7 @@
                 height: 16px
                 width: 16px
                 box-sizing: border-box
-                background-color: #FFFFFF
+                background-color: #fff
                 border: none
                 border-radius: 2px
                 border: 1px solid #1A1A1A
@@ -1640,7 +1640,7 @@
                     top: 50%
                     width: 2px
                     height: 6px
-                    border: solid #000
+                    border: solid #fff
                     border-width: 0 2px 2px 0
                     -webkit-transform: translate(-50%, -50%) rotate(45deg)
                     -ms-transform: translate(-50%, -50%) rotate(45deg)
@@ -1924,6 +1924,10 @@
                 align-items: center
                 justify-content: space-between
                 margin-top: 7px
+            &__item
+                text-align-last: left
+            &__value
+                text-align-last: right
             &__item,
             &__value
                 font-weight: 400
@@ -1950,7 +1954,7 @@
                 width: 100%
                 border-radius: 2px
                 z-index: 2
-                height: 50px
+                height: 55px
                 padding: 15px 0
                 overflow: hidden
                 transition: .3s all
@@ -1961,7 +1965,7 @@
                     bottom: 0
                     left: 0
                     width: 100%
-                    height: 5px
+                    height: 10px
                     background-color: #F8F8F8
             &__wrapper
                 display: flex

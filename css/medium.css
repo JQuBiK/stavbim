@@ -815,7 +815,10 @@
     transition: 0.3s all;
   }
   .product-card__text__sizes__accordion {
-    height: 45px;
+    height: 55px;
+  }
+  .product-card__text__sizes__accordion::after {
+    height: 10px;
   }
   .product-card__text__sizes__btn-open {
     font-size: 12px;
