@@ -503,9 +503,14 @@
   .accordion__link a {
     font-size: 14px;
     line-height: 16px;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: 0.3s all;
   }
   .accordion__link a:hover {
     text-decoration: underline;
+    transition: 0.3s all;
+    text-decoration-color: #1A1A1A;
   }
   .accordion__link:first-child {
     margin-top: 0;
@@ -527,10 +532,18 @@
     font-size: 16px;
     line-height: 18px;
     color: #1A1A1A;
-    text-decoration: none;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: 0.3s all;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
   }
   .accordion__hidden__link a:hover {
     text-decoration: underline;
+    transition: 0.3s all;
+    text-decoration-color: #1A1A1A;
   }
   .accordion__more-btn {
     font-size: 14px;

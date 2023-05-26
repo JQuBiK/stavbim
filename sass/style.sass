@@ -21,7 +21,7 @@
     background-color: #fff
     width: 100%
     padding: 18px 0
-    z-index: 3
+    z-index: 11
     position: relative
     &__content
         width: 100%
@@ -58,24 +58,18 @@
             padding: 0 17.5px
     &__link
         font-style: normal
-        font-size: 18px
         font-weight: 300
-        line-height: 21px
+        font-size: 16px
+        line-height: 18px
         text-decoration: none
         color: #1A1A1A
-        &::before
-            content: ''
-            display: block
-            position: absolute
-            width: 0
-            height: 1px
-            bottom: -3px
-            left: 0
-            background-color: #1A1A1A
-            transition: .3s all
+        text-decoration: underline
+        text-decoration-color: transparent
+        transition: .3s all
         &:hover
-            &::before
-                width: 100%
+            text-decoration: underline
+            text-decoration-color: #1A1A1A
+            transition: .3s all
     &__change-language
         display: flex
         margin: 0 -8.5px
@@ -239,6 +233,10 @@
                     font-size: 18px
                     line-height: 21px
                     color: #1A1A1A
+                    overflow: hidden
+                    display: -webkit-box
+                    -webkit-line-clamp: 1
+                    -webkit-box-orient: vertical
                 &__price
                     font-weight: 400
                     font-size: 16px
@@ -821,6 +819,10 @@
             width: 85%
             text-decoration: none
             display: block
+            overflow: hidden
+            display: -webkit-box
+            -webkit-line-clamp: 2
+            -webkit-box-orient: vertical
         &-price
             margin-top: 15px
             font-style: normal
@@ -1144,8 +1146,17 @@
             font-size: 16px
             line-height: 18px
             color: #1A1A1A
+            text-decoration: underline
+            text-decoration-color: transparent
+            transition: .3s all
+            overflow: hidden
+            display: -webkit-box
+            -webkit-line-clamp: 1
+            -webkit-box-orient: vertical
             &:hover
                 text-decoration: underline
+                transition: .3s all
+                text-decoration-color: #1A1A1A
         &:first-child
             margin-top: 0
     &__hidden
@@ -1163,9 +1174,17 @@
                 font-size: 16px
                 line-height: 18px
                 color: #1A1A1A
-                text-decoration: none
+                text-decoration: underline
+                text-decoration-color: transparent
+                transition: .3s all
+                overflow: hidden
+                display: -webkit-box
+                -webkit-line-clamp: 1
+                -webkit-box-orient: vertical
                 &:hover
                     text-decoration: underline
+                    transition: .3s all
+                    text-decoration-color: #1A1A1A
     &__more-btn
         margin-top: 15px
         display: inline-block
@@ -1391,6 +1410,10 @@
                     color: #1A1A1A
                     margin-top: 15px
                     width: 90%
+                    overflow: hidden
+                    display: -webkit-box
+                    -webkit-line-clamp: 2
+                    -webkit-box-orient: vertical
                 &-price
                     font-weight: 700
                     font-size: 18px
@@ -1538,6 +1561,9 @@
                 &-link
                     padding: 2.5px 0
                     display: block
+                    white-space: nowrap
+                    overflow: hidden
+                    text-overflow: ellipsis
                     &:first-child
                         padding: 0 0 3px 0
                     &:last-child
@@ -1547,20 +1573,12 @@
                         font-size: 18px
                         line-height: 140%
                         color: #1A1A1A
-                        text-decoration: none
+                        text-decoration: underline
+                        text-decoration-color: transparent
+                        transition: .3s all
                         &:hover
-                            &::after
-                                width: 100%
-                                transition: .3s all
-                        &::after
-                            content: ''
-                            display: block
-                            position: absolute
-                            bottom: -1px
-                            left: 0
-                            background-color: #1A1A1A
-                            width: 0
-                            height: 1px
+                            text-decoration: underline
+                            text-decoration-color: #1A1A1A
                             transition: .3s all
         &__manufacturer,
         &__version
@@ -1935,6 +1953,13 @@
                 line-height: 18px
                 color: #1A1A1A
                 text-decoration: none
+        &__link
+            &__value
+                overflow: hidden
+                white-space: nowrap
+                overflow: hidden
+                text-overflow: ellipsis
+                max-width: 182px
         &__sizes
             font-weight: 500
             font-size: 18px
@@ -2136,6 +2161,10 @@
                     line-height: 21px
                     color: #1A1A1A
                     margin-top: 15px
+                    overflow: hidden
+                    display: -webkit-box
+                    -webkit-line-clamp: 2
+                    -webkit-box-orient: vertical
                 &-price
                     font-weight: 700
                     font-size: 18px
@@ -2231,6 +2260,11 @@
             &__item.big
                 padding: 15px
                 width: 50%
+                .yousee__slider__item-text-descr
+                    overflow: hidden
+                    display: -webkit-box
+                    -webkit-line-clamp: 1
+                    -webkit-box-orient: vertical
                 .yousee__slider__item-img
                     border: 1px solid #EFEFEF
                     border-radius: 2px
@@ -2269,6 +2303,10 @@
                     line-height: 21px
                     color: #1A1A1A
                     margin-top: 15px
+                    overflow: hidden
+                    display: -webkit-box
+                    -webkit-line-clamp: 2
+                    -webkit-box-orient: vertical
                 &-price
                     font-weight: 700
                     font-size: 18px
@@ -2323,6 +2361,11 @@
                 &__item.big
                     padding: 13px 15px
                     width: 50%
+                    .myworks__block__slider__item-text-descr
+                        overflow: hidden
+                        display: -webkit-box
+                        -webkit-line-clamp: 1
+                        -webkit-box-orient: vertical
                     .myworks__block__slider__item-img
                         border: 1px solid #EFEFEF
                         border-radius: 2px
@@ -2371,6 +2414,10 @@
                         line-height: 21px
                         color: #1A1A1A
                         margin-top: 15px
+                        overflow: hidden
+                        display: -webkit-box
+                        -webkit-line-clamp: 2
+                        -webkit-box-orient: vertical
                     &-price
                         font-weight: 700
                         font-size: 18px
@@ -2678,10 +2725,51 @@
             background-color: #1A1A1A
             text-decoration: none
             text-align: center
-
-
-
-
+.link-more.active
+    .header__link
+        &::after
+            transition: .3s all
+            transform: rotate(-45deg)
+        &::before
+            transition: .3s all
+            transform: rotate(225deg)
+.link-more 
+    display: flex
+    align-items: center
+    justify-content: center
+    margin: 0 -5px
+    cursor: pointer
+    .header__link
+        border-bottom: 1px dashed #1A1A1A
+        text-decoration: none
+        transition: .3s all
+        &:hover
+            transition: .3s all
+            color: #777777
+            border-bottom: 1px dashed #777777
+            &::after,
+            &::before
+                background-color: #777777
+                transition: .3s all
+        &::after,
+        &::before
+            content: ''
+            display: block
+            position: absolute
+            right: -16px
+            top: 50%
+            transform: translateY(-50%)
+            width: 8px
+            height: 1px
+            background-color: #1A1A1A
+            transition: .3s all
+        &::after
+            transform: rotate(45deg)
+            right: -22px
+            transition: .3s all
+        &::before
+            transform: rotate(135deg)
+            transition: .3s all
 
                         //Imorts
 @import medium

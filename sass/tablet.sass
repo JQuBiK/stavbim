@@ -130,19 +130,13 @@
             font-size: 16px
             line-height: 18px
             color: #1A1A1A
-            &::before
-                content: ''
-                display: block
-                position: absolute
-                width: 0
-                height: 1px
-                bottom: -1px
-                left: 0
-                background-color: #1A1A1A
-                transition: .3s all
+            text-decoration: underline
+            text-decoration-color: transparent
+            transition: .3s all
             &:hover
-                &::before
-                    width: 100%
+                text-decoration: underline
+                text-decoration-color: #1A1A1A
+                transition: .3s all
         &__change-language
             display: none
     
@@ -355,6 +349,10 @@
                 a
                     font-size: 14px
                     line-height: 16px
+                    overflow: hidden
+                    display: -webkit-box
+                    -webkit-line-clamp: 1
+                    -webkit-box-orient: vertical
 
     .info
         padding: 37px 0 110px 0
@@ -518,6 +516,9 @@
                                 &-link
                                     padding: 3px 0
                                     display: block
+                                    white-space: nowrap
+                                    overflow: hidden
+                                    text-overflow: ellipsis
                                     &:first-child
                                         padding: 0 0 3px 0
                                     &:last-child
@@ -527,20 +528,12 @@
                                         font-size: 16px
                                         line-height: 140%
                                         color: #1A1A1A
-                                        text-decoration: none
+                                        text-decoration: underline
+                                        text-decoration-color: transparent
+                                        transition: .3s all
                                         &:hover
-                                            &::after
-                                                width: 100%
-                                                transition: .3s all
-                                        &::after
-                                            content: ''
-                                            display: block
-                                            position: absolute
-                                            bottom: -1px
-                                            left: 0
-                                            background-color: #1A1A1A
-                                            width: 0
-                                            height: 1px
+                                            text-decoration: underline
+                                            text-decoration-color: #1A1A1A
                                             transition: .3s all
                         &__manufacturer,
                         &__version
@@ -813,6 +806,12 @@
             display: block
         &__slider
             display: none
+            &__inner__item.big
+                .yousee__slider__item-text-descr
+                    overflow: hidden
+                    display: -webkit-box
+                    -webkit-line-clamp: 2
+                    -webkit-box-orient: vertical
         .slick-list
             margin: 0 -10px
     .myworks

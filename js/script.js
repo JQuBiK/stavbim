@@ -7,6 +7,11 @@ window.addEventListener('DOMContentLoaded', () => {
 
 	searchOpenBtn.addEventListener('click', () => {
 		searchPanel.classList.toggle('active');
+		if (searchPanel.classList.contains('active')) {
+			basketPopup.classList.remove('active');
+			mobileMenuBtn.classList.remove('active');
+			mobileMenuContent.classList.remove('active');
+		}
   	});
 
   
@@ -25,6 +30,11 @@ window.addEventListener('DOMContentLoaded', () => {
 
 	basketOpenPopupBtn.addEventListener('click', () => {
 		basketPopup.classList.toggle('active');
+		if (basketPopup.classList.contains('active')) {
+			searchPanel.classList.remove('active');
+			mobileMenuBtn.classList.remove('active');
+			mobileMenuContent.classList.remove('active');
+		}
 	});
 
 	basketClosePopupBtn.addEventListener('click', () => {
@@ -68,6 +78,20 @@ window.addEventListener('DOMContentLoaded', () => {
 	}
 
 	countPrice();
+
+	//mobile menu
+
+	const mobileMenuBtn = document.querySelector('.header__mobil-btn'),
+		  mobileMenuContent = document.querySelector('.mobile__menu');
+
+	mobileMenuBtn.addEventListener('click', () => {
+		mobileMenuBtn.classList.toggle('active');
+		mobileMenuContent.classList.toggle('active');
+		if (mobileMenuContent.classList.contains('active')) {
+			searchPanel.classList.remove('active');
+			basketPopup.classList.remove('active');
+		}
+	});
 
 	//slider Brands
 	$('.brands__slider').slick({
@@ -168,16 +192,6 @@ window.addEventListener('DOMContentLoaded', () => {
 			}
 		});
 
-	});
-
-	//mobile menu
-
-	const mobileMenuBtn = document.querySelector('.header__mobil-btn'),
-		  mobileMenuContent = document.querySelector('.mobile__menu');
-
-	mobileMenuBtn.addEventListener('click', () => {
-		mobileMenuBtn.classList.toggle('active');
-		mobileMenuContent.classList.toggle('active');
 	});
 
 	//filter
@@ -316,7 +330,6 @@ window.addEventListener('DOMContentLoaded', () => {
 		});
 		productCardTableCloseBtn.addEventListener('click', () => { 
 			removeSize();
-			console.log(1);
 		});
 	}
 

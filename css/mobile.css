@@ -406,6 +406,7 @@
   .works__card {
     width: 81%;
     display: block;
+    max-width: 290px;
   }
   .works__card:last-child {
     display: block;
@@ -424,6 +425,7 @@
   }
   .works .slick-list {
     margin: 0 -10px;
+    padding: 0 13%;
   }
   .works .slick-slider {
     margin-bottom: 42px;
@@ -599,6 +601,10 @@
   .accordion__link a {
     font-size: 12px;
     line-height: 14px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
   }
   .accordion__more-btn {
     font-size: 12px;
@@ -614,6 +620,10 @@
   .accordion__hidden__link a {
     font-size: 12px;
     line-height: 14px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
   }
   .back-to-page {
     display: inline-block;
@@ -628,6 +638,7 @@
   .back-to-page-img-mobile {
     display: inline-block;
     margin-left: 6px;
+    cursor: pointer;
   }
   .product {
     margin-top: 16px;
