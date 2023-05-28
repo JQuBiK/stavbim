@@ -2729,10 +2729,10 @@
     .header__link
         &::after
             transition: .3s all
-            transform: rotate(-45deg)
+            transform: rotate(45deg)
         &::before
             transition: .3s all
-            transform: rotate(225deg)
+            transform: rotate(135deg)
 .link-more 
     display: flex
     align-items: center
@@ -2764,13 +2764,40 @@
             background-color: #1A1A1A
             transition: .3s all
         &::after
-            transform: rotate(45deg)
+            transform: rotate(-45deg)
             right: -22px
             transition: .3s all
         &::before
-            transform: rotate(135deg)
+            transform: rotate(225deg)
             transition: .3s all
-
+.droplist.active
+    top: 85px
+.droplist
+    position: absolute
+    z-index: 1
+    background-color: #fff
+    right: 27%
+    border-radius: 2px
+    transition: .3s all
+    top: -200px
+    filter: drop-shadow(0px 4px 24px rgba(0, 0, 0, 0.06));
+    &__list
+        list-style: none
+    &__item
+        padding: 15px
+        border-bottom: solid 1px #EFEFEF
+        a
+            text-decoration: underline
+            text-decoration-color: transparent
+            transition: .3s all
+            color: #1A1A1A
+            font-size: 16px
+            line-height: 18px
+            &:hover
+                text-decoration-color: #1A1A1A
+                transition: .3s all
+        &:last-child
+            border-bottom: none
                         //Imorts
 @import medium
 @import tablet

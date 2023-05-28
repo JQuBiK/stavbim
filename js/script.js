@@ -11,6 +11,8 @@ window.addEventListener('DOMContentLoaded', () => {
 			basketPopup.classList.remove('active');
 			mobileMenuBtn.classList.remove('active');
 			mobileMenuContent.classList.remove('active');
+			dropList.classList.remove('active');
+			dropListBtn.classList.remove('active');
 		}
   	});
 
@@ -34,6 +36,8 @@ window.addEventListener('DOMContentLoaded', () => {
 			searchPanel.classList.remove('active');
 			mobileMenuBtn.classList.remove('active');
 			mobileMenuContent.classList.remove('active');
+			dropList.classList.remove('active');
+			dropListBtn.classList.remove('active');
 		}
 	});
 
@@ -90,6 +94,8 @@ window.addEventListener('DOMContentLoaded', () => {
 		if (mobileMenuContent.classList.contains('active')) {
 			searchPanel.classList.remove('active');
 			basketPopup.classList.remove('active');
+			dropList.classList.remove('active');
+			dropListBtn.classList.remove('active');
 		}
 	});
 
@@ -372,5 +378,15 @@ window.addEventListener('DOMContentLoaded', () => {
 		}
       });
 
-	  
+	const dropList = document.querySelector('.droplist'),
+	  	  dropListBtn = document.querySelector('.link-more');
+
+	dropListBtn.addEventListener('click', () => {
+		dropListBtn.classList.toggle('active');
+		dropList.classList.toggle('active');
+		searchPanel.classList.remove('active');
+		mobileMenuBtn.classList.remove('active');
+		mobileMenuContent.classList.remove('active');
+		basketPopup.classList.remove('active');
+	});
 });
