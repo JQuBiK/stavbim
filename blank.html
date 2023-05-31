@@ -41,19 +41,28 @@
                     <li class="header__list-item"><a href="brands.html" class="header__link">Бренды</a></li>
                     <li class="header__list-item"><a href="myworks.html" class="header__link">Мои работы</a></li>
                     <li class="header__list-item"><a href="order.html" class="header__link">Заказать разработку семейства</a></li>
-                    <li class="header__list-item link-more active"><div class="header__link">Eщё</div></li>
+                    <li class="header__list-item link-more"><div class="header__link">Eщё</div></li>
                 </ul>
                 <div class="header__mobile-wrapper">
                     <div class="header__change-language">
-                        <a href="" class="header__change-language-btn active"><p>RUS</p></a>
-                        <a href="" class="header__change-language-btn"><p>ENG</p></a>
+                        <a href="#" class="header__change-language-btn active"><p>RUS</p></a>
+                        <a href="#" class="header__change-language-btn"><p>ENG</p></a>
                     </div>
                     <div class="header__search-basket">
                         <div id="search" class="header__search-basket-btn">
-                            <img src="img/search.svg" alt="Searc">
+                            <svg  viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.7301 24.75C6.25181 24.75 1.00015 19.4334 1.00015 12.875C1.00015 6.31662 6.25181 1 12.7301 1C19.2083 1 24.46 6.31662 24.46 12.875C24.46 19.4334 19.2083 24.75 12.7301 24.75Z" stroke="currentColor" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M31 31L21.6012 21.484" stroke="currentColor" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                                
                         </div>
                         <div id="basket" class="header__search-basket-btn">
-                            <img src="img/basket.svg" alt="Basket">
+                            <svg  viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1H5.42581L7.25 7.25" stroke="currentColor" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M28.2021 30.198C29.2714 29.7551 29.7791 28.5293 29.3362 27.46C28.8933 26.3907 27.6675 25.883 26.5982 26.3259C25.5289 26.7688 25.0212 27.9947 25.4641 29.0639C25.907 30.1332 27.1328 30.641 28.2021 30.198Z" stroke="currentColor" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M13.293 28.747C13.559 27.6207 12.8615 26.4919 11.7351 26.2259C10.6087 25.96 9.47999 26.6575 9.21402 27.7839C8.94804 28.9102 9.64554 30.039 10.7719 30.305C11.8983 30.5709 13.0271 29.8734 13.293 28.747Z" stroke="currentColor" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M11.0819 21.8259C9.94813 21.8259 9.02898 22.7602 9.02898 23.9129C9.02898 25.0656 9.94807 26 11.0819 26H27.2941M7.25 7.25L11.0444 21.8259H27.2057L31 7.25H7.25Z" stroke="currentColor" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg> 
                         </div>
                     </div>
                 </div>
@@ -66,14 +75,16 @@
     </header>
 
     <!-- Выпадающий список -->
-    <div class="droplist active">
-        <ul class="droplist__list">
-            <li class="droplist__item"><a href="">Очень длинный новый пункт меню навигации</a></li>
-            <li class="droplist__item"><a href="">Очень длинный новый пункт меню навигации</a></li>
-            <li class="droplist__item"><a href="">Очень длинный новый пункт меню навигации</a></li>
-        </ul>
+    <div class="container">
+        <div class="droplist">
+            <ul class="droplist__list">
+                <li class="droplist__item"><a href="#">Очень длинный новый пункт меню навигации</a></li>
+                <li class="droplist__item"><a href="#">Очень длинный новый пункт меню навигации</a></li>
+                <li class="droplist__item"><a href="#">Очень длинный новый пункт меню навигации</a></li>
+            </ul>
+        </div>
     </div>
-
+    
     <!-- Меню -->
     
     <div class="mobile__menu">
@@ -84,11 +95,33 @@
             <li class="mobile__menu__list-item"><a href="brands.html" class="mobile__menu__link">Бренды</a></li>
             <li class="mobile__menu__list-item"><a href="myworks.html" class="mobile__menu__link">Мои работы</a></li>
             <li class="mobile__menu__list-item"><a href="order.html" class="mobile__menu__link">Заказать разработку семейства</a></li>
+            <li class="mobile__menu__list-item"><div class="mobile__menu__link mobile__more">Ещё <span>+</span></div></li>
         </ul>
         <div class="mobile__menu__change-language">
-            <a href="" class="mobile__menu__change-language-btn active"><p>RUS</p></a>
-            <a href="" class="mobile__menu__change-language-btn"><p>ENG</p></a>
+            <a href="#" class="mobile__menu__change-language-btn active"><p>RUS</p></a>
+            <a href="#" class="mobile__menu__change-language-btn"><p>ENG</p></a>
         </div>
+    </div>
+
+    <div class="mobile__menu__more">
+        <div class="close__mobile__menu__more">
+            <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17 7H1M1 7L7 1M1 7L7 13" stroke="currentColor"/>
+            </svg>
+            <div class="close__mobile__menu__more__text">Назад</div>
+        </div>
+        <ul class="mobile__menu__more__list">
+            <li class="mobile__menu__more__item"><a href="#" class="mobile__menu__more__link">Новый пункт меню</a></li>
+            <li class="mobile__menu__more__item"><a href="#" class="mobile__menu__more__link">Новый пункт меню</a></li>
+            <li class="mobile__menu__more__item"><a href="#" class="mobile__menu__more__link">Новый пункт меню</a></li>
+            <li class="mobile__menu__more__item"><a href="#" class="mobile__menu__more__link">Новый пункт меню</a></li>
+            <li class="mobile__menu__more__item"><a href="#" class="mobile__menu__more__link">Новый пункт меню</a></li>
+            <li class="mobile__menu__more__item"><a href="#" class="mobile__menu__more__link">Новый пункт меню</a></li>
+            <li class="mobile__menu__more__item"><a href="#" class="mobile__menu__more__link">Новый пункт меню</a></li>
+            <li class="mobile__menu__more__item"><a href="#" class="mobile__menu__more__link">Новый пункт меню</a></li>
+            <li class="mobile__menu__more__item"><a href="#" class="mobile__menu__more__link">Новый пункт меню</a></li>
+            <li class="mobile__menu__more__item"><a href="#" class="mobile__menu__more__link">Новый пункт меню</a></li>
+        </ul>
     </div>
 
     <!-- Меню -->

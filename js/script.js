@@ -13,6 +13,7 @@ window.addEventListener('DOMContentLoaded', () => {
 			mobileMenuContent.classList.remove('active');
 			dropList.classList.remove('active');
 			dropListBtn.classList.remove('active');
+			moreMenuList.classList.remove('active');
 		}
   	});
 
@@ -38,6 +39,7 @@ window.addEventListener('DOMContentLoaded', () => {
 			mobileMenuContent.classList.remove('active');
 			dropList.classList.remove('active');
 			dropListBtn.classList.remove('active');
+			moreMenuList.classList.remove('active');
 		}
 	});
 
@@ -91,6 +93,7 @@ window.addEventListener('DOMContentLoaded', () => {
 	mobileMenuBtn.addEventListener('click', () => {
 		mobileMenuBtn.classList.toggle('active');
 		mobileMenuContent.classList.toggle('active');
+		moreMenuList.classList.remove('active');
 		if (mobileMenuContent.classList.contains('active')) {
 			searchPanel.classList.remove('active');
 			basketPopup.classList.remove('active');
@@ -389,4 +392,18 @@ window.addEventListener('DOMContentLoaded', () => {
 		mobileMenuContent.classList.remove('active');
 		basketPopup.classList.remove('active');
 	});
+
+	const openMoreMenuBtn = document.querySelector('.mobile__more'),
+		  closeMoreMenuBtn = document.querySelector('.close__mobile__menu__more'),
+		  moreMenuList = document.querySelector('.mobile__menu__more');
+
+	document.addEventListener('click', (e) => {
+		if (moreMenuList.classList.contains('active') && !moreMenuList.contains(e.target)) {
+			moreMenuList.classList.remove('active');
+		}
+	});
+
+	openMoreMenuBtn.addEventListener('click', () => moreMenuList.classList.add('active'));
+	closeMoreMenuBtn.addEventListener('click', () => moreMenuList.classList.remove('active'));
+
 });

@@ -1,4 +1,4 @@
-@media only screen and ( max-width:  962px)
+@media only screen and ( max-width:  1033px)
     .container
         width: 95.874%
         overflow: hidden
@@ -115,7 +115,7 @@
         padding: 20px 24px
         background-color: #fff
         z-index: 2
-        top: -175px
+        top: -220px
         left: -1px
         transition: .3s all
         border: 1px solid #1A1A1A
@@ -133,6 +133,11 @@
             text-decoration: underline
             text-decoration-color: transparent
             transition: .3s all
+            cursor: pointer
+            display: inline-block
+            span
+                font-size: 20px
+                font-weight: 100
             &:hover
                 text-decoration: underline
                 text-decoration-color: #1A1A1A
@@ -1073,3 +1078,51 @@
         padding: 15px 1px 20px 1px
     .product-card-container
         overflow: inherit
+    .mobile__menu__more.active
+        left: 0
+        transition: .3s all
+    .mobile__menu__more
+        display: block
+        z-index: 5
+        position: absolute
+        top: 53px
+        left: -322px
+        background-color: #fff
+        padding: 20px 24px
+        width: 320px
+        box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.02), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0143771), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0119221), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.01), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.00807786), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.00562291)
+        transition: .3s all
+        &__list
+            list-style: none
+        &__item
+            margin-bottom: 15px
+            &:last-child
+                margin-bottom: 0
+        &__link
+            font-weight: 300
+            font-size: 16px
+            line-height: 18px
+            color: #1A1A1A
+            text-decoration-color: transparent
+            transition: .3s all
+            &:hover
+                text-decoration-color: #1A1A1A
+                transition: .3s all
+    .close__mobile__menu__more
+        display: flex
+        align-items: center
+        justify-content: start
+        margin-bottom: 22px
+        cursor: pointer
+        &:hover
+            svg
+                transform: translateX(-5px)
+                transition: .3s all
+        svg
+            margin-right: 10px
+            transition: .3s all
+        &__text
+            font-weight: 400
+            font-size: 16px
+            line-height: 18px
+            color: #1A1A1A

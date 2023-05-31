@@ -19,13 +19,16 @@
   .header__list {
     margin: 0 -9px;
     padding: 0 23px;
+    align-items: center;
+    justify-content: space-between;
+    width: 65%;
   }
   .header__list-item {
     padding: 0 8px;
   }
   .header__link {
-    font-size: 16px;
-    line-height: 18px;
+    font-size: 14px;
+    line-height: 16px;
   }
   .header__change-language {
     margin: 0 -7.5px;
@@ -1267,6 +1270,22 @@
     font-size: 14px;
     line-height: 16pxe;
     text-align: center;
+  }
+  .link-more .header__link::before, .link-more .header__link::after {
+    width: 6px;
+  }
+  .link-more .header__link::before {
+    right: -14px;
+  }
+  .link-more .header__link::after {
+    right: -18px;
+  }
+  .droplist__item a {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .mobile__menu__more {
+    display: none;
   }
 }
 @media only screen and (max-width: 1199px) {

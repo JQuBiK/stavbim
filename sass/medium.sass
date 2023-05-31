@@ -14,11 +14,14 @@
         &__list
             margin: 0 -9px
             padding: 0 23px
+            align-items: center
+            justify-content: space-between
+            width: 65%
             &-item
                 padding: 0 8px
         &__link
-            font-size: 16px
-            line-height: 18px
+            font-size: 14px
+            line-height: 16px
         &__change-language
             margin: 0 -7.5px
             padding: 0 23px
@@ -1037,6 +1040,23 @@
                 font-size: 14px
                 line-height: 16pxe
                 text-align: center
+    .link-more
+        .header__link
+            &::before,
+            &::after
+                width: 6px
+            &::before
+                right: -14px
+            &::after
+                right: -18px
+    .droplist 
+        &__item
+            a
+                font-size: 14px
+                line-height: 16px
+    .mobile__menu__more
+        display: none
+        
 
 @media only screen and (max-width: 1199px)
     .header
