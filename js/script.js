@@ -14,6 +14,8 @@ window.addEventListener('DOMContentLoaded', () => {
 			dropList.classList.remove('active');
 			dropListBtn.classList.remove('active');
 			moreMenuList.classList.remove('active');
+			moreMenuWrapper.classList.remove('active');
+			mobileMenuWrapper.classList.remove('active');
 		}
   	});
 
@@ -40,6 +42,8 @@ window.addEventListener('DOMContentLoaded', () => {
 			dropList.classList.remove('active');
 			dropListBtn.classList.remove('active');
 			moreMenuList.classList.remove('active');
+			moreMenuWrapper.classList.remove('active');
+			mobileMenuWrapper.classList.remove('active');
 		}
 	});
 
@@ -88,17 +92,29 @@ window.addEventListener('DOMContentLoaded', () => {
 	//mobile menu
 
 	const mobileMenuBtn = document.querySelector('.header__mobil-btn'),
+		  mobileMenuWrapper = document.querySelector('.mobile__menu__wrapper'),
 		  mobileMenuContent = document.querySelector('.mobile__menu');
 
 	mobileMenuBtn.addEventListener('click', () => {
 		mobileMenuBtn.classList.toggle('active');
 		mobileMenuContent.classList.toggle('active');
 		moreMenuList.classList.remove('active');
+		mobileMenuWrapper.classList.toggle('active');
 		if (mobileMenuContent.classList.contains('active')) {
 			searchPanel.classList.remove('active');
 			basketPopup.classList.remove('active');
 			dropList.classList.remove('active');
 			dropListBtn.classList.remove('active');
+		}
+	});
+
+	document.addEventListener('click', (e) => {
+		if (mobileMenuContent.classList.contains('active')) {
+			if (e.target === mobileMenuWrapper) {
+				mobileMenuContent.classList.remove('active');
+				mobileMenuBtn.classList.remove('active');
+				mobileMenuWrapper.classList.remove('active');
+			}
 		}
 	});
 
@@ -382,28 +398,42 @@ window.addEventListener('DOMContentLoaded', () => {
       });
 
 	const dropList = document.querySelector('.droplist'),
+	  	  dropListWrapper = document.querySelector('.droplist__wrapper'),
 	  	  dropListBtn = document.querySelector('.link-more');
 
 	dropListBtn.addEventListener('click', () => {
 		dropListBtn.classList.toggle('active');
 		dropList.classList.toggle('active');
+		dropListWrapper.classList.toggle('active');
 		searchPanel.classList.remove('active');
 		mobileMenuBtn.classList.remove('active');
 		mobileMenuContent.classList.remove('active');
 		basketPopup.classList.remove('active');
 	});
 
-	const openMoreMenuBtn = document.querySelector('.mobile__more'),
-		  closeMoreMenuBtn = document.querySelector('.close__mobile__menu__more'),
-		  moreMenuList = document.querySelector('.mobile__menu__more');
-
 	document.addEventListener('click', (e) => {
-		if (moreMenuList.classList.contains('active') && !moreMenuList.contains(e.target)) {
-			moreMenuList.classList.remove('active');
+		if(e.target === dropListWrapper) {
+			dropList.classList.remove('active');
+			dropListWrapper.classList.remove('active');
+			dropListBtn.classList.remove('active');
 		}
 	});
 
-	openMoreMenuBtn.addEventListener('click', () => moreMenuList.classList.add('active'));
-	closeMoreMenuBtn.addEventListener('click', () => moreMenuList.classList.remove('active'));
+	const openMoreMenuBtn = document.querySelector('.mobile__more'),
+		  moreMenuList = document.querySelector('.mobile__menu__more'),
+		  moreMenuWrapper = document.querySelector('.mobile__menu__more__wrapper');
 
+	document.addEventListener('click', (e) => {
+		if (moreMenuList.classList.contains('active')) {
+			if (e.target === moreMenuWrapper || e.target.getAttribute('data-closeMoreMenu') == "") {
+				moreMenuList.classList.remove('active');
+				moreMenuWrapper.classList.remove('active');
+			}
+		}
+	});
+
+	openMoreMenuBtn.addEventListener('click', () => {
+		moreMenuWrapper.classList.add('active');
+		moreMenuList.classList.add('active');
+	});
 });

@@ -1280,6 +1280,9 @@
   .link-more .header__link::after {
     right: -18px;
   }
+  .droplist.active {
+    top: 70px;
+  }
   .droplist__item a {
     font-size: 14px;
     line-height: 16px;
@@ -1326,6 +1329,9 @@
   .header__search-basket-btn svg {
     width: 22px;
     height: 22px;
+  }
+  .droplist.active {
+    top: 66px;
   }
 }
 @media only screen and (max-width: 1300px) {

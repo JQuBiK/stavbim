@@ -51,6 +51,10 @@
   .mobile__menu__change-language-btn.active p {
     color: #1A1A1A;
   }
+  .mobile__menu__more {
+    width: 100%;
+    left: -520px;
+  }
   .preview {
     padding: 124px 0 114px 0;
   }
@@ -475,13 +479,27 @@
   }
   .footer__list {
     margin-top: 13px;
+    display: none;
+  }
+  .footer__list__mobile {
+    display: flex;
+    flex-wrap: wrap;
+    width: 290px;
+    padding: 0;
+    margin: 0 -7.5px;
+    margin-top: 13px;
+  }
+  .footer__list__wrapper {
+    margin: 0;
   }
   .footer__item {
+    width: 44%;
+    margin: 0 7.5px;
     margin-top: 8px;
   }
   .footer__item a {
-    font-size: 14px;
-    line-height: 16px;
+    font-size: 12px;
+    line-height: 14px;
   }
   .footer__moreinfo {
     display: block;
