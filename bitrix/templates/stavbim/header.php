@@ -41,7 +41,7 @@
                 <li class="header__list-item"><a href="/company/index.php" class="header__link">О компании</a></li>
                 <li class="header__list-item"><a href="/how-to-buy/index.php" class="header__link">Каталог</a></li>
                 <li class="header__list-item"><a href="/how-to-buy/index.php" class="header__link">Как купить</a></li>
-                <li class="header__list-item"><a href="../../../brands.html" class="header__link">Бренды</a></li>
+                <li class="header__list-item"><a href="/brands/index.php" class="header__link">Бренды</a></li>
                 <li class="header__list-item"><a href="../../../myworks.html" class="header__link">Мои работы</a></li>
                 <li class="header__list-item"><a href="../../../order.html" class="header__link">Заказать разработку семейства</a></li>
                 <li class="header__list-item link-more"><div class="header__link">Eщё</div></li>
