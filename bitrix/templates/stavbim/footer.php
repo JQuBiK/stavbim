@@ -8,7 +8,7 @@
                     <ul class="footer__list">
                         <li class="footer__item"><a href="/company/index.php" class="footer__item__link">О компании</a></li>
                         <li class="footer__item"><a href="../../../adjustable.html" class="footer__item__link">Каталог</a></li>
-                        <li class="footer__item"><a href="../../../howToBuy.html" class="footer__item__link">Как купить</a></li>
+                        <li class="footer__item"><a href="/how-to-buy/index.php" class="footer__item__link">Как купить</a></li>
                         <li class="footer__item"><a href="../../../brands.html" class="footer__item__link">Бренды</a></li>
                         <li class="footer__item"><a href="../../../myworks.html" class="footer__item__link">Мои работы</a></li>
                         <li class="footer__item"><a href="../../../order.html" class="footer__item__link">Заказать разработку семейства</a></li>

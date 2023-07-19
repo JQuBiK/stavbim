@@ -5,60 +5,80 @@ $APPLICATION->SetTitle("О компании");
 
     <div class="container">
         <div class="directory">
-            <div class="directory__way"><a href="" class="directory__way-link">Главная</a><span>/</span></div>
-            <div class="directory__way"><a href="" class="directory__way-link active">О компании</a></div>
+            <div class="directory__way">
+                <a href="" class="directory__way-link">Главная</a>/
+            </div>
+            <div class="directory__way">
+                <a href="" class="directory__way-link active">О компании</a>
+            </div>
         </div>
     </div>
 
-    <section class="aboutCompany">
-        <div class="container">
-            <img src="/design/img/aboutCompany/aboutCompany1.png" alt="" class="onlymobilevisible">
-            <h1 class="aboutCompany__title">О компании</h1>
-            <div class="aboutCompany__wrapper">
-                <div class="aboutCompany__text">
-                    <p>Наша компания - это специализированный поставщик и продавец систем вентиляции и кондиционирования
-                        воздуха для широкого спектра клиентов. Мы предлагаем широкий выбор продуктов, которые отвечают
-                        самым высоким стандартам качества и эффективности.</p>
-                    <p>Наша команда состоит из профессиональных инженеров и экспертов в области вентиляции и
-                        кондиционирования, которые обладают глубокими знаниями и опытом в данной сфере. Мы работаем с
-                        ведущими производителями оборудования и материалов, чтобы предложить нашим клиентам самые
-                        инновационные и надежные решения.</p>
-                    <p class="pHidden">Наша команда состоит из профессиональных инженеров и экспертов в области
-                        вентиляции и кондиционирования, которые обладают глубокими знаниями и опытом в данной сфере. Мы
-                        работаем с ведущими производителями оборудования и материалов, чтобы предложить нашим клиентам
-                        самые инновационные и надежные решения.</p>
-                </div>
-                <div class="aboutCompany__img">
-                    <img src="/design/img/aboutCompany/aboutCompany1.png" alt="">
-                </div>
-            </div>
-            <p class="onlytablevisible">Наша команда состоит из профессиональных инженеров и экспертов в области
-                вентиляции и кондиционирования, которые обладают глубокими знаниями и опытом в данной сфере. Мы работаем
-                с ведущими производителями оборудования и материалов, чтобы предложить нашим клиентам самые
-                инновационные и надежные решения.</p>
-            <div class="aboutCompany__wrapper">
-                <div class="aboutCompany__img">
-                    <img src="/design/img/aboutCompany/aboutCompany2.png" alt="">
-                </div>
-                <div class="aboutCompany__text">
-                    <p>Наша компания - это специализированный поставщик и продавец систем вентиляции и кондиционирования
-                        воздуха для широкого спектра клиентов. Мы предлагаем широкий выбор продуктов, которые отвечают
-                        самым высоким стандартам качества и эффективности.</p>
-                    <p>Наша команда состоит из профессиональных инженеров и экспертов в области вентиляции и
-                        кондиционирования, которые обладают глубокими знаниями и опытом в данной сфере. Мы работаем с
-                        ведущими производителями оборудования и материалов, чтобы предложить нашим клиентам самые
-                        инновационные и надежные решения.</p>
-                    <p class="pHidden">Наша команда состоит из профессиональных инженеров и экспертов в области
-                        вентиляции и кондиционирования, которые обладают глубокими знаниями и опытом в данной сфере. Мы
-                        работаем с ведущими производителями оборудования и материалов, чтобы предложить нашим клиентам
-                        самые инновационные и надежные решения.</p>
-                </div>
-            </div>
-            <p class="onlytablevisible">Наша команда состоит из профессиональных инженеров и экспертов в области
-                вентиляции и кондиционирования, которые обладают глубокими знаниями и опытом в данной сфере. Мы работаем
-                с ведущими производителями оборудования и материалов, чтобы предложить нашим клиентам самые
-                инновационные и надежные решения.</p>
-        </div>
-    </section>
+    <? $APPLICATION->IncludeComponent(
+    "bitrix:news.list",
+    "text-block-page-container-company",
+    array(
+        "ACTIVE_DATE_FORMAT" => "d.m.Y",
+        "ADD_SECTIONS_CHAIN" => "Y",
+        "AJAX_MODE" => "N",
+        "AJAX_OPTION_ADDITIONAL" => "",
+        "AJAX_OPTION_HISTORY" => "N",
+        "AJAX_OPTION_JUMP" => "N",
+        "AJAX_OPTION_STYLE" => "Y",
+        "CACHE_FILTER" => "N",
+        "CACHE_GROUPS" => "Y",
+        "CACHE_TIME" => "36000000",
+        "CACHE_TYPE" => "A",
+        "CHECK_DATES" => "Y",
+        "DETAIL_URL" => "",
+        "DISPLAY_BOTTOM_PAGER" => "Y",
+        "DISPLAY_DATE" => "Y",
+        "DISPLAY_NAME" => "Y",
+        "DISPLAY_PICTURE" => "Y",
+        "DISPLAY_PREVIEW_TEXT" => "Y",
+        "DISPLAY_TOP_PAGER" => "N",
+        "FIELD_CODE" => array(
+            0 => "",
+            1 => "",
+        ),
+        "FILTER_NAME" => "",
+        "HIDE_LINK_WHEN_NO_DETAIL" => "N",
+        "IBLOCK_ID" => "2",
+        "IBLOCK_TYPE" => "infoblocks",
+        "INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
+        "INCLUDE_SUBSECTIONS" => "Y",
+        "MESSAGE_404" => "",
+        "NEWS_COUNT" => "20",
+        "PAGER_BASE_LINK_ENABLE" => "N",
+        "PAGER_DESC_NUMBERING" => "N",
+        "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+        "PAGER_SHOW_ALL" => "N",
+        "PAGER_SHOW_ALWAYS" => "N",
+        "PAGER_TEMPLATE" => ".default",
+        "PAGER_TITLE" => "Новости",
+        "PARENT_SECTION" => "5",
+        "PARENT_SECTION_CODE" => "o-kompanii-podrobnee",
+        "PREVIEW_TRUNCATE_LEN" => "",
+        "PROPERTY_CODE" => array(
+            0 => "",
+            1 => "PICTURE_RIGHT",
+            2 => "PICTURE_LEFT",
+        ),
+        "SET_BROWSER_TITLE" => "Y",
+        "SET_LAST_MODIFIED" => "N",
+        "SET_META_DESCRIPTION" => "Y",
+        "SET_META_KEYWORDS" => "Y",
+        "SET_STATUS_404" => "N",
+        "SET_TITLE" => "Y",
+        "SHOW_404" => "N",
+        "SORT_BY1" => "ACTIVE_FROM",
+        "SORT_BY2" => "SORT",
+        "SORT_ORDER1" => "DESC",
+        "SORT_ORDER2" => "ASC",
+        "STRICT_SECTION_CHECK" => "N",
+        "COMPONENT_TEMPLATE" => "text-block-page-container-company"
+    ),
+    false
+); ?>
 
 <? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>
