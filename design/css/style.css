@@ -652,8 +652,9 @@
 
 .preview {
   padding: 215px 216px 217px 216px;
-  background: url("../img/preview.jpg") center center/cover no-repeat;
+  background: url("/design/img/preview.jpg") center center/cover no-repeat;
 }
+
 .preview__title {
   font-style: normal;
   font-weight: 400;
@@ -800,7 +801,7 @@
 
 .howtobuy {
   padding: 62px 0;
-  background-image: url("../img/paralax.png");
+  background-image: url("/design/img/paralax.png");
   background-attachment: fixed;
   background-position: center;
   background-size: unset;
