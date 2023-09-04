@@ -25,8 +25,10 @@ $this->setFrameMode(true);
                 $this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
                 $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
                 ?>
-            <div class="catalog__card" id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
-                <a href="<?=$arItem["LINK"]?>" class="catalog__card-wrapper">
+
+
+            <div class="catalog__card" style="height: auto;" id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
+                <a href="<?=$arItem["PROPERTIES"]["LINK"]["VALUE"]?>" class="catalog__card-wrapper">
                     <div class="catalog__card-img">
                         <?$arFile_1 = CFile::GetFileArray($arItem["PROPERTIES"]["PICTURE_DESKTOP"]["VALUE"]);?>
                         <?$arFile_2 = CFile::GetFileArray($arItem["PROPERTIES"]["PICTURE_TABLET"]["VALUE"]);?>
@@ -34,7 +36,6 @@ $this->setFrameMode(true);
                         <img src="<?=$arFile_2["SRC"]?>" class="catalog__card-img-tablet" alt="">
                     </div>
                     <div class="catalog__card-descr">
-
                         <?= $arItem["NAME"] ?>
                     </div>
                 </a>
@@ -42,9 +43,6 @@ $this->setFrameMode(true);
         </div>
     </div>
 </section>
-<? echo "<pre style=display:none;>";
-print_r($arItem);
-echo "</pre>"; ?>
 
 
 <? if ($arParams["DISPLAY_BOTTOM_PAGER"]): ?>

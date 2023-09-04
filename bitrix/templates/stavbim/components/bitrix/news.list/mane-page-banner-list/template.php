@@ -18,7 +18,7 @@ $this->setFrameMode(true);
 
 <section class="howtobuy">
     <div class="container">
-        <h3 class="howtobuy__title">Как купить</h3>
+        <h3 class="howtobuy__title_main">Как купить</h3>
         <div class="howtobuy__wrapper">
             <? foreach ($arResult["ITEMS"] as $arItem): ?>
                 <?

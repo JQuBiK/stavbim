@@ -28,10 +28,10 @@ $this->setFrameMode(true);
                     <?=$arItem["PREVIEW_TEXT"]?>
                 </div>
                 <div class="about-company__img-block">
-                    <img src="design/img/aboutCompany.png" alt="About company" class="about-company__img">
-                    <img src="design/img/aboutCompanyMedium.png" alt="About company" class="about-company__img-medium">
-                    <img src="design/img/about-company-tablet.jpg" alt="About company" class="about-company__img-tablet">
-                    <img src="design/img/aboutCompanyMobile.jpg" alt="About company" class="about-company__img-mobile">
+                    <img src="/design/img/aboutCompany.png" alt="About company" class="about-company__img">
+                    <img src="/design/img/aboutCompanyMedium.png" alt="About company" class="about-company__img-medium">
+                    <img src="/design/img/about-company-tablet.jpg" alt="About company" class="about-company__img-tablet">
+                    <img src="/design/img/aboutCompanyMobile.jpg" alt="About company" class="about-company__img-mobile">
                 </div>
             </div>
         </div>

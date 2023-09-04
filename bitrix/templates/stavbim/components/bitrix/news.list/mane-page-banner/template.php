@@ -26,7 +26,6 @@ $this->setFrameMode(true);
             <?=$arItem["DETAIL_TEXT"]?>
         </div>
     </section>
-    <?echo "<pre style=display:none;>"; print_r($arItem); echo "</pre>";?>
 
 <?endforeach;?>
 <?if($arParams["DISPLAY_BOTTOM_PAGER"]):?>

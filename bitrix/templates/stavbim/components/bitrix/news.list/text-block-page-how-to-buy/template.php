@@ -17,7 +17,7 @@ $this->setFrameMode(true);
 <? endif; ?>
 
 
-<section class="howToBuy">
+<section class="howToBuy_page">
     <div class="container">
         <h1 class="howToBuy__title">Как купить</h1>
 
@@ -27,7 +27,7 @@ $this->setFrameMode(true);
             $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
             ?>
 
-            <div class="howToBuy__wrapper" id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
+            <div class="howToBuy__wrapper_page" id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
                 <? $arFile = CFile::GetFileArray($arItem["PROPERTIES"]["PICTURE_LEFT"]["VALUE"]); ?>
                 <div class="howToBuy__img">
                     <div class="howToBuy__img__wrapper">

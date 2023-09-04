@@ -1,22 +1,26 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 $APPLICATION->SetTitle("Title");
-?><div class="container">
-	<div class="directory">
-		<div class="directory__way">
- <a href="" class="directory__way-link">Главная</a>/
-		</div>
-		<div class="directory__way">
- <a href="" class="directory__way-link active">Бренды</a>
-		</div>
-	</div>
-</div>
+?>
+    <div class="container">
+        <? $APPLICATION->IncludeComponent(
+            "bitrix:breadcrumb",
+            "breadcrumbs",
+            array(
+                "COMPONENT_TEMPLATE" => "breadcrumbs",
+                "START_FROM" => "0",
+                "PATH" => "",
+                "SITE_ID" => "s1"
+            ),
+            false
+        ); ?>
+    </div>
  <?$APPLICATION->IncludeComponent(
-	"bitrix:news.list",
-	"mane-page-catalog-brands2",
-	Array(
+	"bitrix:news.list", 
+	"mane-page-catalog-brands2", 
+	array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
-		"ADD_SECTIONS_CHAIN" => "Y",
+		"ADD_SECTIONS_CHAIN" => "N",
 		"AJAX_MODE" => "N",
 		"AJAX_OPTION_ADDITIONAL" => "",
 		"AJAX_OPTION_HISTORY" => "N",
@@ -35,12 +39,15 @@ $APPLICATION->SetTitle("Title");
 		"DISPLAY_PICTURE" => "Y",
 		"DISPLAY_PREVIEW_TEXT" => "Y",
 		"DISPLAY_TOP_PAGER" => "N",
-		"FIELD_CODE" => array(0=>"",1=>"",),
+		"FIELD_CODE" => array(
+			0 => "",
+			1 => "",
+		),
 		"FILTER_NAME" => "",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
 		"IBLOCK_ID" => "3",
 		"IBLOCK_TYPE" => "catalog",
-		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
+		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
 		"INCLUDE_SUBSECTIONS" => "Y",
 		"MESSAGE_404" => "",
 		"NEWS_COUNT" => "20",
@@ -54,7 +61,11 @@ $APPLICATION->SetTitle("Title");
 		"PARENT_SECTION" => "8",
 		"PARENT_SECTION_CODE" => "konditsionery",
 		"PREVIEW_TRUNCATE_LEN" => "",
-		"PROPERTY_CODE" => array(0=>"",1=>"PICTURE_BRAND",),
+		"PROPERTY_CODE" => array(
+			0 => "",
+			1 => "PICTURE_BRAND",
+			2 => "",
+		),
 		"SET_BROWSER_TITLE" => "Y",
 		"SET_LAST_MODIFIED" => "N",
 		"SET_META_DESCRIPTION" => "Y",
@@ -67,14 +78,15 @@ $APPLICATION->SetTitle("Title");
 		"SORT_ORDER1" => "DESC",
 		"SORT_ORDER2" => "ASC",
 		"STRICT_SECTION_CHECK" => "N"
-	)
+	),
+	false
 );?><br>
  <?$APPLICATION->IncludeComponent(
-	"bitrix:news.list",
-	"mane-page-catalog-brands2",
-	Array(
+	"bitrix:news.list", 
+	"mane-page-catalog-brands2", 
+	array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
-		"ADD_SECTIONS_CHAIN" => "Y",
+		"ADD_SECTIONS_CHAIN" => "N",
 		"AJAX_MODE" => "N",
 		"AJAX_OPTION_ADDITIONAL" => "",
 		"AJAX_OPTION_HISTORY" => "N",
@@ -92,12 +104,15 @@ $APPLICATION->SetTitle("Title");
 		"DISPLAY_PICTURE" => "Y",
 		"DISPLAY_PREVIEW_TEXT" => "Y",
 		"DISPLAY_TOP_PAGER" => "N",
-		"FIELD_CODE" => array("",""),
+		"FIELD_CODE" => array(
+			0 => "",
+			1 => "",
+		),
 		"FILTER_NAME" => "",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
 		"IBLOCK_ID" => "3",
 		"IBLOCK_TYPE" => "catalog",
-		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
+		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
 		"INCLUDE_SUBSECTIONS" => "Y",
 		"MESSAGE_404" => "",
 		"NEWS_COUNT" => "20",
@@ -111,7 +126,11 @@ $APPLICATION->SetTitle("Title");
 		"PARENT_SECTION" => "7",
 		"PARENT_SECTION_CODE" => "nasosy",
 		"PREVIEW_TRUNCATE_LEN" => "",
-		"PROPERTY_CODE" => array("","PICTURE_BRAND"),
+		"PROPERTY_CODE" => array(
+			0 => "",
+			1 => "PICTURE_BRAND",
+			2 => "",
+		),
 		"SET_BROWSER_TITLE" => "Y",
 		"SET_LAST_MODIFIED" => "N",
 		"SET_META_DESCRIPTION" => "Y",
@@ -123,14 +142,16 @@ $APPLICATION->SetTitle("Title");
 		"SORT_BY2" => "SORT",
 		"SORT_ORDER1" => "DESC",
 		"SORT_ORDER2" => "ASC",
-		"STRICT_SECTION_CHECK" => "N"
-	)
+		"STRICT_SECTION_CHECK" => "N",
+		"COMPONENT_TEMPLATE" => "mane-page-catalog-brands2"
+	),
+	false
 );?><?$APPLICATION->IncludeComponent(
-	"bitrix:news.list",
-	"mane-page-catalog-brands2",
-	Array(
+	"bitrix:news.list", 
+	"mane-page-catalog-brands2", 
+	array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
-		"ADD_SECTIONS_CHAIN" => "Y",
+		"ADD_SECTIONS_CHAIN" => "N",
 		"AJAX_MODE" => "N",
 		"AJAX_OPTION_ADDITIONAL" => "",
 		"AJAX_OPTION_HISTORY" => "N",
@@ -149,12 +170,15 @@ $APPLICATION->SetTitle("Title");
 		"DISPLAY_PICTURE" => "Y",
 		"DISPLAY_PREVIEW_TEXT" => "Y",
 		"DISPLAY_TOP_PAGER" => "N",
-		"FIELD_CODE" => array(0=>"",1=>"",),
+		"FIELD_CODE" => array(
+			0 => "",
+			1 => "",
+		),
 		"FILTER_NAME" => "",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
 		"IBLOCK_ID" => "3",
 		"IBLOCK_TYPE" => "catalog",
-		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
+		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
 		"INCLUDE_SUBSECTIONS" => "Y",
 		"MESSAGE_404" => "",
 		"NEWS_COUNT" => "20",
@@ -168,7 +192,11 @@ $APPLICATION->SetTitle("Title");
 		"PARENT_SECTION" => "9",
 		"PARENT_SECTION_CODE" => "ventilyatory",
 		"PREVIEW_TRUNCATE_LEN" => "",
-		"PROPERTY_CODE" => array(0=>"",1=>"PICTURE_BRAND",),
+		"PROPERTY_CODE" => array(
+			0 => "",
+			1 => "PICTURE_BRAND",
+			2 => "",
+		),
 		"SET_BROWSER_TITLE" => "Y",
 		"SET_LAST_MODIFIED" => "N",
 		"SET_META_DESCRIPTION" => "Y",
@@ -181,7 +209,8 @@ $APPLICATION->SetTitle("Title");
 		"SORT_ORDER1" => "DESC",
 		"SORT_ORDER2" => "ASC",
 		"STRICT_SECTION_CHECK" => "N"
-	)
+	),
+	false
 );?><?$APPLICATION->IncludeComponent(
 	"bitrix:news.list", 
 	"text-block-page", 
@@ -221,8 +250,8 @@ $APPLICATION->SetTitle("Title");
 		"SET_META_KEYWORDS" => "Y",
 		"SET_META_DESCRIPTION" => "Y",
 		"SET_LAST_MODIFIED" => "N",
-		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
-		"ADD_SECTIONS_CHAIN" => "Y",
+		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+		"ADD_SECTIONS_CHAIN" => "N",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
 		"PARENT_SECTION" => "10",
 		"PARENT_SECTION_CODE" => "blok-s-tekstom-vnizu-stranitsy",

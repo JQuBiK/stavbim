@@ -4,17 +4,20 @@ $APPLICATION->SetTitle("О компании");
 ?>
 
     <div class="container">
-        <div class="directory">
-            <div class="directory__way">
-                <a href="" class="directory__way-link">Главная</a>/
-            </div>
-            <div class="directory__way">
-                <a href="" class="directory__way-link active">О компании</a>
-            </div>
-        </div>
+        <? $APPLICATION->IncludeComponent(
+            "bitrix:breadcrumb",
+            "breadcrumbs",
+            array(
+                "COMPONENT_TEMPLATE" => "breadcrumbs",
+                "START_FROM" => "0",
+                "PATH" => "",
+                "SITE_ID" => "s1"
+            ),
+            false
+        ); ?>
     </div>
 
-    <? $APPLICATION->IncludeComponent(
+<? $APPLICATION->IncludeComponent(
     "bitrix:news.list",
     "text-block-page-container-company",
     array(

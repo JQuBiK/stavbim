@@ -34,7 +34,7 @@ $this->setFrameMode(true);
     <div class="container">
         <div class="works__title-wrapper">
             <h3 class="works__title">Готовые работы</h3>
-            <a href="<?= $arResult["LINK"] ?>" class="works__link">
+            <a href="/my-works/" class="works__link">
                 <p>
                     Смотреть все
                 </p>
@@ -74,7 +74,6 @@ $this->setFrameMode(true);
                         <a href="<?= $arItem["LINK_PRODUCT"] ?>" class="works__img-container">
                             <?$arFile_1 = CFile::GetFileArray($arItem["PROPERTIES"]["PICTURE_DESKTOP"]["VALUE"]);?>
                             <?$arFile_2 = CFile::GetFileArray($arItem["PROPERTIES"]["PICTURE_FILE"]["VALUE"]);?>
-                            <?$arFile_3 = CFile::GetFileArray($arItem["PROPERTIES"]["PRICE"]["VALUE"]);?>
                             <img src="<?=$arFile_1["SRC"]?>" class="works__img" alt="">
                             <img src="<?=$arFile_2["SRC"]?>" class="works__icon" alt="">
                             <a href="<?= $arItem["LINK_PRODUCT"] ?>" class="works__card-modal">Модель для проектирования</a>
@@ -89,8 +88,4 @@ $this->setFrameMode(true);
     </div>
 
 </section>
-
-<? if ($arParams["DISPLAY_BOTTOM_PAGER"]): ?>
-    <br/><?= $arResult["NAV_STRING"] ?>
-<? endif; ?>
 

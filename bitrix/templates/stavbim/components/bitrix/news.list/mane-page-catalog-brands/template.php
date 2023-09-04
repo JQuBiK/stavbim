@@ -34,7 +34,7 @@ $this->setFrameMode(true);
     <div class="container">
         <div class="brands__title-wrapper">
             <h3 class="brands__title">Бренды</h3>
-            <a href="<?= $arResult["LINK"] ?>" class="brands__link">
+            <a href="/brands/" class="brands__link">
                 <p>
                     Смотреть все
                 </p>
@@ -67,11 +67,6 @@ $this->setFrameMode(true);
 
     </div>
 </section>
-
-<? echo "<pre style=display:none;>";
-
-print_r($arItem);
-echo "</pre>"; ?>
 
 
 <? if ($arParams["DISPLAY_BOTTOM_PAGER"]): ?>
